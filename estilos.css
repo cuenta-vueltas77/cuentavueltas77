@@ -1,0 +1,299 @@
+/* =======================
+   RESET Y ESTILOS BASE
+   ======================= */
+body {
+  padding-top: 100px; /* espacio para navbar fija */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+a {
+  cursor: pointer;
+}
+
+/* =======================
+   NAVBAR FIJA
+   ======================= */
+.navbar {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  gap: 20px;
+}
+
+.logo-nombre {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+}
+
+.navbar h1 {
+  font-size: 24px;
+  margin: 0;
+  color: #fff;
+  font-weight: bold;
+}
+
+.navbar nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.navbar nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 6px 10px;
+  transition: color 0.3s;
+}
+
+.navbar nav ul li a:hover {
+  color: #e60000; /* Rojo deportivo */
+}
+
+/* =======================
+   SECCIÓN DE BIENVENIDA
+   ======================= */
+.bienvenida {
+  margin-top: 140px; /* Ajuste por el logo grande */
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =======================
+   ARTÍCULOS Y NOTAS
+   ======================= */
+article {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 40px;
+  font-family: Arial, sans-serif;
+}
+
+article h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #e60000;
+  font-family: 'Arial Black', sans-serif;
+  text-transform: uppercase;
+}
+
+article p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+article img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+article em {
+  color: #666;
+  font-size: 14px;
+}
+
+/* =======================
+   FICHAS DE PILOTOS
+   ======================= */
+.ficha-piloto {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  align-items: center;
+  gap: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.ficha-piloto img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.info-piloto {
+  flex: 1;
+}
+
+.info-piloto h2 {
+  margin-top: 0;
+  font-size: 28px;
+  color: #e60000;
+  font-family: 'Arial Black', sans-serif;
+}
+
+.info-piloto p {
+  font-size: 18px;
+  margin: 8px 0;
+  color: #444;
+}
+
+/* =======================
+   HISTORIAS Y CONTENIDO
+   ======================= */
+.contenido {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.articulo {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.articulo h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #e60000;
+  font-family: 'Arial Black', sans-serif;
+}
+
+.articulo p {
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.imagen-articulo {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* =======================
+   CONTADOR LATERAL
+   ======================= */
+.contador-lateral {
+  position: fixed;
+  top: 120px;
+  right: 20px;
+  width: 280px;
+  background-color: #fff3e0;
+  border-left: 5px solid #e60000;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  font-family: 'Arial', sans-serif;
+  z-index: 1000;
+}
+
+.contador-lateral h2 {
+  font-size: 1.2em;
+  color: #e60000;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#cuenta-regresiva {
+  font-size: 0.95em;
+  color: #333;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .contador-lateral {
+    position: static;
+    width: 100%;
+    margin: 20px auto;
+    border-left: none;
+    border-top: 5px solid #e60000;
+  }
+}
+
+/* =======================
+   FOOTER
+   ======================= */
+footer {
+  text-align: center;
+  background-color: #111;
+  color: #ccc;
+  padding: 15px 20px;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+/* =======================
+   BOTÓN VOLVER ARRIBA
+   ======================= */
+#btnVolverArriba {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: #e60000;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 14px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s;
+}
+
+#btnVolverArriba:hover {
+  background-color: #990000;
+}
+
+/* =======================
+   RESPONSIVE NAVBAR
+   ======================= */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+  .navbar nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.navbar h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: #fff;
+  margin: 0;
+}

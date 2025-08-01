@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio - Cuenta Vueltas 77</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald&display=swap">
+
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo-nombre">
+      <img src="logo-cuenta-vueltas.png" alt="Logo Cuenta Vueltas 77" class="logo">
+      <h1>Cuenta Vueltas 77</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="activo">Inicio</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="pilotos.html">Pilotos</a></li>
+        <li><a href="historias.html">Historias</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenido -->
+  <main style="display: flex; justify-content: space-between; max-width: 1200px; margin: 0 auto; gap: 20px;">
+    <section style="max-width: 800px;">
+      <section class="bienvenida">
+        <h2>Bienvenidos a Cuenta Vueltas 77</h2>
+        <p>Bienvenidos a la web del automovilismo chubutense. Aquí vas a encontrar noticias, historias y columnas sobre nuestros pilotos locales y su recorrido en el deporte motor.</p>
+        <p><em>Noticias, historias y pasión fierrera desde el corazón del sur argentino</em></p>
+      </section>
+
+      <h2>Últimas noticias</h2>
+      <article>
+        <h3>Renzo Blotta vuelve a la acción este fin de semana en el Turismo Nacional Clase 2</h3>
+        <p>El piloto de Comodoro Rivadavia vuelve a la acción en el autódromo de Oberá.</p>
+      </article>
+    </section>
+
+    <!-- Contador -->
+    <aside class="contador-lateral">
+      <h2>🏁 Fecha 6 - GP Transportes Arias</h2>
+      <p id="cuenta-regresiva">Cargando...</p>
+    </aside>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Cuenta Vueltas 77. Creado por Antonella Tacul.</p>
+  </footer>
+
+  <!-- Script contador -->
+  <script>
+    const fechaEvento = new Date("August 08, 2025 10:00:00").getTime();
+    const cuentaRegresiva = document.getElementById("cuenta-regresiva");
+
+    setInterval(() => {
+      const ahora = new Date().getTime();
+      const diferencia = fechaEvento - ahora;
+
+      if (diferencia <= 0) {
+        cuentaRegresiva.innerText = "🏁 ¡Hoy es día de Zonal!";
+        return;
+      }
+
+      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+      const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+      cuentaRegresiva.innerText = `Faltan ${dias} días, ${horas} horas, ${minutos} minutos y ${segundos} segundos para la próxima fecha del Zonal`;
+    }, 1000);
+  </script>
+</body>
+</html>
