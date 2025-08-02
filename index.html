@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inicio - Cuenta Vueltas 77</title>
   <link rel="stylesheet" href="estilos.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald&display=swap">
-
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed+2&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Header -->
+  <!-- Header principal -->
   <header class="navbar">
     <div class="logo-nombre">
-      <img src="logo-cuenta-vueltas.png" alt="Logo Cuenta Vueltas 77" class="logo">
-      <h1>Cuenta Vueltas 77</h1>
+      <img src="logo-cuenta-vueltas-encabezado.PNG" alt="Logo Cuenta Vueltas 77" class="logo">
+      
     </div>
     <nav>
       <ul>
@@ -21,12 +21,12 @@
         <li><a href="noticias.html">Noticias</a></li>
         <li><a href="pilotos.html">Pilotos</a></li>
         <li><a href="historias.html">Historias</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><a href="Categorias.html">Categorias</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Contenido -->
+  <!-- Contenido principal -->
   <main style="display: flex; justify-content: space-between; max-width: 1200px; margin: 0 auto; gap: 20px;">
     <section style="max-width: 800px;">
       <section class="bienvenida">
@@ -44,27 +44,42 @@
 
     <!-- Contador -->
     <aside class="contador-lateral">
-      <h2>🏁 Fecha 6 - GP Transportes Arias</h2>
-      <p id="cuenta-regresiva">Cargando...</p>
+      <h2 class="titulo-contador">🏁 Fecha 6 - GP Transporte Arias</h2>
+      <div id="cuenta-regresiva" class="cronometro">
+        <div class="digito"><span id="dias">00</span><small>DÍAS</small></div>
+        <div class="digito"><span id="horas">00</span><small>HORAS</small></div>
+        <div class="digito"><span id="minutos">00</span><small>MIN</small></div>
+        <div class="digito"><span id="segundos">00</span><small>SEG</small></div>
+      </div>
     </aside>
   </main>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Cuenta Vueltas 77. Creado por Antonella Tacul.</p>
+    <p>&copy; 2025 Cuenta Vueltas 77</p>
+    <div class="redes-sociales">
+      <a href="https://instagram.com/cuentavueltas77" target="_blank" class="instagram">📸 Instagram</a>
+      <a href="https://facebook.com/cuentavueltas77" target="_blank" class="facebook">📘 Facebook</a>
+      <a href="https://tiktok.com/@cuentavueltas77" target="_blank" class="tiktok">🎥 TikTok</a>
+      <a href="https://x.com/cuentavueltas77" target="_blank" class="twitter">🐦 Twitter</a>
+      <a href="https://youtube.com/@cuentavueltas77" target="_blank" class="youtube">▶️ YouTube</a>
+    </div>
   </footer>
 
   <!-- Script contador -->
   <script>
     const fechaEvento = new Date("August 08, 2025 10:00:00").getTime();
-    const cuentaRegresiva = document.getElementById("cuenta-regresiva");
+    const d = document.getElementById("dias");
+    const h = document.getElementById("horas");
+    const m = document.getElementById("minutos");
+    const s = document.getElementById("segundos");
 
     setInterval(() => {
       const ahora = new Date().getTime();
       const diferencia = fechaEvento - ahora;
 
       if (diferencia <= 0) {
-        cuentaRegresiva.innerText = "🏁 ¡Hoy es día de Zonal!";
+        document.getElementById("cuenta-regresiva").innerHTML = "🏁 ¡Hoy es día de Zonal!";
         return;
       }
 
@@ -73,7 +88,10 @@
       const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
       const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
 
-      cuentaRegresiva.innerText = `Faltan ${dias} días, ${horas} horas, ${minutos} minutos y ${segundos} segundos para la próxima fecha del Zonal`;
+      d.textContent = dias.toString().padStart(2, '0');
+      h.textContent = horas.toString().padStart(2, '0');
+      m.textContent = minutos.toString().padStart(2, '0');
+      s.textContent = segundos.toString().padStart(2, '0');
     }, 1000);
   </script>
 </body>

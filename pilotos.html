@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pilotos - Cuenta Vueltas 77</title>
   <link rel="stylesheet" href="estilos.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed+2&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Header -->
   <header class="navbar">
     <div class="logo-nombre">
-      <img src="logo-cuenta-vueltas.png" alt="Logo Cuenta Vueltas 77" class="logo">
-      <h1>Cuenta Vueltas 77</h1>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
-
+      <img src="logo-cuenta-vueltas-encabezado.PNG" alt="Logo Cuenta Vueltas 77" class="logo">
+    
     </div>
     <nav>
       <ul>
@@ -20,12 +21,18 @@
         <li><a href="noticias.html">Noticias</a></li>
         <li><a href="pilotos.html" class="activo">Pilotos</a></li>
         <li><a href="historias.html">Historias</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><a href="Categorias.html">Categorias</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
+  <!-- Contenido principal -->
+  <main style="max-width: 800px; margin: 0 auto; padding-top: 40px;">
+    <section class="bienvenida">
+      <p>Conocé a los protagonistas del automovilismo chubutense y sus trayectorias en las pistas.</p>
+    </section>
+
+    <!-- Ficha de piloto -->
     <section class="ficha-piloto">
       <img src="renzo-blotta.jpg" alt="Renzo Blotta en su Toyota Etios" />
       <div class="info-piloto">
@@ -36,8 +43,8 @@
         <p><strong>Auto que maneja:</strong> Toyota Etios</p>
       </div>
     </section>
-
-    <section class="ficha-piloto">
+   
+     <section class="ficha-piloto">
       <img src="marcelo-agrelo.png" alt="Marcelo Agrelo con su Toyota Camry" />
       <div class="info-piloto">
         <h2>Marcelo Agrelo</h2>
@@ -49,8 +56,18 @@
     </section>
   </main>
 
+
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Cuenta Vueltas 77. Creado por Antonella Tacul.</p>
+    <p>&copy; 2025 Cuenta Vueltas 77</p>
+    <div class="redes-sociales">
+      <a href="https://instagram.com/cuentavueltas77" target="_blank" class="instagram">📸 Instagram</a>
+      <a href="https://facebook.com/cuentavueltas77" target="_blank" class="facebook">📘 Facebook</a>
+      <a href="https://tiktok.com/@cuentavueltas77" target="_blank" class="tiktok">🎥 TikTok</a>
+      <a href="https://x.com/cuentavueltas77" target="_blank" class="twitter">🐦 Twitter</a>
+      <a href="https://youtube.com/@cuentavueltas77" target="_blank" class="youtube">▶️ YouTube</a>
+    </div>
   </footer>
 </body>
 </html>
