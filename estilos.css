@@ -12,7 +12,9 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   color: #222;
+
 }
+
 
 a {
   cursor: pointer;
@@ -541,4 +543,47 @@ footer {
 /* Mostrar el menú al pasar el mouse */
 .dropdown:hover .dropdown-content {
   display: block;
+}
+.contenido-principal {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.noticias {
+  flex: 3;
+}
+
+.tabla-posiciones {
+  margin-top: 30px; /* Podés aumentar o reducir este valor */
+  flex: 1;
+  max-width: 300px; /* Ajusta el tamaño máximo */
+}
+
+.tabla-posiciones img {
+  width: 100%;
+  height: auto;
+  border: 2px solid #ff0000;
+  border-radius: 5px;
+}
+.btn-tabla {
+  display: inline-block;
+  background-color: #ff0000;
+  color: #fff;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: 2px solid #ff0000;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+.btn-tabla:hover {
+  background-color: #fff;
+  color: #ff0000;
 }
