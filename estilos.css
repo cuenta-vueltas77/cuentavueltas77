@@ -581,9 +581,189 @@ footer {
   border: 2px solid #ff0000;
   transition: 0.3s;
   margin-top: 20px;
+  font-size: 16px;
 }
 
 .btn-tabla:hover {
   background-color: #fff;
   color: #ff0000;
+}
+/* =======================
+   📱 AJUSTES PARA TABLET Y CELULAR
+   ======================= */
+
+/* 📌 TABLET (pantallas ≤ 768px) */
+@media (max-width: 768px) {
+
+
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .navbar nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .logo {
+    height: 70px;
+  }
+
+  /* Contenido principal */
+  .contenido-principal {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tabla-posiciones {
+    max-width: 100%;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  /* Contador */
+  .contador-lateral {
+    position: static;
+    width: 95%;
+    margin: 20px auto;
+    transform: scale(1);
+  }
+
+  /* Fichas de pilotos */
+  .ficha-piloto {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ficha-piloto img {
+    max-width: 90%;
+  }
+}
+
+/* 📌 CELULAR (pantallas ≤ 480px) */
+@media (max-width: 480px) {
+  /* Texto más pequeño */
+  .navbar h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  article h3,
+  .tarjeta-noticia h3,
+  .tarjeta-historia h3 {
+    font-size: 20px;
+  }
+
+  article p,
+  .tarjeta-noticia p,
+  .tarjeta-historia p {
+    font-size: 16px;
+  }
+
+  /* Contador */
+  .digito {
+    width: 70px;
+    font-size: 0.9em;
+  }
+
+  /* Categorías */
+  .categorias-bar a {
+    font-size: 14px;
+    margin: 5px;
+    padding: 5px 8px;
+  }
+
+  /* Imágenes noticias e historias */
+  .tarjeta-noticia img.imagen-articulo,
+  .tarjeta-historia img.imagen-historia {
+    max-width: 100%;
+    height: auto;
+  }
+}
+/* 🔹 Botón hamburguesa (oculto en PC) */
+.menu-toggle {
+  display: none !important; /* Oculto por defecto en todas las pantallas */
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  background: #e60000;
+  padding: 6px 12px;
+  border-radius: 5px;
+}
+
+/* Ajustes en móvil */
+@media (max-width: 600px) {
+  .menu-toggle {
+    display: block !important;
+    margin-top: 10px;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+    background-color: #000;
+    margin-top: 10px;
+    text-align: center;
+    border-top: 2px solid #e60000;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav.mostrar {
+    display: block;
+  }
+}
+/* Ajuste contador en tablet y móvil */
+@media (max-width: 768px) {
+  .contenido-principal {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .contador-lateral {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    width: 90% !important;
+    margin: 20px auto !important;
+    transform: scale(0.9) !important;
+    order: 3 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .contador-lateral {
+    transform: scale(0.8) !important;
+    padding: 10px !important;
+  }
+
+  .digito {
+    width: 65px !important;
+    font-size: 0.9em !important;
+  }
+
+  .digito span {
+    font-size: 1em !important;
+    padding: 3px !important;
+  }
+
+  .digito small {
+    font-size: 0.6em !important;
+  }
 }

@@ -3,46 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Noticias - Cuenta Vueltas 77</title>
+  <title>Turismo 1100 - Cuenta Vueltas 77</title>
   <link rel="stylesheet" href="estilos.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed+2&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    /* --- Ajustes extra para el botón y margen --- */
+    .categoria-info {
+      width: 90%;
+      margin: 30px auto;
+      text-align: center;
+    }
+
+    .btn-tabla {
+      display: inline-block;
+      background-color: #ff0000;
+      color: #fff;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-radius: 5px;
+      border: 2px solid #ff0000;
+      transition: 0.3s;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    .btn-tabla:hover {
+      background-color: #fff;
+      color: #ff0000;
+    }
+  </style>
 </head>
 <body>
-
-<section class="contenido-principal">
-  <div class="noticias">
-    <h2>Últimas Noticias</h2>
-    <p>Contenido de noticias aquí...</p>
-  </div>
-
-  <aside class="tabla-posiciones">
-    <img src="tabla-r12.png" alt="Tabla de posiciones Monomarca R12">
-  </aside>
-</section>
-
-
-
-
-
   <!-- Header -->
   <header class="navbar">
     <div class="logo-nombre">
       <img src="logo-cuenta-vueltas-encabezado.PNG" alt="Logo Cuenta Vueltas 77" class="logo">
-      
     </div>
     <nav>
       <ul>
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="noticias.html" class="activo">Noticias</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
         <li><a href="pilotos.html">Pilotos</a></li>
         <li><a href="historias.html">Historias</a></li>
-        <li><a href="Categorias.html">Categorias</a></li>
+        <li><a href="Categorias.html">Categorías</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- Contenido principal -->
+  <section class="categoria-info">
+    <h2>Monomarca R12</h2>
+    <p>Aquí podés encontrar noticias, información y resultados de la categoría Monomarca R12</p>
 
+    <a href="https://fcha.org.ar/wp-content/uploads/ranking/FChA-Pista-2025-5-Puntos-R12-Chubutense.pdf" target="_blank" class="btn-tabla">
+      Ver Tabla de Posiciones Oficial
+    </a>
+  </section>
 
  <!-- Footer -->
   <footer>

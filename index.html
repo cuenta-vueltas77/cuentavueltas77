@@ -15,8 +15,14 @@
       <img src="logo-cuenta-vueltas-encabezado.PNG" alt="Logo Cuenta Vueltas 77" class="logo">
       
     </div>
-    <nav>
-      <ul>
+
+     <!-- Botón hamburguesa -->
+  <div class="menu-toggle" id="menu-toggle">
+    &#9776;
+  </div>
+
+  <nav id="menu">
+    <ul>
         <li><a href="index.html" class="activo">Inicio</a></li>
         <li><a href="noticias.html">Noticias</a></li>
         <li><a href="pilotos.html">Pilotos</a></li>
@@ -24,19 +30,9 @@
         <li><a href="Categorias.html">Categorias</a></li>
       </ul>
     </nav>
-    <!-- Botón hamburguesa -->
-  <button class="hamburger" id="hamburger">&#9776;</button>
-</header>
+    
   </header>
-  
-<script>
-  const hamburger = document.getElementById("hamburger");
-  const menu = document.querySelector(".navbar ul");
 
-  hamburger.addEventListener("click", () => {
-    menu.classList.toggle("show");
-  });
-</script>
 
   <!-- Contenido principal -->
   <main style="display: flex; justify-content: space-between; max-width: 1200px; margin: 0 auto; gap: 20px;">
@@ -105,6 +101,16 @@
       m.textContent = minutos.toString().padStart(2, '0');
       s.textContent = segundos.toString().padStart(2, '0');
     }, 1000);
+
+
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('mostrar');
+  });
+
+
   </script>
 </body>
 </html>
