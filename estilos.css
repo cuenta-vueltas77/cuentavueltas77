@@ -804,3 +804,50 @@ footer {
     background-color: #e60000;
   }
 }
+/* =======================
+   📱 Ajustes contador en móvil y tablet
+   ======================= */
+@media (max-width: 768px) {
+  .contador-lateral {
+    position: relative !important;
+    width: 90% !important;
+    margin: 20px auto !important;
+    transform: scale(0.85) !important;
+  }
+
+  .digito {
+    width: 70px !important;
+    padding: 4px !important;
+    font-size: 0.9em !important;
+  }
+
+  .digito span {
+    font-size: 1em !important;
+    padding: 3px !important;
+  }
+
+  .digito small {
+    font-size: 0.65em !important;
+  }
+}
+
+/* Ajuste extra para celulares muy chicos */
+@media (max-width: 480px) {
+  .contador-lateral {
+    transform: scale(0.75) !important;
+    padding: 8px !important;
+  }
+
+  .digito {
+    width: 60px !important;
+    font-size: 0.85em !important;
+  }
+
+  .digito span {
+    font-size: 0.95em !important;
+  }
+
+  .digito small {
+    font-size: 0.6em !important;
+  }
+}
