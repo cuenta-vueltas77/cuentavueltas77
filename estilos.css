@@ -592,9 +592,10 @@ footer {
    📱 AJUSTES PARA TABLET Y CELULAR
    ======================= */
 
+
+
 /* 📌 TABLET (pantallas ≤ 768px) */
 @media (max-width: 768px) {
-
 
   /* Navbar */
   .navbar {
@@ -624,14 +625,6 @@ footer {
     max-width: 100%;
     width: 100%;
     margin-top: 20px;
-  }
-
-  /* Contador */
-  .contador-lateral {
-    position: static;
-    width: 95%;
-    margin: 20px auto;
-    transform: scale(1);
   }
 
   /* Fichas de pilotos */
@@ -665,12 +658,6 @@ footer {
     font-size: 16px;
   }
 
-  /* Contador */
-  .digito {
-    width: 70px;
-    font-size: 0.9em;
-  }
-
   /* Categorías */
   .categorias-bar a {
     font-size: 14px;
@@ -685,6 +672,7 @@ footer {
     height: auto;
   }
 }
+
 /* 🔹 Botón hamburguesa (oculto en PC) */
 .menu-toggle {
   display: none !important; /* Oculto por defecto en todas las pantallas */
@@ -729,23 +717,7 @@ footer {
     display: block;
   }
 }
-/* Ajuste contador en tablet y móvil */
-@media (max-width: 768px) {
-  .contenido-principal {
-    display: flex !important;
-    flex-direction: column !important;
-  }
 
-  .contador-lateral {
-    position: relative !important;
-    top: auto !important;
-    right: auto !important;
-    width: 90% !important;
-    margin: 20px auto !important;
-    transform: scale(0.9) !important;
-    order: 3 !important;
-  }
-}
 /* --- MENÚ HAMBURGUESA RESPONSIVE --- */
 .menu-toggle {
   display: none;
@@ -804,42 +776,21 @@ footer {
     background-color: #e60000;
   }
 }
-/* =======================
-   📱 Ajustes contador en móvil y tablet
-   ======================= */
-@media (max-width: 768px) {
-  .contador-lateral {
-    position: relative !important;
-    width: 90% !important;
-    margin: 20px auto !important;
-    transform: scale(0.85) !important;
-  }
 
-  .digito {
-    width: 70px !important;
-    padding: 4px !important;
-    font-size: 0.9em !important;
-  }
-
-  .digito span {
-    font-size: 1em !important;
-    padding: 3px !important;
-  }
-
-  .digito small {
-    font-size: 0.65em !important;
-  }
-}
-
-/* === Contador abajo del contenido y en horizontal === */
+/* ===== CONTADOR DESKTOP ===== */
 .contador-lateral {
   position: fixed;
   top: 160px;
   right: 20px;
-  
 }
 
+/* ===== CONTADOR MOBILE / TABLET ===== */
 @media (max-width: 768px) {
+  .contenido-principal {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
   .contador-lateral {
     position: relative !important;
     top: auto !important;
@@ -850,14 +801,15 @@ footer {
     flex-direction: column !important;
     align-items: center !important;
     order: 3 !important;
+    transform: scale(0.9) !important;
     z-index: 1 !important;
   }
 
   #cuenta-regresiva {
     display: flex !important;
     flex-direction: row !important;
-    flex-wrap: nowrap !important;
     justify-content: center !important;
+    flex-wrap: nowrap !important;
     gap: 8px !important;
     width: 100% !important;
   }
@@ -875,5 +827,16 @@ footer {
 
   .digito small {
     font-size: 0.6em !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .contador-lateral {
+    transform: scale(0.8) !important;
+  }
+
+  .digito {
+    width: 55px !important;
+    font-size: 0.85em !important;
   }
 }
