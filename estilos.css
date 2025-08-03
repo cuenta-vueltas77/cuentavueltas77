@@ -7,14 +7,12 @@
    RESET Y ESTILOS BASE
    ======================= */
 body {
-  padding-top: 100px; /* espacio para navbar fija */
+  padding-top: 100px;
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   color: #222;
-
 }
-
 
 a {
   cursor: pointer;
@@ -88,7 +86,6 @@ a {
   transform: scale(1.05);
 }
 
-/* Botón activo */
 .navbar nav ul li a.activo {
   color: #e60000;
 }
@@ -144,6 +141,70 @@ article em {
   font-size: 14px;
 }
 
+/* =======================
+   CONTADOR LATERAL
+   ======================= */
+.contador-lateral {
+  position: fixed;
+  top: 160px;
+  right: 20px;
+  width: 100%;
+  max-width: 500px;
+  background: #111;
+  border: 2px solid #e60000;
+  border-radius: 6px;
+  padding: 6px;
+  text-align: center;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  transform: scale(0.85);
+  transform-origin: top right;
+}
+
+.contador-lateral h2 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  color: #ff0000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#cuenta-regresiva {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.digito {
+  flex: none;
+  width: 90px;
+  background: #e60000;
+  color: #fff;
+  border-radius: 4px;
+  padding: 4px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+
+.digito span {
+  display: block;
+  font-size: 1.2em;
+  background: #000;
+  padding: 4px;
+  border-radius: 3px;
+  margin-bottom: 2px;
+  letter-spacing: 1px;
+}
+
+.digito small {
+  font-size: 0.65em;
+  color: #ffcccc;
+  letter-spacing: 1px;
+}
 
 /* =======================
    FOOTER
@@ -211,6 +272,7 @@ footer {
     margin-top: 10px;
   }
 }
+
 .ficha-piloto {
   display: flex;
   flex-wrap: wrap;
@@ -248,6 +310,7 @@ footer {
   margin: 8px 0;
   color: #444;
 }
+
 /* Ajuste de imágenes en noticias */
 .contenido {
   max-width: 800px;
@@ -255,58 +318,7 @@ footer {
   padding: 0 20px;
 }
 
-.tarjeta-noticia {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin-bottom: 40px;
-}
-
-.tarjeta-noticia h3 {
-  font-size: 28px;
-  margin-bottom: 15px;
-  color: #e60000;
-  font-family: 'Arial Black', sans-serif;
-  text-transform: uppercase;
-}
-
-.tarjeta-noticia p {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 16px;
-  color: #333;
-}
-
-.imagen-articulo {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-.tarjeta-noticia em {
-  color: #666;
-  font-size: 14px;
-}
-
-.tarjeta-noticia img.imagen-articulo {
-  display: block;
-  max-width: 500px;
-  width: 100%;
-  height: auto;
-  margin: 0 auto 20px auto; /* centra la imagen y deja espacio abajo */
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-/* ======== Estilos para página Historias ======== */
-.contenido-historias {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
+.tarjeta-noticia,
 .tarjeta-historia {
   background-color: #fff;
   border-radius: 12px;
@@ -315,6 +327,7 @@ footer {
   margin-bottom: 40px;
 }
 
+.tarjeta-noticia h3,
 .tarjeta-historia h3 {
   font-size: 28px;
   margin-bottom: 15px;
@@ -323,6 +336,7 @@ footer {
   text-transform: uppercase;
 }
 
+.tarjeta-noticia p,
 .tarjeta-historia p {
   font-size: 18px;
   line-height: 1.6;
@@ -330,145 +344,17 @@ footer {
   color: #333;
 }
 
+.imagen-articulo,
+.tarjeta-noticia img.imagen-articulo,
 .tarjeta-historia img.imagen-historia {
-  display: block;
-  max-width: 500px;
   width: 100%;
   height: auto;
-  margin: 0 auto 20px auto; /* centra la imagen */
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-.tarjeta-historia em {
-  color: #666;
-  font-size: 14px;
-}
-
-/* Estilo para el botón Categorías */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropbtn {
-  background-color: transparent;
-  color: white;
-  padding: 10px 15px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.dropbtn:hover {
-  color: #ff0000; /* Rojo al pasar el mouse */
-}
-
-/* Contenedor del contenido desplegable */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #1a1a1a;
-  min-width: 200px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-  z-index: 1;
-  border-radius: 5px;
-}
-
-/* Links dentro del menú */
-.dropdown-content a {
-  color: white;
-  padding: 10px 15px;
-  text-decoration: none;
-  display: block;
-  transition: background 0.3s;
-}
-
-.dropdown-content a:hover {
-  background-color: #ff0000;
-}
-
-/* Mostrar el menú al pasar el mouse */
-.dropdown:hover .dropdown-content {
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   display: block;
 }
-/* Barra de categorías fija */
-.categorias-bar {
-  background-color: #1a1a1a;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 8px 0;
-  border-top: 2px solid #ff0000;
-  border-bottom: 2px solid #ff0000;
-}
 
-.categorias-bar a {
-  color: white;
-  text-decoration: none;
-  margin: 0 12px;
-  padding: 6px 10px;
-  font-size: 15px;
-  transition: 0.3s;
-}
-
-.categorias-bar a:hover {
-  background-color: #ff0000;
-  border-radius: 4px;
-}
-/* ----- Menú desplegable Categorías ----- */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropbtn {
-  background-color: transparent;
-  color: white;
-  padding: 10px 15px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.dropbtn:hover {
-  color: #ff0000; /* Rojo al pasar el mouse */
-}
-
-/* Contenedor del contenido desplegable */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #1a1a1a;
-  min-width: 200px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-  z-index: 1;
-  border-radius: 5px;
-  top: 100%;
-  left: 0;
-}
-
-/* Links dentro del menú */
-.dropdown-content a {
-  color: white;
-  padding: 10px 15px;
-  text-decoration: none;
-  display: block;
-  transition: background 0.3s;
-}
-
-.dropdown-content a:hover {
-  background-color: #ff0000;
-}
-
-/* Mostrar el menú al pasar el mouse */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
 .contenido-principal {
   display: flex;
   justify-content: space-between;
@@ -483,9 +369,9 @@ footer {
 }
 
 .tabla-posiciones {
-  margin-top: 30px; /* Podés aumentar o reducir este valor */
+  margin-top: 30px;
   flex: 1;
-  max-width: 300px; /* Ajusta el tamaño máximo */
+  max-width: 300px;
 }
 
 .tabla-posiciones img {
@@ -494,6 +380,7 @@ footer {
   border: 2px solid #ff0000;
   border-radius: 5px;
 }
+
 .btn-tabla {
   display: inline-block;
   background-color: #ff0000;
@@ -513,137 +400,8 @@ footer {
   background-color: #fff;
   color: #ff0000;
 }
-/* =======================
-   📱 AJUSTES PARA TABLET Y CELULAR
-   ======================= */
 
-
-
-/* 📌 TABLET (pantallas ≤ 768px) */
-@media (max-width: 768px) {
-
-  /* Navbar */
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    text-align: center;
-  }
-
-  .navbar nav ul {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .logo {
-    height: 70px;
-  }
-
-  /* Contenido principal */
-  .contenido-principal {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .tabla-posiciones {
-    max-width: 100%;
-    width: 100%;
-    margin-top: 20px;
-  }
-
-  /* Fichas de pilotos */
-  .ficha-piloto {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .ficha-piloto img {
-    max-width: 90%;
-  }
-}
-
-/* 📌 CELULAR (pantallas ≤ 480px) */
-@media (max-width: 480px) {
-  /* Texto más pequeño */
-  .navbar h1 {
-    font-size: 24px;
-    text-align: center;
-  }
-
-  article h3,
-  .tarjeta-noticia h3,
-  .tarjeta-historia h3 {
-    font-size: 20px;
-  }
-
-  article p,
-  .tarjeta-noticia p,
-  .tarjeta-historia p {
-    font-size: 16px;
-  }
-
-  /* Categorías */
-  .categorias-bar a {
-    font-size: 14px;
-    margin: 5px;
-    padding: 5px 8px;
-  }
-
-  /* Imágenes noticias e historias */
-  .tarjeta-noticia img.imagen-articulo,
-  .tarjeta-historia img.imagen-historia {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-/* 🔹 Botón hamburguesa (oculto en PC) */
-.menu-toggle {
-  display: none !important; /* Oculto por defecto en todas las pantallas */
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  color: white;
-  background: #e60000;
-  padding: 6px 12px;
-  border-radius: 5px;
-}
-
-/* Ajustes en móvil */
-@media (max-width: 600px) {
-  .menu-toggle {
-    display: block !important;
-    margin-top: 10px;
-  }
-
-  nav {
-    display: none;
-    width: 100%;
-    background-color: #000;
-    margin-top: 10px;
-    text-align: center;
-    border-top: 2px solid #e60000;
-  }
-
-  nav ul {
-    flex-direction: column;
-    padding: 10px 0;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-
-  nav.mostrar {
-    display: block;
-  }
-}
-
-/* --- MENÚ HAMBURGUESA RESPONSIVE --- */
+/* ===== MENÚ HAMBURGUESA ===== */
 .menu-toggle {
   display: none;
   font-size: 28px;
@@ -654,7 +412,6 @@ footer {
   color: #fff;
 }
 
-/* Menú desplegable en móvil */
 @media (max-width: 600px) {
   .menu-toggle {
     display: block;
@@ -701,26 +458,8 @@ footer {
     background-color: #e60000;
   }
 }
-/* ===== CONTADOR ESCRITORIO ===== */
-.contador-lateral {
-  position: fixed;
-  top: 160px;
-  right: 20px;
-  width: 100%;
-  max-width: 500px;
-  background: #111;
-  border: 2px solid #e60000;
-  border-radius: 6px;
-  padding: 6px;
-  text-align: center;
-  color: white;
-  font-family: 'Orbitron', sans-serif;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-  transform: scale(0.85);
-  transform-origin: top right;
-}
 
-/* ===== CONTADOR MOBILE / TABLET ===== */
+/* ===== CONTADOR MOBILE ===== */
 @media (max-width: 768px) {
   .contenido-principal {
     display: flex !important;
@@ -735,6 +474,9 @@ footer {
     margin: 20px auto !important;
     order: 3 !important;
     transform: scale(0.9) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
   }
 
   #cuenta-regresiva {
@@ -768,55 +510,5 @@ footer {
   .digito {
     width: 55px !important;
     font-size: 0.85em !important;
-  }
-}
-@media (max-width: 768px) {
-  .contador-lateral {
-    position: relative !important;
-    top: auto !important;
-    right: auto !important;
-    width: 95% !important;
-    margin: 20px auto !important;
-    order: 3 !important;
-    transform: scale(0.9) !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-  }
-
-  #cuenta-regresiva {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    gap: 8px !important;
-    width: 100% !important;
-  }
-
-  .digito {
-    flex: none !important;
-    width: 65px !important;
-    background: #e60000 !important;
-    color: #fff !important;
-    border-radius: 4px !important;
-    padding: 4px !important;
-    text-align: center !important;
-    font-weight: bold !important;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.4) !important;
-  }
-
-  .digito span {
-    display: block !important;
-    font-size: 1em !important;
-    background: #000 !important;
-    padding: 3px !important;
-    border-radius: 3px !important;
-    margin-bottom: 2px !important;
-    letter-spacing: 1px !important;
-  }
-
-  .digito small {
-    font-size: 0.6em !important;
-    color: #ffcccc !important;
-    letter-spacing: 1px !important;
   }
 }
