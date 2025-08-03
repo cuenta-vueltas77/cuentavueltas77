@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prueba Contador - Cuenta Vueltas 77</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    text-align: center;
+  }
+
+  .contenido-principal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+    gap: 20px;
+  }
+
+  .noticia {
+    flex: 3;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  .contador-lateral {
+    position: fixed;
+    top: 120px;
+    right: 20px;
+    width: 300px;
+    background: #111;
+    border: 2px solid #e60000;
+    border-radius: 6px;
+    padding: 6px;
+    text-align: center;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  .contador-lateral h2 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #ff0000;
+    text-transform: uppercase;
+  }
+
+  #cuenta-regresiva {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+
+  .digito {
+    flex: none;
+    width: 80px;
+    background: #e60000;
+    color: #fff;
+    border-radius: 4px;
+    padding: 4px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  }
+
+  .digito span {
+    display: block;
+    font-size: 1.2em;
+    background: #000;
+    padding: 4px;
+    border-radius: 3px;
+    margin-bottom: 2px;
+    letter-spacing: 1px;
+  }
+
+  .digito small {
+    font-size: 0.65em;
+    color: #ffcccc;
+    letter-spacing: 1px;
+  }
+
+  /* === 📱 Ajuste en móviles === */
+  @media (max-width: 768px) {
+    .contenido-principal {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contador-lateral {
+      position: relative !important;
+      order: 3 !important;
+      width: 95% !important;
+      margin: 20px auto !important;
+      transform: scale(0.9) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+    }
+
+    #cuenta-regresiva {
+      flex-direction: row !important;
+      flex-wrap: nowrap !important;
+      justify-content: center !important;
+      gap: 8px !important;
+      width: 100% !important;
+    }
+
+    .digito {
+      width: 65px !important;
+      padding: 4px !important;
+    }
+
+    .digito span {
+      font-size: 1em !important;
+      padding: 3px !important;
+    }
+
+    .digito small {
+      font-size: 0.6em !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .contador-lateral {
+      transform: scale(0.8) !important;
+    }
+
+    .digito {
+      width: 55px !important;
+      font-size: 0.85em !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="contenido-principal">
+  <div class="noticia">
+    <h3>🚗 Últimas Noticias de la Fecha</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mañana se corre la gran final del campeonato zonal.</p>
+  </div>
+
+  <div class="contador-lateral">
+    <h2>Próxima Carrera</h2>
+    <div id="cuenta-regresiva">
+      <div class="digito"><span>05</span><small>Días</small></div>
+      <div class="digito"><span>12</span><small>Horas</small></div>
+      <div class="digito"><span>45</span><small>Min</small></div>
+      <div class="digito"><span>30</span><small>Seg</small></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
