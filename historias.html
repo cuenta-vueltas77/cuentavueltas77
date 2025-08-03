@@ -7,47 +7,66 @@
   <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
+  <header class="navbar">
+    <div class="logo-nombre">
+      <img src="logo-cuenta-vueltas-encabezado.PNG" alt="Logo Cuenta Vueltas 77" class="logo">
+     
+   <div class="menu-toggle" id="menu-toggle">☰</div>
 
-<!-- Navbar cargada dinámicamente -->
-<div id="navbar"></div>
-
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="pilotos.html">Pilotos</a></li>
+        <li><a href="historias.html" class="activo">Historias</a></li>
+        <li><a href="Categorias.html">Categorias</a></li>
+      </ul>
+    </nav>
+  </header>
 <main class="contenido-historias">
   <article class="tarjeta-historia">
     <h3>La pasión por el automovilismo que se hereda</h3>
     <img src="familia-otero.png" alt="Familia Otero en el automovilismo zonal" class="imagen-historia" />
-    <p>Las categorías zonales no solo destacan por el espectáculo en pista, sino también por las historias que las sostienen. Historias de esfuerzo, herencia y pasión...</p>
+    <p>Las categorías zonales no solo destacan por el espectáculo en pista, sino también por las historias que las sostienen. Historias de esfuerzo, herencia y pasión. En este universo, hay familias que no sólo compiten, sino que viven el automovilismo como una forma de vida. La familia Otero es un ejemplo claro: respiran motores, transitan circuitos y transmiten su amor por las carreras de generación en generación.</p>
+      <p>Marcelo Otero, campeón del Turismo Carretera Austral en 2014, es uno de los protagonistas históricos de la categoría. Hoy, además de seguir compitiendo, volvió a las pistas compartiendo equipo y garaje con su hijo, Miguel Otero, actual referente del TCA y líder del campeonato. A su lado, Leo Otero, hermano de Miguel e hijo de Marcelo, también forma parte del proyecto familiar desde un rol clave: el trabajo mecánico y técnico, fundamental para que los autos rindan al máximo. Y la pasión no termina ahí: Lalo, hermano de Marcelo, también dice presente cada fin de semana en la categoría R12, manteniendo viva la llama de la competencia.</p>
+      <p>La historia de los Otero es mucho más que una sucesión de apellidos en una planilla. Es el retrato de lo que el automovilismo zonal significa para quienes lo sienten desde adentro: una pasión que se transmite en el taller, en la pista, en la radio del auto y en cada abrazo familiar al final de una carrera. Porque en el sur, los motores no sólo rugen en los circuitos: también laten en el corazón de las familias que lo hacen posible.</p></p>
     <p><em>Cuenta Vueltas 77 – Fecha</em></p>
   </article>
 </main>
 
-<footer>
-  <p>&copy; 2025 Cuenta Vueltas 77</p>
+
+   <footer>
+  <p>&copy; 2025 Cuenta Vueltas 77 - </p>
   <div class="redes-sociales">
     <a href="https://instagram.com/cuentavueltas77" target="_blank" class="instagram">📸 Instagram</a>
     <a href="https://facebook.com/cuentavueltas77" target="_blank" class="facebook">📘 Facebook</a>
     <a href="https://tiktok.com/@cuentavueltas77" target="_blank" class="tiktok">🎥 TikTok</a>
     <a href="https://x.com/cuentavueltas77" target="_blank" class="twitter">🐦 Twitter</a>
     <a href="https://youtube.com/@cuentavueltas77" target="_blank" class="youtube">▶️ YouTube</a>
-  </div>
-</footer>
 
+<div id="navbar"></div>
 <script>
   fetch("navbar.html")
     .then(res => res.text())
     .then(data => {
       document.getElementById("navbar").innerHTML = data;
 
-      // Activar hamburguesa
+      // 🔹 Activar el botón hamburguesa una vez insertado el menú
       const toggleBtn = document.getElementById("menu-toggle");
       const menu = document.getElementById("menu");
 
-      if (toggleBtn && menu) {
-        toggleBtn.addEventListener("click", () => {
-          menu.classList.toggle("mostrar");
-        });
-      }
+      toggleBtn.addEventListener("click", () => {
+        menu.classList.toggle("mostrar");
+      });
     });
 </script>
 
+
+
+
+
+  </div>
+</footer>
 </body>
 </html>
