@@ -45,27 +45,6 @@
     <a href="https://x.com/cuentavueltas77" target="_blank" class="twitter">🐦 Twitter</a>
     <a href="https://youtube.com/@cuentavueltas77" target="_blank" class="youtube">▶️ YouTube</a>
 
-<div id="navbar"></div>
-<script>
-  fetch("navbar.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("navbar").innerHTML = data;
-
-      // 🔹 Activar el botón hamburguesa una vez insertado el menú
-      const toggleBtn = document.getElementById("menu-toggle");
-      const menu = document.getElementById("menu");
-
-      toggleBtn.addEventListener("click", () => {
-        menu.classList.toggle("mostrar");
-      });
-    });
-</script>
-
-
-
-
-
   </div>
 </footer>
 </body>
