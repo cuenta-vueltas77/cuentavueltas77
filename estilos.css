@@ -144,81 +144,6 @@ article em {
   font-size: 14px;
 }
 
-/* =======================
-   CONTADOR LATERAL
-   ======================= */
-.contador-lateral {
-  position: fixed;
-  top: 160px; /* 🔹 Antes estaba en 120px */
-  right: 20px;
-  width: 100%;
-  max-width: 500px;
-  background: #111;
-  border: 2px solid #e60000;
-  border-radius: 6px;
-  padding: 6px;
-  text-align: center;
-  color: white;
-  font-family: 'Orbitron', sans-serif;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-  transform: scale(0.85);
-  transform-origin: top right;
-}
-
-
-.contador-lateral h2 {
-  font-size: 1.4em;
-  margin-bottom: 10px;
-  color: #ff0000;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-#cuenta-regresiva {
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-  margin-top: 10px;
-  flex-wrap: wrap;
-}
-
-.digito {
-  flex: none;
-  width: 90px;
-  background: #e60000;
-  color: #fff;
-  border-radius: 4px;
-  padding: 4px;
-  text-align: center;
-  font-weight: bold;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-}
-
-.digito span {
-  display: block;
-  font-size: 1.2em;
-  background: #000;
-  padding: 4px;
-  border-radius: 3px;
-  margin-bottom: 2px;
-  letter-spacing: 1px;
-}
-
-.digito small {
-  font-size: 0.65em;
-  color: #ffcccc;
-  letter-spacing: 1px;
-}
-
-@media (max-width: 768px) {
-  .contador-lateral {
-    position: static;
-    width: 90%;
-    margin: 20px auto;
-    border-left: none;
-    border-top: 5px solid #e60000;
-  }
-}
 
 /* =======================
    FOOTER
@@ -776,12 +701,23 @@ footer {
     background-color: #e60000;
   }
 }
-
-/* ===== CONTADOR DESKTOP ===== */
+/* ===== CONTADOR ESCRITORIO ===== */
 .contador-lateral {
   position: fixed;
   top: 160px;
   right: 20px;
+  width: 100%;
+  max-width: 500px;
+  background: #111;
+  border: 2px solid #e60000;
+  border-radius: 6px;
+  padding: 6px;
+  text-align: center;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  transform: scale(0.85);
+  transform-origin: top right;
 }
 
 /* ===== CONTADOR MOBILE / TABLET ===== */
@@ -797,19 +733,14 @@ footer {
     right: auto !important;
     width: 95% !important;
     margin: 20px auto !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
     order: 3 !important;
     transform: scale(0.9) !important;
-    z-index: 1 !important;
   }
 
   #cuenta-regresiva {
     display: flex !important;
     flex-direction: row !important;
     justify-content: center !important;
-    flex-wrap: nowrap !important;
     gap: 8px !important;
     width: 100% !important;
   }
@@ -817,7 +748,6 @@ footer {
   .digito {
     width: 65px !important;
     padding: 4px !important;
-    text-align: center !important;
   }
 
   .digito span {
@@ -842,29 +772,51 @@ footer {
 }
 @media (max-width: 768px) {
   .contador-lateral {
-    all: unset !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
     width: 95% !important;
     margin: 20px auto !important;
     order: 3 !important;
-    background: #111 !important;
-    border: 2px solid #e60000 !important;
-    padding: 6px !important;
+    transform: scale(0.9) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
   }
 
   #cuenta-regresiva {
     display: flex !important;
     flex-direction: row !important;
     justify-content: center !important;
-    width: 100% !important;
     gap: 8px !important;
+    width: 100% !important;
   }
 
   .digito {
+    flex: none !important;
     width: 65px !important;
+    background: #e60000 !important;
+    color: #fff !important;
+    border-radius: 4px !important;
     padding: 4px !important;
     text-align: center !important;
+    font-weight: bold !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4) !important;
+  }
+
+  .digito span {
+    display: block !important;
+    font-size: 1em !important;
+    background: #000 !important;
+    padding: 3px !important;
+    border-radius: 3px !important;
+    margin-bottom: 2px !important;
+    letter-spacing: 1px !important;
+  }
+
+  .digito small {
+    font-size: 0.6em !important;
+    color: #ffcccc !important;
+    letter-spacing: 1px !important;
   }
 }
