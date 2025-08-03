@@ -7,13 +7,21 @@
   <link rel="stylesheet" href="estilos.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed+2&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
+
 </head>
+
 <body>
   <!-- Header principal -->
   <header class="navbar">
     <div class="logo-nombre">
       <img src="logo-cuenta-vueltas-encabezado.PNG" alt="Logo Cuenta Vueltas 77" class="logo">
-      
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
     </div>
 
      <!-- Botón hamburguesa -->
@@ -103,13 +111,16 @@
     }, 1000);
 
 
-  const menuToggle = document.getElementById('menu-toggle');
-  const menu = document.getElementById('menu');
+ 
+  document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
 
-  menuToggle.addEventListener('click', () => {
-    menu.classList.toggle('mostrar');
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('mostrar');
+    });
   });
-
+</script>
 
   </script>
 </body>
