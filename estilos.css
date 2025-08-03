@@ -354,6 +354,56 @@ footer {
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   display: block;
 }
+.tarjeta-historia {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.tarjeta-historia h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #e60000;
+  font-family: 'Arial Black', sans-serif;
+  text-transform: uppercase;
+}
+
+.tarjeta-historia p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.tarjeta-historia img.imagen-historia {
+  display: block;
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta-historia em {
+  color: #666;
+  font-size: 14px;
+}
+.contenido-historias {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.tarjeta-historia {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 40px;
+}
 
 .contenido-principal {
   display: flex;
@@ -519,4 +569,81 @@ footer {
   .contador-mobile {
     display: block;
   }
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1a1a1a;
+  min-width: 200px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  border-radius: 5px;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: transparent;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.dropbtn:hover {
+  color: #ff0000;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #1a1a1a;
+  min-width: 200px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  border-radius: 5px;
+  padding: 5px 0;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(255, 0, 0, 0.3); /* Rojo al 50% de opacidad */
+  color: #fff;
+}
+.dropdown-content {
+  display: none;
+  flex-direction: column !important; /* 🔹 obliga a formato vertical */
+  text-align: left;
+}
+
+.dropdown-content a {
+  display: block !important;
+  width: 100%;
+  padding: 10px 15px;
+  border-bottom: 1px solid #333;
+  white-space: nowrap;
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;
 }

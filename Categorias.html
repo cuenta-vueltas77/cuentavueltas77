@@ -47,6 +47,28 @@
     <a href="https://tiktok.com/@cuentavueltas77" target="_blank" class="tiktok">🎥 TikTok</a>
     <a href="https://x.com/cuentavueltas77" target="_blank" class="twitter">🐦 Twitter</a>
     <a href="https://youtube.com/@cuentavueltas77" target="_blank" class="youtube">▶️ YouTube</a>
+  
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const dropBtn = document.querySelector(".dropbtn");
+    const dropContent = document.querySelector(".dropdown-content");
+
+    dropBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      dropContent.style.display = 
+        dropContent.style.display === "block" ? "none" : "block";
+    });
+
+    // Cerrar al hacer clic fuera del menú
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(".dropdown")) {
+        dropContent.style.display = "none";
+      }
+    });
+  });
+</script>
+
+  
   </div>
 </footer>
 </body>
