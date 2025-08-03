@@ -746,24 +746,3 @@ footer {
     order: 3 !important;
   }
 }
-
-@media (max-width: 480px) {
-  .contador-lateral {
-    transform: scale(0.8) !important;
-    padding: 10px !important;
-  }
-
-  .digito {
-    width: 65px !important;
-    font-size: 0.9em !important;
-  }
-
-  .digito span {
-    font-size: 1em !important;
-    padding: 3px !important;
-  }
-
-  .digito small {
-    font-size: 0.6em !important;
-  }
-}
