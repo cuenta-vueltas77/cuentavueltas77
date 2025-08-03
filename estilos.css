@@ -831,23 +831,57 @@ footer {
   }
 }
 
-/* Ajuste extra para celulares muy chicos */
-@media (max-width: 480px) {
+/* === Contador abajo del contenido y en horizontal === */
+@media (max-width: 768px) {
+  .contenido-principal {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
   .contador-lateral {
-    transform: scale(0.75) !important;
-    padding: 8px !important;
+    position: relative !important;
+    order: 3 !important; /* se va al final */
+    width: 95% !important;
+    margin: 20px auto !important;
+    transform: scale(0.9) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  #cuenta-regresiva {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    width: 100% !important;
   }
 
   .digito {
-    width: 60px !important;
-    font-size: 0.85em !important;
+    width: 65px !important;
+    padding: 4px !important;
+    text-align: center !important;
   }
 
   .digito span {
-    font-size: 0.95em !important;
+    font-size: 1em !important;
+    padding: 3px !important;
   }
 
   .digito small {
     font-size: 0.6em !important;
   }
 }
+
+@media (max-width: 480px) {
+  .contador-lateral {
+    transform: scale(0.8) !important;
+  }
+
+  .digito {
+    width: 55px !important;
+    font-size: 0.85em !important;
+  }
+}
+
