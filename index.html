@@ -36,6 +36,21 @@
     </nav>
     
   </header>
+  <!-- 🔽 Flecha para móvil -->
+<div class="flecha-movil" onclick="mostrarMenu()">
+  ⬇ Menú
+</div>
+
+<nav class="menu-movil" id="menu-movil">
+  <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="noticias.html">Noticias</a></li>
+    <li><a href="pilotos.html">Pilotos</a></li>
+    <li><a href="historias.html">Historias</a></li>
+    <li><a href="Categorias.html">Categorías</a></li>
+  </ul>
+</nav>
+
 
 
   <!-- Contenido principal -->
@@ -120,6 +135,14 @@
     }, 1000);
 
 
-  </script>
+  
+</script>
+<script>
+  function mostrarMenu() {
+    const menu = document.getElementById("menu-movil");
+    menu.classList.toggle("activo");
+  }
+</script>
+
 </body>
 </html>
