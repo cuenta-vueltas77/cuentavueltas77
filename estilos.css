@@ -840,13 +840,16 @@ footer {
 
   .contador-lateral {
     position: relative !important;
-    order: 3 !important; /* se va al final */
+    top: auto !important;
+    right: auto !important;
     width: 95% !important;
     margin: 20px auto !important;
     transform: scale(0.9) !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
+    order: 3 !important;
+    z-index: 1 !important;
   }
 
   #cuenta-regresiva {
@@ -884,4 +887,3 @@ footer {
     font-size: 0.85em !important;
   }
 }
-
