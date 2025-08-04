@@ -15,15 +15,60 @@
       <img src="logo-cuenta-vueltas-encabezado.PNG" alt="Logo Cuenta Vueltas 77" class="logo">
     
     </div>
+    <!-- 🔽 Flecha para móvil -->
+<div class="flecha-movil" onclick="toggleMenu()">⬇ Menú</div>
     <nav>
+
+      <!-- Menú de escritorio -->
+    <nav class="menu-desktop">
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="noticias.html">Noticias</a></li>
-        <li><a href="pilotos.html" class="activo">Pilotos</a></li>
+        <li><a href="pilotos.html">Pilotos</a></li>
         <li><a href="historias.html">Historias</a></li>
-        <li><a href="Categorias.html">Categorias</a></li>
+        <li><a href="Categorias.html">Categorías </a></li>
+        <li class="dropdown">
+          
+          <div class="dropdown-content">
+            <a href="turismo-carretera-austral.html">Turismo Carretera Austral</a>
+            <a href="tc-patagonico.html">TC Patagónico</a>
+            <a href="monomarca-r12.html">Monomarca R12</a>
+            <a href="tp-gol.html">Turismo Pista Gol 1.6</a>
+            <a href="tp-1100.html">Turismo Pista 1100</a>
+            <a href="karting.html">Karting</a>
+            <a href="safari.html">Safari</a>
+            <a href="sarmiento.html">Sarmiento</a>
+          </div>
+        </li>
       </ul>
     </nav>
+  </header>
+
+  
+<!-- Menú Móvil -->
+    <nav id="menu-movil">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="pilotos.html">Pilotos</a></li>
+        <li><a href="historias.html">Historias</a></li>
+        
+      <li class="submenu-movil">
+  <a href="#" id="btn-categorias-movil">Categorías ▼</a>
+  <ul class="submenu-categorias-movil">
+    <li><a href="turismo-carretera-austral.html">Turismo Carretera Austral</a></li>
+    <li><a href="tc-patagonico.html">TC Patagónico</a></li>
+    <li><a href="monomarca-r12.html">Monomarca R12</a></li>
+    <li><a href="tp-gol.html">Turismo Pista Gol 1.6</a></li>
+    <li><a href="tp-1100.html">Turismo Pista 1100</a></li>
+    <li><a href="karting.html">Karting</a></li>
+    <li><a href="safari.html">Safari</a></li>
+    <li><a href="sarmiento.html">Sarmiento</a></li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+
   </header>
 
   <!-- Contenido principal -->
@@ -69,5 +114,84 @@
       <a href="https://youtube.com/@cuentavueltas77" target="_blank" class="youtube">▶️ YouTube</a>
     </div>
   </footer>
+
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu-movil");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+  </script>
+  <style>
+     /* Estilo simple para la flecha-movil */
+    .flecha-movil {
+      display: none;
+      cursor: pointer;
+      padding: 10px;
+      background-color: #111;
+      color: white;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    #menu-movil {
+      display: none;
+      background-color: #111;
+    }
+
+    #menu-movil ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    #menu-movil li a {
+      display: block;
+      padding: 12px 20px;
+      color: white;
+      text-decoration: none;
+      border-top: 1px solid #222;
+    }
+
+    #menu-movil li a:hover {
+      background-color: #222;
+    }
+
+    @media (max-width: 768px) {
+      .flecha-movil {
+        display: block;
+      }
+
+      nav.menu-desktop {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("menu-movil");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+  }
+
+  // Desplegar submenú en móvil
+  const btnCategoriasMovil = document.getElementById("btn-categorias-movil");
+  const submenuMovil = document.querySelector(".submenu-categorias-movil");
+
+  if (btnCategoriasMovil && submenuMovil) {
+    btnCategoriasMovil.addEventListener("click", function(e) {
+      e.preventDefault();
+      submenuMovil.style.display = submenuMovil.style.display === "block" ? "none" : "block";
+    });
+
+    document.addEventListener("click", function(e) {
+      if (!btnCategoriasMovil.contains(e.target) && !submenuMovil.contains(e.target)) {
+        submenuMovil.style.display = "none";
+      }
+    });
+  }
+</script>
+
 </body>
 </html>

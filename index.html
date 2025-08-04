@@ -35,13 +35,12 @@
       </ul>
     </nav>
     
-  </header>
+ 
   <!-- 🔽 Flecha para móvil -->
-<div class="flecha-movil" onclick="mostrarMenu()">
-  ⬇ Menú
-</div>
+<div class="flecha-movil" onclick="toggleMenu()">⬇ Menú</div>
+ 
 
-<nav class="menu-movil" id="menu-movil">
+<nav id="menu-movil">
   <ul>
     <li><a href="index.html">Inicio</a></li>
     <li><a href="noticias.html">Noticias</a></li>
@@ -50,7 +49,7 @@
     <li><a href="Categorias.html">Categorías</a></li>
   </ul>
 </nav>
-
+</header>
 
 
   <!-- Contenido principal -->
@@ -137,12 +136,15 @@
 
   
 </script>
+<!-- otras partes de la página -->
+
 <script>
-  function mostrarMenu() {
+  function toggleMenu() {
     const menu = document.getElementById("menu-movil");
-    menu.classList.toggle("activo");
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
   }
 </script>
 
 </body>
 </html>
+

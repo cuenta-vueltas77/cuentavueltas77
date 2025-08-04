@@ -5,73 +5,154 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Historias de Vida - Cuenta Vueltas 77</title>
   <link rel="stylesheet" href="estilos.css" />
-</head>
-<body>
+  <!-- Header -->
   <header class="navbar">
     <div class="logo-nombre">
       <img src="logo-cuenta-vueltas-encabezado.PNG" alt="Logo Cuenta Vueltas 77" class="logo">
-     
     </div>
-     <div class="menu-toggle" id="menu-toggle">☰</div>
-  <nav id="menu">
-    
+
+    <!-- Flecha para mostrar el menú en el celular -->
+    <div class="flecha-movil" onclick="toggleMenu()">⬇ Menú</div>
+
+    <!-- Menú Móvil -->
+    <nav id="menu-movil">
       <ul>
-  
-<li><a href="index.html">Inicio</a></li>
-  <li><a href="noticias.html">Noticias</a></li>
-  <li><a href="pilotos.html">Pilotos</a></li>
-  <li><a href="historias.html">Historias</a></li>
-  
-
-<li class="dropdown">
- <a href="#" class="dropbtn">Categorías</a>
-  <div class="dropdown-content">
-  <a href="turismo-carretera-austral.html">Turismo Carretera Austral</a>
-  <a href="tc-patagonico.html">TC Patagonico</a>
-  <a href="monomarca-r12.html">Monomarca R12</a>
-  <a href="tp-gol.html">Turismo Pista Gol 1.6</a>
-  <a href="tp-1100.html">Turismo Pista 1100</a>
-  <a href="karting.html">Karting</a>
-  <a href="safari.html">Safari</a>
-  <a href="sarmiento.html">Sarmiento</a>
-
-  </div>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="pilotos.html">Pilotos</a></li>
+        <li><a href="historias.html">Historias</a></li>
+        
+      <li class="submenu-movil">
+  <a href="#" id="btn-categorias-movil">Categorías</a>
+  <ul class="submenu-categorias-movil">
+    <li><a href="turismo-carretera-austral.html">Turismo Carretera Austral</a></li>
+    <li><a href="tc-patagonico.html">TC Patagónico</a></li>
+    <li><a href="monomarca-r12.html">Monomarca R12</a></li>
+    <li><a href="tp-gol.html">Turismo Pista Gol 1.6</a></li>
+    <li><a href="tp-1100.html">Turismo Pista 1100</a></li>
+    <li><a href="karting.html">Karting</a></li>
+    <li><a href="safari.html">Safari</a></li>
+    <li><a href="sarmiento.html">Sarmiento</a></li>
+  </ul>
 </li>
-</header>
 
+    </nav>
 
+    <!-- Menú de escritorio -->
+    <nav class="menu-desktop">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="pilotos.html">Pilotos</a></li>
+        <li><a href="historias.html">Historias</a></li>
+        <li class="dropdown">
+          <a href="#" id="btn-categorias-movil">Categorías </a>
+          <div class="dropdown-content">
+            <a href="turismo-carretera-austral.html">Turismo Carretera Austral</a>
+            <a href="tc-patagonico.html">TC Patagónico</a>
+            <a href="monomarca-r12.html">Monomarca R12</a>
+            <a href="tp-gol.html">Turismo Pista Gol 1.6</a>
+            <a href="tp-1100.html">Turismo Pista 1100</a>
+            <a href="karting.html">Karting</a>
+            <a href="safari.html">Safari</a>
+            <a href="sarmiento.html">Sarmiento</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Contenido de historias -->
+  </main>
 
   <footer>
-  <p>&copy; 2025 Cuenta Vueltas 77 - </p>
-  <div class="redes-sociales">
-    <a href="https://instagram.com/cuentavueltas77" target="_blank" class="instagram">📸 Instagram</a>
-    <a href="https://facebook.com/cuentavueltas77" target="_blank" class="facebook">📘 Facebook</a>
-    <a href="https://tiktok.com/@cuentavueltas77" target="_blank" class="tiktok">🎥 TikTok</a>
-    <a href="https://x.com/cuentavueltas77" target="_blank" class="twitter">🐦 Twitter</a>
-    <a href="https://youtube.com/@cuentavueltas77" target="_blank" class="youtube">▶️ YouTube</a>
-  
-  <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const dropBtn = document.querySelector(".dropbtn");
-    const dropContent = document.querySelector(".dropdown-content");
+    <p>&copy; 2025 Cuenta Vueltas 77 - </p>
+    <div class="redes-sociales">
+      <a href="https://instagram.com/cuentavueltas77" target="_blank" class="instagram">📸 Instagram</a>
+      <a href="https://facebook.com/cuentavueltas77" target="_blank" class="facebook">📘 Facebook</a>
+      <a href="https://tiktok.com/@cuentavueltas77" target="_blank" class="tiktok">🎥 TikTok</a>
+      <a href="https://x.com/cuentavueltas77" target="_blank" class="twitter">🐦 Twitter</a>
+      <a href="https://youtube.com/@cuentavueltas77" target="_blank" class="youtube">▶️ YouTube</a>
+    </div>
+  </footer>
 
-    dropBtn.addEventListener("click", (e) => {
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu-movil");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+  </script>
+  <style>
+    /* Estilo simple para la flecha-movil */
+    .flecha-movil {
+      display: none;
+      cursor: pointer;
+      padding: 10px;
+      background-color: #111;
+      color: white;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    #menu-movil {
+      display: none;
+      background-color: #111;
+    }
+
+    #menu-movil ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    #menu-movil li a {
+      display: block;
+      padding: 12px 20px;
+      color: white;
+      text-decoration: none;
+      border-top: 1px solid #222;
+    }
+
+    #menu-movil li a:hover {
+      background-color: #222;
+    }
+
+    @media (max-width: 768px) {
+      .flecha-movil {
+        display: block;
+      }
+
+      nav.menu-desktop {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("menu-movil");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+  }
+
+  // Desplegar submenú en móvil
+  const btnCategoriasMovil = document.getElementById("btn-categorias-movil");
+  const submenuMovil = document.querySelector(".submenu-categorias-movil");
+
+  if (btnCategoriasMovil && submenuMovil) {
+    btnCategoriasMovil.addEventListener("click", function(e) {
       e.preventDefault();
-      dropContent.style.display = 
-        dropContent.style.display === "block" ? "none" : "block";
+      submenuMovil.style.display = submenuMovil.style.display === "block" ? "none" : "block";
     });
 
-    // Cerrar al hacer clic fuera del menú
-    document.addEventListener("click", (e) => {
-      if (!e.target.closest(".dropdown")) {
-        dropContent.style.display = "none";
+    document.addEventListener("click", function(e) {
+      if (!btnCategoriasMovil.contains(e.target) && !submenuMovil.contains(e.target)) {
+        submenuMovil.style.display = "none";
       }
     });
-  });
+  }
 </script>
 
-  
-  </div>
-</footer>
 </body>
 </html>
