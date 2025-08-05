@@ -13,66 +13,65 @@
   <header class="navbar">
     <div class="logo-nombre">
       <img src="logo-cuenta-vueltas-encabezado.PNG" alt="Logo Cuenta Vueltas 77" class="logo">
-    
     </div>
-    <!-- 🔽 Flecha para móvil -->
-<div class="flecha-movil" onclick="toggleMenu()">⬇ Menú</div>
-    <nav>
 
-      <!-- Menú de escritorio -->
+    <!-- 🔽 Flecha para móvil -->
+    <div class="flecha-movil" onclick="toggleMenu()">⬇ Menú</div>
+
+    <!-- Menú Móvil -->
+<div id="menu-movil">
+  <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="noticias.html">Noticias</a></li>
+    <li><a href="pilotos.html" class="activo">Pilotos</a></li>
+    <li><a href="historias.html">Historias</a></li>
+    <li class="menu-categorias">
+      <a href="categorias.html">Categorías</a>
+      <span class="desplegar-submenu" onclick="toggleSubmenu()">▼</span>
+      <ul class="submenu-categorias-movil">
+        <li><a href="#">Turismo Carretera Austral</a></li>
+        <li><a href="#">TC Patagónico</a></li>
+        <li><a href="#">Monomarca R12</a></li>
+        <li><a href="#">Turismo Pista Gol 1.6</a></li>
+        <li><a href="#">Turismo Pista 1100</a></li>
+        <li><a href="#">Karting</a></li>
+        <li><a href="#">Safari</a></li>
+        <li><a href="#">Sarmiento</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- Menú de escritorio -->
     <nav class="menu-desktop">
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="noticias.html">Noticias</a></li>
-        <li><a href="pilotos.html">Pilotos</a></li>
+        <li><a href="pilotos.html"class="activo">Pilotos</a></li>
         <li><a href="historias.html">Historias</a></li>
-        <li><a href="Categorias.html">Categorías </a></li>
-        <li class="dropdown">
-          
-          <div class="dropdown-content">
-            <a href="turismo-carretera-austral.html">Turismo Carretera Austral</a>
-            <a href="tc-patagonico.html">TC Patagónico</a>
-            <a href="monomarca-r12.html">Monomarca R12</a>
-            <a href="tp-gol.html">Turismo Pista Gol 1.6</a>
-            <a href="tp-1100.html">Turismo Pista 1100</a>
-            <a href="karting.html">Karting</a>
-            <a href="safari.html">Safari</a>
-            <a href="sarmiento.html">Sarmiento</a>
+       <li class="dropdown">
+  <a href="Categorias.html">Categorías</a>
+  <span class="flecha-desktop" onclick="toggleDropdown()">▼</span>
+  <div class="dropdown-content" id="submenu-desktop">
+    <a href="turismo-carretera-austral.html">Turismo Carretera Austral</a>
+    <a href="tc-patagonico.html">TC Patagónico</a>
+    <a href="monomarca-r12.html">Monomarca R12</a>
+    <a href="tp-gol.html">Turismo Pista Gol 1.6</a>
+    <a href="tp-1100.html">Turismo Pista 1100</a>
+    <a href="karting.html">Karting</a>
+    <a href="safari.html">Safari</a>
+    <a href="sarmiento.html">Sarmiento</a>
+  </div>
+</li>
+
           </div>
         </li>
       </ul>
     </nav>
   </header>
 
-  
-<!-- Menú Móvil -->
-    <nav id="menu-movil">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="noticias.html">Noticias</a></li>
-        <li><a href="pilotos.html">Pilotos</a></li>
-        <li><a href="historias.html">Historias</a></li>
-        
-      <li class="submenu-movil">
-  <a href="#" id="btn-categorias-movil">Categorías ▼</a>
-  <ul class="submenu-categorias-movil">
-    <li><a href="turismo-carretera-austral.html">Turismo Carretera Austral</a></li>
-    <li><a href="tc-patagonico.html">TC Patagónico</a></li>
-    <li><a href="monomarca-r12.html">Monomarca R12</a></li>
-    <li><a href="tp-gol.html">Turismo Pista Gol 1.6</a></li>
-    <li><a href="tp-1100.html">Turismo Pista 1100</a></li>
-    <li><a href="karting.html">Karting</a></li>
-    <li><a href="safari.html">Safari</a></li>
-    <li><a href="sarmiento.html">Sarmiento</a></li>
-  </ul>
-</li>
-    </ul>
-  </nav>
-
-  </header>
-
   <!-- Contenido principal -->
-  <main style="max-width: 800px; margin: 0 auto; padding-top: 40px;">
+  <main class="contenido-pilotos"></main>
     <section class="bienvenida">
       <p>Conocé a los protagonistas del automovilismo chubutense y sus trayectorias en las pistas.</p>
     </section>
@@ -88,8 +87,8 @@
         <p><strong>Auto que maneja:</strong> Toyota Etios</p>
       </div>
     </section>
-   
-     <section class="ficha-piloto">
+
+    <section class="ficha-piloto">
       <img src="marcelo-agrelo.png" alt="Marcelo Agrelo con su Toyota Camry" />
       <div class="info-piloto">
         <h2>Marcelo Agrelo</h2>
@@ -100,8 +99,6 @@
       </div>
     </section>
   </main>
-
-
 
   <!-- Footer -->
   <footer>
@@ -115,82 +112,40 @@
     </div>
   </footer>
 
-
+  <!-- JavaScript -->
   <script>
-    function toggleMenu() {
-      const menu = document.getElementById("menu-movil");
-      menu.style.display = menu.style.display === "block" ? "none" : "block";
-    }
-  </script>
-  <style>
-     /* Estilo simple para la flecha-movil */
-    .flecha-movil {
-      display: none;
-      cursor: pointer;
-      padding: 10px;
-      background-color: #111;
-      color: white;
-      font-size: 1.2rem;
-      text-align: center;
-    }
-
-    #menu-movil {
-      display: none;
-      background-color: #111;
-    }
-
-    #menu-movil ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    #menu-movil li a {
-      display: block;
-      padding: 12px 20px;
-      color: white;
-      text-decoration: none;
-      border-top: 1px solid #222;
-    }
-
-    #menu-movil li a:hover {
-      background-color: #222;
-    }
-
-    @media (max-width: 768px) {
-      .flecha-movil {
-        display: block;
-      }
-
-      nav.menu-desktop {
-        display: none;
-      }
-    }
-  </style>
-</head>
-
-<script>
+  // Abre o cierra el menú móvil al tocar "↓ Menú"
   function toggleMenu() {
     const menu = document.getElementById("menu-movil");
     menu.style.display = menu.style.display === "block" ? "none" : "block";
   }
 
-  // Desplegar submenú en móvil
-  const btnCategoriasMovil = document.getElementById("btn-categorias-movil");
-  const submenuMovil = document.querySelector(".submenu-categorias-movil");
-
-  if (btnCategoriasMovil && submenuMovil) {
-    btnCategoriasMovil.addEventListener("click", function(e) {
-      e.preventDefault();
-      submenuMovil.style.display = submenuMovil.style.display === "block" ? "none" : "block";
-    });
-
-    document.addEventListener("click", function(e) {
-      if (!btnCategoriasMovil.contains(e.target) && !submenuMovil.contains(e.target)) {
-        submenuMovil.style.display = "none";
-      }
-    });
+  // Abre o cierra el submenú al tocar la flechita ▼
+  function toggleSubmenu() {
+    const submenu = document.querySelector(".submenu-categorias-movil");
+    if (submenu) {
+      submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+    }
   }
+
+  // Cierra el submenú si se hace clic afuera
+  document.addEventListener("DOMContentLoaded", function () {
+    const categorias = document.querySelector(".menu-categorias > a");
+    const submenu = document.querySelector(".submenu-categorias-movil");
+    const flechita = document.querySelector(".desplegar-submenu");
+
+    if (categorias && submenu) {
+      document.addEventListener("click", function (e) {
+        if (
+          !categorias.contains(e.target) &&
+          !submenu.contains(e.target) &&
+          !flechita.contains(e.target)
+        ) {
+          submenu.style.display = "none";
+        }
+      });
+    }
+  });
 </script>
 
 </body>

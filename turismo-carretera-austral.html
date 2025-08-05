@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Turismo 1100 - Cuenta Vueltas 77</title>
+  <title>Turismo Carretera Austral - Cuenta Vueltas 77</title>
   <link rel="stylesheet" href="estilos.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed+2&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
-    /* --- Ajustes extra para el botón y margen --- */
     .categoria-info {
       width: 90%;
       margin: 30px auto;
@@ -34,26 +33,83 @@
       background-color: #fff;
       color: #ff0000;
     }
+    
+  @media (max-width: 768px) {
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      height: 100px;
+    }
+
+    main {
+      padding-top: 100px;
+    }
+  }
+</style>
+
   </style>
 </head>
 <body>
-  <!-- Header -->
+
+  <!-- 🟥 HEADER CON MENÚ COMPLETO -->
   <header class="navbar">
     <div class="logo-nombre">
       <img src="logo-cuenta-vueltas-encabezado.PNG" alt="Logo Cuenta Vueltas 77" class="logo">
     </div>
-    <nav>
+
+    <!-- Menú escritorio -->
+    <nav class="menu-escritorio">
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="noticias.html">Noticias</a></li>
         <li><a href="pilotos.html">Pilotos</a></li>
         <li><a href="historias.html">Historias</a></li>
-        <li><a href="Categorias.html">Categorías</a></li>
+        <li class="menu-categorias">
+          <a href="Categorias.html">Categorías</a>
+          <span class="desplegar-submenu" onclick="toggleSubmenu()">▼</span>
+          <ul class="submenu-categorias-movil">
+            <li><a href="turismo-carretera-austral.html">Turismo Carretera Austral</a></li>
+            <li><a href="tc-patagonico.html">TC Patagónico</a></li>
+            <li><a href="monomarca-r12.html">Monomarca R12</a></li>
+            <li><a href="tp-gol.html">Turismo Pista Gol 1.6</a></li>
+            <li><a href="tp-1100.html">Turismo Pista 1100</a></li>
+            <li><a href="karting.html">Karting</a></li>
+            <li><a href="safari.html">Safari</a></li>
+            <li><a href="sarmiento.html">Sarmiento</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
+
+    <!-- Menú móvil -->
+    <div class="flecha-movil" onclick="toggleMenu()">☰ Menú</div>
+    <div id="menu-movil">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="pilotos.html">Pilotos</a></li>
+        <li><a href="historias.html">Historias</a></li>
+        <li class="menu-categorias">
+          <a href="categorias.html">Categorías</a>
+          <span class="desplegar-submenu" onclick="toggleSubmenu()">▼</span>
+          <ul class="submenu-categorias-movil">
+            <li><a href="turismo-carretera-austral.html">Turismo Carretera Austral</a></li>
+            <li><a href="tc-patagonico.html">TC Patagónico</a></li>
+            <li><a href="monomarca-r12.html">Monomarca R12</a></li>
+            <li><a href="tp-gol.html">Turismo Pista Gol 1.6</a></li>
+            <li><a href="tp-1100.html">Turismo Pista 1100</a></li>
+            <li><a href="karting.html">Karting</a></li>
+            <li><a href="safari.html">Safari</a></li>
+            <li><a href="sarmiento.html">Sarmiento</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
   </header>
 
-  <!-- Contenido principal -->
+  <!-- 🔵 CONTENIDO -->
   <section class="categoria-info">
     <h2>Turismo Carretera Austral</h2>
     <p>Aquí podés encontrar noticias, información y resultados de la categoría TC Austral.</p>
@@ -63,8 +119,7 @@
     </a>
   </section>
 
-
- <!-- Footer -->
+  <!-- 🔻 FOOTER -->
   <footer>
     <p>&copy; 2025 Cuenta Vueltas 77</p>
     <div class="redes-sociales">
@@ -75,5 +130,34 @@
       <a href="https://youtube.com/@cuentavueltas77" target="_blank" class="youtube">▶️ YouTube</a>
     </div>
   </footer>
+
+  <!-- ✅ SCRIPT -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu-movil");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+
+    function toggleSubmenu() {
+      document.querySelectorAll(".submenu-categorias-movil").forEach((submenu) => {
+        const visible = submenu.style.display === "block";
+        submenu.style.display = visible ? "none" : "block";
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const submenus = document.querySelectorAll(".submenu-categorias-movil");
+      const flechitas = document.querySelectorAll(".desplegar-submenu");
+      const categorias = document.querySelectorAll(".menu-categorias > a");
+
+      document.addEventListener("click", function (e) {
+        const clickedInside = [...submenus, ...flechitas, ...categorias].some(el => el.contains(e.target));
+        if (!clickedInside) {
+          submenus.forEach(submenu => submenu.style.display = "none");
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>

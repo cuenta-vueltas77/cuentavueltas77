@@ -24,31 +24,58 @@
     </div>
 
   </div>
-
-  <nav id="menu">
-    <ul>
-        <li><a href="index.html" class="activo">Inicio</a></li>
+ <!-- Menú de escritorio -->
+    <nav class="menu-desktop">
+      <ul>
+        <li><a href="index.html"class="activo">Inicio</a></li>
         <li><a href="noticias.html">Noticias</a></li>
         <li><a href="pilotos.html">Pilotos</a></li>
         <li><a href="historias.html">Historias</a></li>
-        <li><a href="Categorias.html">Categorias</a></li>
+        <li class="dropdown">
+  <a href="categorias.html">Categorías</a>
+  <span class="flecha-desktop" onclick="toggleDropdown()">▼</span>
+  <div class="dropdown-content" id="submenu-desktop">
+    <a href="turismo-carretera-austral.html">Turismo Carretera Austral</a>
+    <a href="tc-patagonico.html">TC Patagónico</a>
+    <a href="monomarca-r12.html">Monomarca R12</a>
+    <a href="tp-gol.html">Turismo Pista Gol 1.6</a>
+    <a href="tp-1100.html">Turismo Pista 1100</a>
+    <a href="karting.html">Karting</a>
+    <a href="safari.html">Safari</a>
+    <a href="sarmiento.html">Sarmiento</a>
+  </div>
+</li>
+
       </ul>
     </nav>
-    
  
-  <!-- 🔽 Flecha para móvil -->
+ <!-- 🔽 Flecha para móvil -->
 <div class="flecha-movil" onclick="toggleMenu()">⬇ Menú</div>
- 
 
-<nav id="menu-movil">
+<!-- Menú Móvil -->
+<div id="menu-movil">
   <ul>
     <li><a href="index.html">Inicio</a></li>
     <li><a href="noticias.html">Noticias</a></li>
     <li><a href="pilotos.html">Pilotos</a></li>
     <li><a href="historias.html">Historias</a></li>
-    <li><a href="Categorias.html">Categorías</a></li>
+    <li class="menu-categorias">
+      <a href="Categorias.html">Categorías</a>
+      <span class="desplegar-submenu" onclick="toggleSubmenu()">▼</span>
+      <ul class="submenu-categorias-movil">
+        <li><a href="turismo-carretera-austral.html">Turismo Carretera Austral</a></li>
+        <li><a href="tc-patagonico.html">TC Patagónico</a></li>
+        <li><a href="monomarca-r12.html">Monomarca R12</a></li>
+        <li><a href="tp-gol.html">Turismo Pista Gol 1.6</a></li>
+        <li><a href="tp-1100.html">Turismo Pista 1100</a></li>
+        <li><a href="karting.html">Karting</a></li>
+        <li><a href="safari.html">Safari</a></li>
+        <li><a href="sarmiento.html">Sarmiento</a></li>
+      </ul>
+    </li>
   </ul>
-</nav>
+</div>
+
 </header>
 
 
@@ -83,12 +110,14 @@
   <!-- Contador MÓVIL (nuevo) -->
 <div class="contador-mobile">
   <h2>Fecha 6 - GP Transporte Arias</h2>
-  <div class="cuenta-mobile">
-    <div class="digito"><span>04</span><small>DÍAS</small></div>
-    <div class="digito"><span>11</span><small>HORAS</small></div>
-    <div class="digito"><span>10</span><small>MIN</small></div>
-    <div class="digito"><span>14</span><small>SEG</small></div>
+  <div class="cuenta-mobile cronometro">
+    <div class="digito"><span class="dias">00</span><small>DÍAS</small></div>
+    <div class="digito"><span class="horas">00</span><small>HORAS</small></div>
+    <div class="digito"><span class="minutos">00</span><small>MIN</small></div>
+    <div class="digito"><span class="segundos">00</span><small>SEG</small></div>
   </div>
+</div>
+
 </div>
 
 
@@ -138,11 +167,71 @@
 </script>
 <!-- otras partes de la página -->
 
-<script>
+ <!-- JavaScript -->
+  <script>
+  // Abre o cierra el menú móvil al tocar "↓ Menú"
   function toggleMenu() {
     const menu = document.getElementById("menu-movil");
-    menu.style.display = (menu.style.display === "block") ? "none" : "block";
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
   }
+
+  // Abre o cierra el submenú al tocar la flechita ▼
+  function toggleSubmenu() {
+    const submenu = document.querySelector(".submenu-categorias-movil");
+    if (submenu) {
+      submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+    }
+  }
+
+  // Cierra el submenú si se hace clic afuera
+  document.addEventListener("DOMContentLoaded", function () {
+    const categorias = document.querySelector(".menu-categorias > a");
+    const submenu = document.querySelector(".submenu-categorias-movil");
+    const flechita = document.querySelector(".desplegar-submenu");
+
+    if (categorias && submenu) {
+      document.addEventListener("click", function (e) {
+        if (
+          !categorias.contains(e.target) &&
+          !submenu.contains(e.target) &&
+          !flechita.contains(e.target)
+        ) {
+          submenu.style.display = "none";
+        }
+      });
+    }
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const fechaEvento = new Date("August 08, 2025 10:00:00").getTime();
+
+    setInterval(() => {
+      const ahora = new Date().getTime();
+      const diferencia = fechaEvento - ahora;
+
+      let dias = "00", horas = "00", minutos = "00", segundos = "00";
+
+      if (diferencia > 0) {
+        dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+        horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+        segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+        dias = dias.toString().padStart(2, '0');
+        horas = horas.toString().padStart(2, '0');
+        minutos = minutos.toString().padStart(2, '0');
+        segundos = segundos.toString().padStart(2, '0');
+      }
+
+      // Actualizar TODOS los contadores que tengan las clases correspondientes
+      document.querySelectorAll(".dias").forEach(el => el.textContent = dias);
+      document.querySelectorAll(".horas").forEach(el => el.textContent = horas);
+      document.querySelectorAll(".minutos").forEach(el => el.textContent = minutos);
+      document.querySelectorAll(".segundos").forEach(el => el.textContent = segundos);
+    }, 1000);
+  });
 </script>
 
 </body>

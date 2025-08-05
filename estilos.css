@@ -310,6 +310,26 @@ footer {
   margin: 8px 0;
   color: #444;
 }
+@media (max-width: 768px) {
+  .ficha-piloto {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ficha-piloto img {
+    max-width: 80%;
+  }
+
+  .info-piloto {
+    margin-top: 10px;
+  }
+}
+.contenido-pilotos {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 2px; /* o ajustá según el alto de tu header */
+}
+
 
 /* Ajuste de imágenes en noticias */
 .contenido {
@@ -561,6 +581,9 @@ footer {
   border-radius: 5px;
   padding: 5px 0;
 }
+main {
+  padding-top: 60px;
+}
 
 .dropdown-content a {
   color: white;
@@ -642,6 +665,56 @@ footer {
     background-color: #e60000;
   }
 }
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+@media (min-width: 769px) {
+  main {
+    padding-top: 60px; /* ajustá este valor al alto total del header + submenú */
+  }
+}
+ 
+@media (min-width: 769px) {
+  .submenu-categorias-movil {
+    display: none;
+    position: absolute;
+    background-color: #111;
+    padding: 4px 0;
+    list-style: none;
+    border: 2px solid red;
+    border-radius: 4px;
+    margin-top: 10px;
+    z-index: 999;
+    flex-direction: column;
+    width: 160px;
+  }
+
+  .submenu-categorias-movil li {
+    padding: 3px 8px;
+    line-height: 1.1;
+  }
+
+  .submenu-categorias-movil li a {
+    font-size: 12px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+  }
+
+  .submenu-categorias-movil li a:hover {
+    background-color: #222;
+    color: red;
+  }
+}
+
+.menu-categorias {
+  position: relative;
+}
+
 @media (max-width: 768px) {
   .navbar nav ul {
     flex-direction: column;
@@ -671,16 +744,17 @@ footer {
 .flecha-movil {
   display: none;
   cursor: pointer;
-  padding: 3px 8px;
-  font-size: 14px;
+  padding: 5px 12px;
+  font-size: 16px;
   font-weight: bold;
   background-color: #111;
   color: white;
-  border-radius: 5px;
+  border-radius: 8px;
   text-align: center;
-  margin: 4px auto;
-  max-width: 100px;
+  margin: 8px auto;
+  max-width: 120px;
 }
+
 
 #menu-movil {
   display: none;
@@ -739,12 +813,12 @@ footer {
 .submenu-categorias-movil {
   display: none;
   background-color: #111;
-  padding: 0;
+  padding: 6px;
   list-style: none;
-  border: 1px solid rgb(255, 0, 0);
-  border-radius: 5px;
+  border: 2px solid rgb(255, 0, 0);
+  border-radius: 3px;
   z-index: 999;
-  margin: 0;
+  margin: 6px 0;
 }
 
 .submenu-categorias li,
@@ -757,7 +831,7 @@ footer {
 .submenu-categorias-movil li a {
   color: white;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 13.5px;
 }
 
 .submenu-categorias li a:hover,
@@ -766,5 +840,38 @@ footer {
 }
 
 
+.desplegar-submenu {
+  cursor: pointer;
+  color: red;
+  font-size: 14px;
+  margin-left: 8px;
+}
 
+.categoria-info {
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.bienvenida {
+  margin-top: 100px; /* podés ajustar a 80 o 120 si querés más o menos espacio */
+}
+@media (max-width: 768px) {
+  .bienvenida {
+    margin-top: 100px;
+  }
+}
+.historia {
+  margin-top: 100px;
+}
+@media (max-width: 768px) {
+  .historia {
+    margin-top: 80px;
+  }
+}
+@media (max-width: 768px) {
+  .contenido-historias {
+    padding-top: 20px; /* Ajustá este valor según el alto real de tu header */
+  }
+}
 

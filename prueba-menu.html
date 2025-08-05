@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prueba Menú Móvil</title>
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      font-family: sans-serif;
+    }
+
+    .flecha-movil {
+      display: none;
+      cursor: pointer;
+      padding: 10px;
+      background-color: #222;
+      color: white;
+      text-align: center;
+      max-width: 150px;
+      margin: 10px auto;
+      border-radius: 5px;
+    }
+
+    #menu-movil {
+      display: none;
+      background-color: #000;
+      text-align: center;
+      padding: 10px;
+    }
+
+    #menu-movil ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    #menu-movil ul li {
+      padding: 5px;
+    }
+
+    #menu-movil ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .submenu-categorias-movil {
+      display: none;
+      background-color: #222;
+      border: 1px solid red;
+      padding: 5px;
+    }
+
+    .submenu-categorias-movil li {
+      padding: 5px;
+    }
+
+    .desplegar-submenu {
+      cursor: pointer;
+      color: red;
+      font-size: 14px;
+      margin-left: 6px;
+    }
+
+    @media (max-width: 768px) {
+      .flecha-movil {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="flecha-movil" onclick="toggleMenu()">☰ Menú</div>
+  <div id="menu-movil">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li class="menu-categorias">
+        <a href="#">Categorías</a>
+        <span class="desplegar-submenu" onclick="toggleSubmenu()">▼</span>
+        <ul class="submenu-categorias-movil">
+          <li><a href="#">R12</a></li>
+          <li><a href="#">TP Gol</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu-movil");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+
+    function toggleSubmenu() {
+      const submenu = document.querySelector(".submenu-categorias-movil");
+      submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+    }
+  </script>
+
+</body>
+</html>
