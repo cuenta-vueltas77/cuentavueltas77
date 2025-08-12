@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gran Premio Transportes Arias – Fecha 6 | Cuenta Vueltas 77</title>
+
+  <!-- Esta página está en /notas/, por eso usamos ../ -->
+  <link rel="stylesheet" href="../estilos.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+</head>
+
+<body>
+  <!-- Header principal -->
+  <header class="navbar">
+    <div class="logo-nombre">
+      <img src="../logo-cuenta-vueltas-encabezado.PNG" alt="Logo Cuenta Vueltas 77" class="logo">
+    </div>
+
+    <!-- Menú ESCRITORIO -->
+    <nav class="menu-escritorio">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../noticias.html">Noticias</a></li>
+        <li><a href="../pilotos.html">Pilotos</a></li>
+        <li><a href="../historias.html">Historias</a></li>
+        <li><a href="../labandadelsur.html">La Banda del Sur</a></li>
+
+        
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Menú MÓVIL -->
+    <div class="flecha-movil" onclick="toggleMenu()">☰ Menú</div>
+    <div id="menu-movil">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../noticias.html">Noticias</a></li>
+        <li><a href="../pilotos.html">Pilotos</a></li>
+        <li><a href="../historias.html">Historias</a></li>
+        <li><a href="../labandadelsur.html">La Banda del Sur</a></li>
+       
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Menú móvil -->
+  <div id="menu-movil">
+    <ul>
+      <li><a href="index.html" class="activo">Inicio</a></li>
+      <li><a href="noticias.html">Noticias</a></li>
+      <li><a href="pilotos.html">Pilotos</a></li>
+      <li><a href="historias.html">Historias</a></li>
+      <li class="menu-categorias">
+        <a href="categorias.html">Categorías</a>
+        <span class="desplegar-submenu" onclick="toggleSubmenuMovil()">▼</span>
+        <ul class="submenu-categorias-movil">
+          <li><a href="#">Turismo Carretera Austral</a></li>
+          <li><a href="#">TC Patagónico</a></li>
+          <li><a href="#">Monomarca R12</a></li>
+          <li><a href="#">Turismo Pista Gol 1.6</a></li>
+          <li><a href="#">Turismo Pista 1100</a></li>
+          <li><a href="#">Karting</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Contenido principal -->
+  <main class="nota-layout">
+  <!-- migas opcionales -->
+  <nav class="breadcrumbs">
+    <a href="../index.html">Inicio</a> / El Karting vuelve a la acción – 5ª Fecha
+  </nav>
+
+  <article class="nota-card">
+    <header class="nota-header">
+      <h1 class="nota-titulo">El Karting vuelve a la acción con la 5ª fecha del campeonato</h1>
+      <p class="nota-subtitulo">Kartódromo de Comodoro Rivadavia – Circuito N.º 5 “horario”</p>
+      
+    </header>
+
+    <figure class="nota-media">
+      <img src="../notas/karting-fecha5.png" alt="El karting vuelve a la acción" />
+    <figcaption class="nota-cita-img">Foto: Galar prensa. </figcaption>
+    </figure>
+
+    <section class="nota-cuerpo">
+      <p>Este fin de semana, <strong>16 y 17 de agosto</strong>, el kartódromo de Comodoro volverá a vibrar con la pasión fierrera. Tras el parate por el receso invernal, se disputará la <strong>5ª fecha del campeonato</strong>, enmarcada en la <strong>Copa Transportes Arias</strong>.</p>
+      <p>La competencia se desarrollará en el <strong>circuito N.º 5 “horario”</strong>, con epicentro en el kartódromo de kilómetro 9, y contará con la presencia de las distintas categorías que buscarán sumar puntos clave en la recta final del campeonato.</p>
+      <p>El fin de semana promete grandes duelos en pista y un clima especial para el reencuentro de pilotos, equipos y público, que volverán a vivir la adrenalina del karting en nuestra región.</p>
+    </section>
+  </article>
+</main>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Cuenta Vueltas 77</p>
+    <div class="redes-sociales">
+      <a href="https://instagram.com/cuentavueltas77" target="_blank" class="instagram">📸 Instagram</a>
+      <a href="https://facebook.com/cuentavueltas77" target="_blank" class="facebook">📘 Facebook</a>
+      <a href="https://tiktok.com/@cuentavueltas77" target="_blank" class="tiktok">🎥 TikTok</a>
+      <a href="https://x.com/cuentavueltas77" target="_blank" class="twitter">🐦 Twitter</a>
+      <a href="https://youtube.com/@cuentavueltas77" target="_blank" class="youtube">▶️ YouTube</a>
+    </div>
+  </footer>
+  <script src="menu.js"></script>
+</body>
+</html>
