@@ -1,3 +1,6 @@
+
+
+
 @font-face {
   font-family: 'RaceSport';
   src: url('fuentes/RaceSport.ttf') format('truetype');
@@ -91,17 +94,6 @@ a {
 }
 
 /* =======================
-   SECCIÓN DE BIENVENIDA
-   ======================= */
-.bienvenida {
-  margin-top: 40px;
-  text-align: center;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* =======================
    ARTÍCULOS Y NOTAS
    ======================= */
 article {
@@ -146,7 +138,7 @@ article em {
    ======================= */
 .contador-lateral {
   position: fixed;
-  top: 160px;
+  top: 180px;
   right: 20px;
   width: 100%;
   max-width: 500px;
@@ -352,7 +344,7 @@ footer {
   font-size: 28px;
   margin-bottom: 15px;
   color: #e60000;
-  font-family: 'Arial Black', sans-serif;
+  font-family:'Orbitron', sans-serif;
   text-transform: uppercase;
 }
 
@@ -386,9 +378,31 @@ footer {
   font-size: 28px;
   margin-bottom: 15px;
   color: #e60000;
-  font-family: 'Arial Black', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   text-transform: uppercase;
 }
+.noticia-card__titulo {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  color: #e40000;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  line-height: 1.15;
+  margin: 0 0 10px;
+}
+.noticia-card h2,
+.noticia-card h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.nota-teaser h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #e40000;
+}
+
 
 .tarjeta-historia p {
   font-size: 16px;
@@ -816,7 +830,7 @@ main {
 /* Submenú de categorías */
 .submenu-categorias,
 .submenu-categorias-movil {
-  display: none;
+  display: block;
   background-color: #111;
   padding: 6px;
   list-style: none;
@@ -858,14 +872,6 @@ main {
   text-align: center;
 }
 
-.bienvenida {
-  margin-top: 100px; /* podés ajustar a 80 o 120 si querés más o menos espacio */
-}
-@media (max-width: 768px) {
-  .bienvenida {
-    margin-top: 100px;
-  }
-}
 .historia {
   margin-top: 100px;
 }
@@ -880,3 +886,347 @@ main {
   }
 }
 
+.nota-teaser {
+  background:#111; border:1px solid #333; border-radius:10px;
+  padding:12px 14px; margin:12px 0;
+}
+.nota-teaser .teaser-link {
+  display:block; color:#fff; text-decoration:none;
+}
+.nota-teaser h3 { margin:0 0 6px; line-height:1.2; }
+.nota-teaser p { margin:0 0 10px; color:#cfcfcf; }
+.nota-teaser .leer-mas {
+  font-weight:700; color:#ff2d2d; border-bottom:2px solid #ff2d2d;
+}
+.nota-teaser:hover .leer-mas { transform: translateX(2px); }
+/* ===== Página de nota ===== */
+body { background:#ffffff; color:#000000; font-family:"Saira Condensed", system-ui, sans-serif; }
+h1,h2,h3 { font-family:"Orbitron", sans-serif; letter-spacing:.3px; }
+
+.contenedor { max-width:1200px; margin:0 auto; padding:16px; }
+.migas { margin:8px 0 18px; font-size:.95rem; color:#bdbdbd; }
+.migas a { color:#ff2d2d; text-decoration:none; }
+.migas a:hover { text-decoration:underline; }
+
+.nota-card {
+  background:#ffffff; border:1px solid #2a2a2a; border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.35);
+  padding:22px 24px; margin:0 0 24px;
+}
+.nota-card h1 { margin:0 0 6px; font-size:1.9rem; }
+.nota-meta { margin:0 0 18px; color:#a8a8a8; font-size:.95rem; }
+
+.nota-media img { width:100%; height:auto; display:block; border-radius:12px; }
+.nota-media figcaption { color:#bdbdbd; font-size:.9rem; margin-top:6px; }
+
+.nota-card p { color:#010101; line-height:1.7; font-size:1.05rem; margin:0 0 14px; }
+
+.nota-card a { color:#ff2d2d; text-decoration:none; }
+.nota-card a:hover { text-decoration:underline; }
+
+.btn-volver {
+  display:inline-block; margin-top:6px; padding:10px 14px; border-radius:10px;
+  background:#000; color:#fff; border:1px solid #ff2d2d; font-weight:700;
+}
+.btn-volver:hover { transform:translateY(-1px); }
+
+/* Responsive */
+@media (max-width:768px){
+  .nota-card { padding:16px; border-radius:14px; }
+  .nota-card h1 { font-size:1.6rem; }
+}
+.nota-media {
+  text-align: center; /* centra la imagen y el texto */
+}
+
+.nota-media img {
+  max-width: 700px; /* achica la imagen si es muy grande */
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.nota-media figcaption {
+  font-size: 0.85rem;
+  color: #777; /* gris suave */
+  margin-top: 5px;
+  font-style: italic;
+}
+.notas-categoria, .posiciones-categoria { width:90%; margin: 16px auto 28px; }
+.posiciones-categoria h2 { margin: 0 0 12px; font-family: "Orbitron", sans-serif; }
+
+/* Reusar tu .btn-tabla; si quedó en la parte de arriba, lo movimos acá */
+
+/* Oculto por defecto */
+.dropdown-content { display: none; }
+
+/* (Opcional) si querés abrirlo al pasar el mouse en escritorio, dejá esta */
+.dropdown:hover .dropdown-content { display: block; }
+/* ===== FIX MENÚ CATEGORÍAS ===== */
+/* Cerrado por defecto, sin rectángulos vacíos */
+.submenu-categorias,
+.submenu-categorias-movil {
+  display: none !important;
+}
+
+/* Abrir solo cuando el contenedor tenga la clase .open (la pone el JS) */
+.menu-categorias.open .submenu-categorias-movil { 
+  display: block !important; 
+}
+
+/* Para escritorio: abrir solo cuando .dropdown tenga .open */
+.dropdown .dropdown-content { display: none; }
+.dropdown.open .dropdown-content { display: block; }
+
+/* Opcional: si NO querés que se abra con hover en escritorio, comentá la línea de abajo */
+ /* .dropdown:hover .dropdown-content { display: block; } */
+.menu-categorias { position: relative; }
+.menu-categorias .submenu-categorias-movil{
+  display: none;
+  position: absolute;
+  left: 0; top: 100%;
+  background: #111;
+  border: 1px solid #f00;
+  border-radius: 8px;
+  padding: 6px 0;
+  z-index: 9999; /* evita que algo se superponga */
+}
+.menu-categorias.abierto .submenu-categorias-movil{ display: block; }
+.desplegar-submenu{ background: none; border: 0; cursor: pointer; color: #fff; }
+
+.botones-categorias {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #fff;
+}
+
+.botones-categorias .btn-tabla {
+  display: inline-block;
+  background-color: #ff0000;
+  color: #fff;
+  padding: 10px 16px;
+  margin: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: 2px solid #ff0000;
+  transition: 0.3s;
+}
+
+.botones-categorias .btn-tabla:hover {
+  background-color: #fff;
+  color: #ff0000;
+}
+/* Dar aire bajo el header fijo en móvil */
+@media (max-width: 768px){
+  .botones-categorias{
+    margin-top: 80px;   /* probá entre 110–140 según la altura real del header */
+  }
+}
+
+/* Estilo unificado para el menú móvil */
+#menu-movil ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#menu-movil ul li {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#menu-movil ul li a {
+  display: block;
+  padding: 10px;
+  background-color: #000;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 1px solid red;
+}
+
+#menu-movil ul li a:hover {
+  background-color: red;
+  color: white;
+}
+
+/* Submenú (La Banda del Sur) */
+#menu-movil ul li ul {
+  display: none;
+  background-color: #111;
+  padding: 0;
+}
+
+#menu-movil ul li ul li a {
+  background-color: #111;
+  border-left: 3px solid red;
+  padding-left: 15px;
+}
+
+#menu-movil ul li ul li a:hover {
+  background-color: red;
+}
+
+/* Mostrar submenú al abrir */
+#menu-movil ul li.activo > ul {
+  display: block;
+}
+
+/* --- Bienvenida (limpio y mobile-first) --- */
+.bienvenida{
+  text-align:center;
+  max-width:800px;
+  margin:24px auto 0;     /* desktop: un poco de aire */
+}
+
+/* Títulos dentro de bienvenida sin margen arriba */
+.bienvenida h1,
+.bienvenida h2{
+  margin-top:0;
+}
+
+/* Botonera: aire justo debajo en móvil */
+@media (max-width:768px){
+  .botones-categorias{
+    margin-top:120px;     /* despega del header fijo */
+    padding-bottom:6px;   /* recorta aire propio */
+    margin-bottom:0;
+  }
+  .bienvenida{
+    margin-top:10px !important;  /* quita el hueco grande */
+  }
+}
+/* Tarjeta "Últimas noticias" */
+.noticia-card {
+  display: block;
+  text-decoration: none;
+  background: #0e0e0e;
+  border-radius: 16px;
+  padding: 22px 22px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.3);
+  transition: transform .15s ease, box-shadow .15s ease;
+  margin: 18px 0;
+}
+.noticia-card:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,.35); }
+
+.noticia-card__titulo {
+  font-family: 'Orbitron', sans-serif;
+  color: #e40000;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  line-height: 1.15;
+  margin: 0 0 10px;
+}
+.noticia-card__bajada {
+  color: #ddd;
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 1.1rem;
+  margin: 0 0 12px;
+}
+.noticia-card__leer {
+  color: #ff3b3b;
+  text-decoration: underline;
+  font-weight: 700;
+  font-family: 'Saira Condensed', sans-serif;
+}
+/* ===== Estilo de nota clara (como "GP Transportes Arias – Fecha 6") ===== */
+.nota-layout {
+  margin-top: 5px;                /* separa del header fijo */
+  width: 100%;
+}
+
+.breadcrumbs {
+  width: 92%;
+  max-width: 1200px;
+  margin: 0 auto 10px;
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 0.98rem;
+  color: #a0a0a0;
+}
+.breadcrumbs a { color: #e40000; text-decoration: none; }
+.breadcrumbs a:hover { text-decoration: underline; }
+
+.nota-card {
+  width: 92%;
+  max-width: 1200px;
+  margin: 0 auto 50px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.12);
+  padding: 28px;
+  border: 1px solid rgba(0,0,0,0.06); /* leve borde como en el ejemplo */
+}
+
+.nota-titulo {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  color: #121212;                  /* título negro */
+  letter-spacing: .2px;
+  line-height: 1.15;
+  font-size: clamp(28px, 2.2vw + 14px, 46px);
+  margin: 0 0 4px;
+}
+
+.nota-subtitulo {
+  font-family: 'Saira Condensed', sans-serif;
+  color: #3a3a3a;                  /* gris oscuro como en el ejemplo */
+  font-size: 1.25rem;
+  margin: 0 0 14px;
+}
+
+.nota-fecha {
+  font-family: 'Saira Condensed', sans-serif;
+  color: #8f8f8f;
+  font-size: 0.98rem;
+  margin: 0 0 10px;
+}
+
+.nota-media {
+  display: block; /* en vez de flex */
+  text-align: center; /* centra la imagen y el texto */
+  margin: 10px 0 20px;
+}
+
+.nota-media img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.nota-cita-img {
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 0.85rem;
+  color: #8f8f8f; /* gris claro */
+  margin-top: 4px;
+}
+
+
+.nota-cuerpo p {
+  font-family: 'Saira Condensed', sans-serif;
+  color: #202020;
+  font-size: 1.18rem;
+  line-height: 1.65;
+  max-width: 980px;                /* alinea con imagen */
+  margin: 0 auto 14px;             /* centrado como el ejemplo */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nota-card { padding: 18px; border-radius: 14px; }
+  .nota-subtitulo { font-size: 1.1rem; }
+  .nota-cuerpo p { font-size: 1.06rem; }
+}
+.nota-cita-img {
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 0.85rem;
+  color: #8f8f8f; /* gris claro */
+  text-align: center;
+  margin-top: 4px;
+}

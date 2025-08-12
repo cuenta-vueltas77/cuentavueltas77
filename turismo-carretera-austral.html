@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Turismo Carretera Austral - Cuenta Vueltas 77</title>
+  <title>Turismo 1100 - Cuenta Vueltas 77</title>
   <link rel="stylesheet" href="estilos.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed+2&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
+    /* --- Ajustes extra para el botón y margen --- */
     .categoria-info {
       width: 90%;
       margin: 30px auto;
@@ -33,8 +34,7 @@
       background-color: #fff;
       color: #ff0000;
     }
-    
-  @media (max-width: 768px) {
+     @media (max-width: 768px) {
     .navbar {
       position: fixed;
       top: 0;
@@ -47,79 +47,85 @@
       padding-top: 100px;
     }
   }
-</style>
-
   </style>
 </head>
 <body>
+  <!-- Header -->
+ <!-- Header con menú completo -->
+<header class="navbar">
+  <div class="logo-nombre">
+    <img src="logo-cuenta-vueltas-encabezado.PNG" alt="Logo Cuenta Vueltas 77" class="logo">
+  </div>
 
-  <!-- 🟥 HEADER CON MENÚ COMPLETO -->
-  <header class="navbar">
-    <div class="logo-nombre">
-      <img src="logo-cuenta-vueltas-encabezado.PNG" alt="Logo Cuenta Vueltas 77" class="logo">
-    </div>
+  <!-- Menú escritorio -->
+  <nav class="menu-escritorio">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="noticias.html">Noticias</a></li>
+      <li><a href="pilotos.html">Pilotos</a></li>
+      <li><a href="historias.html">Historias</a></li>
+      <li><a href="labandadelsur.html">La Banda del Sur</a></li>
+    </ul>
+  </nav>
 
-    <!-- Menú escritorio -->
-    <nav class="menu-escritorio">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="noticias.html">Noticias</a></li>
-        <li><a href="pilotos.html">Pilotos</a></li>
-        <li><a href="historias.html">Historias</a></li>
-        <li class="menu-categorias">
-          <a href="Categorias.html">Categorías</a>
-          <span class="desplegar-submenu" onclick="toggleSubmenu()">▼</span>
-          <ul class="submenu-categorias-movil">
-            <li><a href="turismo-carretera-austral.html">Turismo Carretera Austral</a></li>
-            <li><a href="tc-patagonico.html">TC Patagónico</a></li>
-            <li><a href="monomarca-r12.html">Monomarca R12</a></li>
-            <li><a href="tp-gol.html">Turismo Pista Gol 1.6</a></li>
-            <li><a href="tp-1100.html">Turismo Pista 1100</a></li>
-            <li><a href="karting.html">Karting</a></li>
-            <li><a href="safari.html">Safari</a></li>
-            <li><a href="sarmiento.html">Sarmiento</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
+  <!-- Menú móvil -->
+  <div class="flecha-movil" onclick="toggleMenu()">☰ Menú</div>
+  <div id="menu-movil">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="noticias.html">Noticias</a></li>
+      <li><a href="pilotos.html">Pilotos</a></li>
+      <li><a href="historias.html">Historias</a></li>
+      
+    </ul>
+  </div>
+</header>
+<div class="botones-categorias">
+  <a href="turismo-carretera-austral.html#tabla" class="btn-tabla">Turismo Carretera Austral</a>
+  <a href="tc-patagonico.html#tabla" class="btn-tabla">TC Patagónico</a>
+  <a href="monomarca-r12.html#tabla" class="btn-tabla">Monomarca R12</a>
+  <a href="tp-gol.html#tabla" class="btn-tabla">Turismo Pista Gol 1.6</a>
+  <a href="tp-1100.html#tabla" class="btn-tabla">Turismo Pista 1100</a>
+  <a href="karting.html#tabla" class="btn-tabla">Karting</a>
+</div>
 
-    <!-- Menú móvil -->
-    <div class="flecha-movil" onclick="toggleMenu()">☰ Menú</div>
-    <div id="menu-movil">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="noticias.html">Noticias</a></li>
-        <li><a href="pilotos.html">Pilotos</a></li>
-        <li><a href="historias.html">Historias</a></li>
-        <li class="menu-categorias">
-          <a href="Categorias.html">Categorías</a>
-          <span class="desplegar-submenu" onclick="toggleSubmenu()">▼</span>
-          <ul class="submenu-categorias-movil">
-            <li><a href="turismo-carretera-austral.html">Turismo Carretera Austral</a></li>
-            <li><a href="tc-patagonico.html">TC Patagónico</a></li>
-            <li><a href="monomarca-r12.html">Monomarca R12</a></li>
-            <li><a href="tp-gol.html">Turismo Pista Gol 1.6</a></li>
-            <li><a href="tp-1100.html">Turismo Pista 1100</a></li>
-            <li><a href="karting.html">Karting</a></li>
-            <li><a href="safari.html">Safari</a></li>
-            <li><a href="sarmiento.html">Sarmiento</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </header>
 
-  <!-- 🔵 CONTENIDO -->
+  <!-- Contenido principal -->
   <section class="categoria-info">
     <h2>Turismo Carretera Austral</h2>
-    <p>Aquí podés encontrar noticias, información y resultados de la categoría TC Austral.</p>
+    <p>Aquí podés encontrar noticias, información y resultados de la categoría TCA.</p>
 
-    <a href="https://fcha.org.ar/wp-content/uploads/ranking/FChA-Pista-2025-5-Puntos-TCA.pdf" target="_blank" class="btn-tabla">
-      Ver Tabla de Posiciones Oficial
-    </a>
+    
   </section>
+<!-- NOTAS DE LA CATEGORÍA -->
+<section class="notas-categoria">
+  <h2>Notas de la categoría</h2>
 
-  <!-- 🔻 FOOTER -->
+  <!-- Tarjeta/teaser de la nota -->
+  <article class="nota-teaser">
+    <a class="teaser-link" href="notas/tc-austral-fecha6.html">
+
+      <h3>Larreguy se llevó una final con golpes de escena</h3>
+      <p>En una final accidentada completo el podio Marcelo Otero y Lola Enrrico.</p>
+      <span class="leer-mas">Leer nota ➜</span>
+    </a>
+  </article>
+
+  <!-- Duplicá más tarjetas si querés -->
+</section>
+<section class="posiciones-categoria">
+  <h2>Tabla de posiciones</h2>
+
+  <!-- Botón a PDF oficial -->
+  <a href="https://fcha.org.ar/wp-content/uploads/ranking/FChA-Pista-2025-5-Puntos-TCA.pdf"
+     target="_blank" class="btn-tabla">
+    Ver tabla de posiciones oficial
+  </a>
+
+  
+</section>
+
+ <!-- Footer -->
   <footer>
     <p>&copy; 2025 Cuenta Vueltas 77</p>
     <div class="redes-sociales">
@@ -128,36 +134,41 @@
       <a href="https://tiktok.com/@cuentavueltas77" target="_blank" class="tiktok">🎥 TikTok</a>
       <a href="https://x.com/cuentavueltas77" target="_blank" class="twitter">🐦 Twitter</a>
       <a href="https://youtube.com/@cuentavueltas77" target="_blank" class="youtube">▶️ YouTube</a>
+    
+    
     </div>
   </footer>
 
-  <!-- ✅ SCRIPT -->
   <script>
-    function toggleMenu() {
-      const menu = document.getElementById("menu-movil");
-      menu.style.display = menu.style.display === "block" ? "none" : "block";
-    }
+  
+  function toggleMenu() {
+    const menu = document.getElementById("menu-movil");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+  }
 
-    function toggleSubmenu() {
-      document.querySelectorAll(".submenu-categorias-movil").forEach((submenu) => {
-        const visible = submenu.style.display === "block";
-        submenu.style.display = visible ? "none" : "block";
-      });
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
-      const submenus = document.querySelectorAll(".submenu-categorias-movil");
-      const flechitas = document.querySelectorAll(".desplegar-submenu");
-      const categorias = document.querySelectorAll(".menu-categorias > a");
-
-      document.addEventListener("click", function (e) {
-        const clickedInside = [...submenus, ...flechitas, ...categorias].some(el => el.contains(e.target));
-        if (!clickedInside) {
-          submenus.forEach(submenu => submenu.style.display = "none");
-        }
-      });
+  function toggleSubmenu() {
+    document.querySelectorAll(".submenu-categorias-movil").forEach((submenu) => {
+      const visible = submenu.style.display === "block";
+      submenu.style.display = visible ? "none" : "block";
     });
-  </script>
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const submenus = document.querySelectorAll(".submenu-categorias-movil");
+    const flechitas = document.querySelectorAll(".desplegar-submenu");
+    const categorias = document.querySelectorAll(".menu-categorias > a");
+
+    document.addEventListener("click", function (e) {
+      const clickedInside = [...submenus, ...flechitas, ...categorias].some(el => el.contains(e.target));
+      if (!clickedInside) {
+        submenus.forEach(submenu => submenu.style.display = "none");
+      }
+    });
+  });
+</script>
+
+
+
 
 </body>
 </html>

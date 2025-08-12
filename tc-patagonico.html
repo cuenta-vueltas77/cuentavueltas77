@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TC Patagónico - Cuenta Vueltas 77</title>
+  <title>Turismo 1100 - Cuenta Vueltas 77</title>
   <link rel="stylesheet" href="estilos.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed+2&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
+    /* --- Ajustes extra para el botón y margen --- */
     .categoria-info {
       width: 90%;
       margin: 30px auto;
@@ -33,8 +34,7 @@
       background-color: #fff;
       color: #ff0000;
     }
-    
-  @media (max-width: 768px) {
+     @media (max-width: 768px) {
     .navbar {
       position: fixed;
       top: 0;
@@ -47,12 +47,11 @@
       padding-top: 100px;
     }
   }
-
   </style>
 </head>
 <body>
-
-<!-- 🟥 HEADER CON MENÚ COMPLETO -->
+  <!-- Header -->
+ <!-- Header con menú completo -->
 <header class="navbar">
   <div class="logo-nombre">
     <img src="logo-cuenta-vueltas-encabezado.PNG" alt="Logo Cuenta Vueltas 77" class="logo">
@@ -65,20 +64,7 @@
       <li><a href="noticias.html">Noticias</a></li>
       <li><a href="pilotos.html">Pilotos</a></li>
       <li><a href="historias.html">Historias</a></li>
-      <li class="menu-categorias">
-        <a href="Categorias.html">Categorías</a>
-        <span class="desplegar-submenu" onclick="toggleSubmenu()">▼</span>
-        <ul class="submenu-categorias-movil">
-          <li><a href="turismo-carretera-austral.html">Turismo Carretera Austral</a></li>
-          <li><a href="tc-patagonico.html">TC Patagónico</a></li>
-          <li><a href="monomarca-r12.html">Monomarca R12</a></li>
-          <li><a href="tp-gol.html">Turismo Pista Gol 1.6</a></li>
-          <li><a href="tp-1100.html">Turismo Pista 1100</a></li>
-          <li><a href="karting.html">Karting</a></li>
-          <li><a href="safari.html">Safari</a></li>
-          <li><a href="sarmiento.html">Sarmiento</a></li>
-        </ul>
-      </li>
+      <li><a href="labandadelsur.html">La Banda del Sur</a></li>
     </ul>
   </nav>
 
@@ -90,48 +76,71 @@
       <li><a href="noticias.html">Noticias</a></li>
       <li><a href="pilotos.html">Pilotos</a></li>
       <li><a href="historias.html">Historias</a></li>
-      <li class="menu-categorias">
-        <a href="Categorias.html">Categorías</a>
-        <span class="desplegar-submenu" onclick="toggleSubmenu()">▼</span>
-        <ul class="submenu-categorias-movil">
-          <li><a href="turismo-carretera-austral.html">Turismo Carretera Austral</a></li>
-          <li><a href="tc-patagonico.html">TC Patagónico</a></li>
-          <li><a href="monomarca-r12.html">Monomarca R12</a></li>
-          <li><a href="tp-gol.html">Turismo Pista Gol 1.6</a></li>
-          <li><a href="tp-1100.html">Turismo Pista 1100</a></li>
-          <li><a href="karting.html">Karting</a></li>
-          <li><a href="safari.html">Safari</a></li>
-          <li><a href="sarmiento.html">Sarmiento</a></li>
-        </ul>
-      </li>
+      
     </ul>
   </div>
 </header>
+<div class="botones-categorias">
+  <a href="turismo-carretera-austral.html#tabla" class="btn-tabla">Turismo Carretera Austral</a>
+  <a href="tc-patagonico.html#tabla" class="btn-tabla">TC Patagónico</a>
+  <a href="monomarca-r12.html#tabla" class="btn-tabla">Monomarca R12</a>
+  <a href="tp-gol.html#tabla" class="btn-tabla">Turismo Pista Gol 1.6</a>
+  <a href="tp-1100.html#tabla" class="btn-tabla">Turismo Pista 1100</a>
+  <a href="karting.html#tabla" class="btn-tabla">Karting</a>
+</div>
 
-<!-- 🔵 CONTENIDO PRINCIPAL -->
-<section class="categoria-info">
-  <h2>Turismo Carretera Patagónico</h2>
-  <p>Aquí podés encontrar noticias, información y resultados de la categoría TC Patagónico.</p>
 
-  <a href="https://fcha.org.ar/wp-content/uploads/ranking/FChA-Pista-2025-5-Puntos-TCP.pdf" target="_blank" class="btn-tabla">
-    Ver Tabla de Posiciones Oficial
+  <!-- Contenido principal -->
+  <section class="categoria-info">
+    <h2>Turismo Carretera Patagonico</h2>
+    <p>Aquí podés encontrar noticias, información y resultados de la categoría TCP.</p>
+
+    
+  </section>
+<!-- NOTAS DE LA CATEGORÍA -->
+<section class="notas-categoria">
+  <h2>Notas de la categoría</h2>
+
+  <!-- Tarjeta/teaser de la nota -->
+  <article class="nota-teaser">
+    <a class="teaser-link" href="notas/tcp-fecha6.html">
+
+      <h3> Oliver sumó otra victoria y sigue firme en el campeonato</h3>
+      <p>Completaron el podio Emiliano Lopez y Laudonio Marcos. </p>
+      <span class="leer-mas">Leer nota ➜</span>
+    </a>
+  </article>
+
+  <!-- Duplicá más tarjetas si querés -->
+</section>
+<section class="posiciones-categoria">
+  <h2>Tabla de posiciones</h2>
+
+  <!-- Botón a PDF oficial -->
+  <a href="https://fcha.org.ar/wp-content/uploads/ranking/FChA-Pista-2025-5-Puntos-TCP_.pdf"
+     target="_blank" class="btn-tabla">
+    Ver tabla de posiciones oficial
   </a>
+
+  
 </section>
 
-<!-- 🔻 FOOTER -->
-<footer>
-  <p>&copy; 2025 Cuenta Vueltas 77</p>
-  <div class="redes-sociales">
-    <a href="https://instagram.com/cuentavueltas77" target="_blank" class="instagram">📸 Instagram</a>
-    <a href="https://facebook.com/cuentavueltas77" target="_blank" class="facebook">📘 Facebook</a>
-    <a href="https://tiktok.com/@cuentavueltas77" target="_blank" class="tiktok">🎥 TikTok</a>
-    <a href="https://x.com/cuentavueltas77" target="_blank" class="twitter">🐦 Twitter</a>
-    <a href="https://youtube.com/@cuentavueltas77" target="_blank" class="youtube">▶️ YouTube</a>
-  </div>
-</footer>
+ <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Cuenta Vueltas 77</p>
+    <div class="redes-sociales">
+      <a href="https://instagram.com/cuentavueltas77" target="_blank" class="instagram">📸 Instagram</a>
+      <a href="https://facebook.com/cuentavueltas77" target="_blank" class="facebook">📘 Facebook</a>
+      <a href="https://tiktok.com/@cuentavueltas77" target="_blank" class="tiktok">🎥 TikTok</a>
+      <a href="https://x.com/cuentavueltas77" target="_blank" class="twitter">🐦 Twitter</a>
+      <a href="https://youtube.com/@cuentavueltas77" target="_blank" class="youtube">▶️ YouTube</a>
+    
+    
+    </div>
+  </footer>
 
-<!-- ✅ SCRIPT FINAL -->
-<script>
+  <script>
+  
   function toggleMenu() {
     const menu = document.getElementById("menu-movil");
     menu.style.display = menu.style.display === "block" ? "none" : "block";
@@ -156,21 +165,10 @@
       }
     });
   });
-  
-  function toggleDropdown() {
-    const submenu = document.getElementById("submenu-desktop");
-    submenu.style.display = submenu.style.display === "block" ? "none" : "block";
-
-    // Agregar clase al body si el menú está abierto
-    if (submenu.style.display === "block") {
-      document.body.classList.add("submenu-abierto");
-    } else {
-      document.body.classList.remove("submenu-abierto");
-    }
-  }
 </script>
 
-</script>
+
+
 
 </body>
 </html>

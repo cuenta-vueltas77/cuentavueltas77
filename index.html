@@ -24,59 +24,40 @@
     </div>
 
   </div>
- <!-- Menú de escritorio -->
-    <nav class="menu-desktop">
-      <ul>
-        <li><a href="index.html"class="activo">Inicio</a></li>
-        <li><a href="noticias.html">Noticias</a></li>
-        <li><a href="pilotos.html">Pilotos</a></li>
-        <li><a href="historias.html">Historias</a></li>
-        <li class="dropdown">
-  <a href="Categorias.html">Categorías</a>
-  <span class="flecha-desktop" onclick="toggleDropdown()">▼</span>
-  <div class="dropdown-content" id="submenu-desktop">
-    <a href="turismo-carretera-austral.html">Turismo Carretera Austral</a>
-    <a href="tc-patagonico.html">TC Patagónico</a>
-    <a href="monomarca-r12.html">Monomarca R12</a>
-    <a href="tp-gol.html">Turismo Pista Gol 1.6</a>
-    <a href="tp-1100.html">Turismo Pista 1100</a>
-    <a href="karting.html">Karting</a>
-    <a href="safari.html">Safari</a>
-    <a href="sarmiento.html">Sarmiento</a>
+ <!-- Menú escritorio -->
+  <nav class="menu-escritorio">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="noticias.html">Noticias</a></li>
+      <li><a href="pilotos.html">Pilotos</a></li>
+      <li><a href="historias.html">Historias</a></li>
+      <li><a href="labandadelsur.html">La Banda del Sur</a></li>
+    </ul>
+  </nav>
+
+  <!-- Menú móvil -->
+  <div class="flecha-movil" onclick="toggleMenu()">☰ Menú</div>
+  <div id="menu-movil">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="noticias.html">Noticias</a></li>
+      <li><a href="pilotos.html">Pilotos</a></li>
+      <li><a href="historias.html">Historias</a></li>
+      <li><a href="labandadelsur.html">La Banda del Sur</a></li>
+    
+    
+    </ul>
   </div>
-</li>
-
-      </ul>
-    </nav>
- 
- <!-- 🔽 Flecha para móvil -->
-<div class="flecha-movil" onclick="toggleMenu()">⬇ Menú</div>
-
-<!-- Menú Móvil -->
-<div id="menu-movil">
-  <ul>
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="noticias.html">Noticias</a></li>
-    <li><a href="pilotos.html">Pilotos</a></li>
-    <li><a href="historias.html">Historias</a></li>
-    <li class="menu-categorias">
-      <a href="Categorias.html">Categorías</a>
-      <span class="desplegar-submenu" onclick="toggleSubmenu()">▼</span>
-      <ul class="submenu-categorias-movil">
-        <li><a href="turismo-carretera-austral.html">Turismo Carretera Austral</a></li>
-        <li><a href="tc-patagonico.html">TC Patagónico</a></li>
-        <li><a href="monomarca-r12.html">Monomarca R12</a></li>
-        <li><a href="tp-gol.html">Turismo Pista Gol 1.6</a></li>
-        <li><a href="tp-1100.html">Turismo Pista 1100</a></li>
-        <li><a href="karting.html">Karting</a></li>
-        <li><a href="safari.html">Safari</a></li>
-        <li><a href="sarmiento.html">Sarmiento</a></li>
-      </ul>
-    </li>
-  </ul>
+</header>
+<div class="botones-categorias">
+  <a href="turismo-carretera-austral.html#tabla" class="btn-tabla">Turismo Carretera Austral</a>
+  <a href="tc-patagonico.html#tabla" class="btn-tabla">TC Patagónico</a>
+  <a href="monomarca-r12.html#tabla" class="btn-tabla">Monomarca R12</a>
+  <a href="tp-gol.html#tabla" class="btn-tabla">Turismo Pista Gol 1.6</a>
+  <a href="tp-1100.html#tabla" class="btn-tabla">Turismo Pista 1100</a>
+  <a href="karting.html#tabla" class="btn-tabla">Karting</a>
 </div>
 
-</header>
 
 
   <!-- Contenido principal -->
@@ -88,16 +69,53 @@
         <p><em>Noticias, historias y pasión fierrera desde el corazón del sur argentino</em></p>
       </section>
 
+      
       <h2>Últimas noticias</h2>
-      <article>
-        <h3>Renzo Blotta vuelve a la acción este fin de semana en el Turismo Nacional Clase 2</h3>
-        <p>El piloto de Comodoro Rivadavia vuelve a la acción en el autódromo de Oberá.</p>
-      </article>
+
+<!-- Tarjeta estándar -->
+<a class="noticia-card" href="notas/sexta-fecha.html" aria-label="Leer nota completa: Gran Premio Transportes Arias">
+  <div class="noticia-card__inner">
+    <h3 class="noticia-card__titulo">
+      GRAN PREMIO TRANSPORTES ARIAS: ACCIÓN, EMOCIÓN Y FIESTA EN EL REGRESO DEL AUTOMOVILISMO ZONAL
+    </h3>
+    <p class="noticia-card__bajada">
+      El automovilismo zonal regresó al Autódromo General San Martín con la 6ª fecha, Gran Premio Transportes Arias, y un fin de semana lleno de emociones y nuevos vencedores en cada categoría.
+    </p>
+    <span class="noticia-card__leer">Leer nota ➜</span>
+  </div>
+</a>
+
+
+<!-- Tarjeta nueva: Karting vuelve (Inicio) -->
+<a class="noticia-card" href="notas/karting-vuelve-fecha5.html">
+  <div class="noticia-card__inner">
+    <h3 class="noticia-card__titulo">
+      EL KARTING VUELVE A LA ACCIÓN CON LA 5ª FECHA DEL CAMPEONATO
+    </h3>
+    <p class="noticia-card__bajada">
+      Este fin de semana (16 y 17 de agosto) el kartódromo de Comodoro vuelve a vibrar: 5ª fecha, Copa Transportes Arias, en el circuito Nº5 “horario”.
+    </p>
+    <span class="noticia-card__leer">Leer nota ➜</span>
+  </div>
+</a>
+<!-- Tarjeta nueva: Blotta + Martini (Inicio) -->
+<a class="noticia-card" href="notas/blotta-martini-tn200.html">
+  <div class="noticia-card__inner">
+    <h3 class="noticia-card__titulo">
+      Renzo Blotta invita a Felipe Martini para la Carrera de los 200 Pilotos del TN Clase 2
+    </h3>
+    <p class="noticia-card__bajada">
+      El comodorense será protagonista del GP Elf (5–7 de septiembre, Gálvez), compartiendo su Toyota Etios con Felipe Martini. Evento solidario con entrada por alimento no perecedero.
+    </p>
+    <span class="noticia-card__leer">Leer nota ➜</span>
+  </div>
+</a>
+
     </section>
 
     <!-- Contador -->
     <aside class="contador-lateral">
-      <h2 class="titulo-contador">🏁 Fecha 6 - GP Transporte Arias</h2>
+      <h2 class="titulo-contador">🏁 Fecha 7 y 8- Autodromo Mar y Valle</h2>
       <div id="cuenta-regresiva" class="cronometro">
         <div class="digito"><span id="dias">00</span><small>DÍAS</small></div>
         <div class="digito"><span id="horas">00</span><small>HORAS</small></div>
@@ -109,7 +127,7 @@
 
   <!-- Contador MÓVIL (nuevo) -->
 <div class="contador-mobile">
-  <h2>Fecha 6 - GP Transporte Arias</h2>
+  <h2>Fecha 7 y 8 - Autodromo Mar y Valle</h2>
   <div class="cuenta-mobile cronometro">
     <div class="digito"><span class="dias">00</span><small>DÍAS</small></div>
     <div class="digito"><span class="horas">00</span><small>HORAS</small></div>
@@ -136,7 +154,7 @@
 
   <!-- Script contador -->
   <script>
-    const fechaEvento = new Date("August 08, 2025 10:00:00").getTime();
+    const fechaEvento = new Date("Sep 12, 2025 10:00:00").getTime();
     const d = document.getElementById("dias");
     const h = document.getElementById("horas");
     const m = document.getElementById("minutos");
@@ -167,45 +185,55 @@
 </script>
 <!-- otras partes de la página -->
 
- <!-- JavaScript -->
-  <script>
-  // Abre o cierra el menú móvil al tocar "↓ Menú"
-  function toggleMenu() {
-    const menu = document.getElementById("menu-movil");
-    menu.style.display = menu.style.display === "block" ? "none" : "block";
+ <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const menuMovil = document.getElementById("menu-movil");
+  const btnFlechaMovil = document.querySelector(".flecha-movil");
+  const categoriasLink = document.querySelector(".menu-categorias > a");
+  const flechita = document.querySelector(".desplegar-submenu");
+  const submenuCategorias = document.querySelector(".submenu-categorias-movil");
+
+  // Abrir/cerrar menú móvil
+  if (btnFlechaMovil && menuMovil) {
+    btnFlechaMovil.addEventListener("click", function (e) {
+      e.stopPropagation();
+      menuMovil.style.display = menuMovil.style.display === "block" ? "none" : "block";
+    });
   }
 
-  // Abre o cierra el submenú al tocar la flechita ▼
-  function toggleSubmenu() {
-    const submenu = document.querySelector(".submenu-categorias-movil");
-    if (submenu) {
-      submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+  // Abrir/cerrar submenú
+  if (flechita && submenuCategorias) {
+    flechita.addEventListener("click", function (e) {
+      e.stopPropagation();
+      submenuCategorias.style.display = submenuCategorias.style.display === "block" ? "none" : "block";
+    });
+  }
+
+  // Cerrar todo si se hace clic fuera
+  document.addEventListener("click", function (e) {
+    if (menuMovil && !menuMovil.contains(e.target) && !btnFlechaMovil.contains(e.target)) {
+      menuMovil.style.display = "none";
     }
-  }
-
-  // Cierra el submenú si se hace clic afuera
-  document.addEventListener("DOMContentLoaded", function () {
-    const categorias = document.querySelector(".menu-categorias > a");
-    const submenu = document.querySelector(".submenu-categorias-movil");
-    const flechita = document.querySelector(".desplegar-submenu");
-
-    if (categorias && submenu) {
-      document.addEventListener("click", function (e) {
-        if (
-          !categorias.contains(e.target) &&
-          !submenu.contains(e.target) &&
-          !flechita.contains(e.target)
-        ) {
-          submenu.style.display = "none";
-        }
-      });
+    if (submenuCategorias && !submenuCategorias.contains(e.target) && !flechita.contains(e.target)) {
+      submenuCategorias.style.display = "none";
     }
   });
+
+  // Cerrar menú al hacer clic en un enlace
+  const enlacesMenu = document.querySelectorAll("#menu-movil a");
+  enlacesMenu.forEach(link => {
+    link.addEventListener("click", () => {
+      menuMovil.style.display = "none";
+      submenuCategorias.style.display = "none";
+    });
+  });
+});
 </script>
+
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const fechaEvento = new Date("August 08, 2025 10:00:00").getTime();
+    const fechaEvento = new Date("Sep 12, 2025 10:00:00").getTime();
 
     setInterval(() => {
       const ahora = new Date().getTime();

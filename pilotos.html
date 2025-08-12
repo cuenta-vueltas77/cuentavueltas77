@@ -15,60 +15,38 @@
       <img src="logo-cuenta-vueltas-encabezado.PNG" alt="Logo Cuenta Vueltas 77" class="logo">
     </div>
 
-    <!-- 🔽 Flecha para móvil -->
-    <div class="flecha-movil" onclick="toggleMenu()">⬇ Menú</div>
 
-    <!-- Menú Móvil -->
-<div id="menu-movil">
-  <ul>
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="noticias.html">Noticias</a></li>
-    <li><a href="pilotos.html" class="activo">Pilotos</a></li>
-    <li><a href="historias.html">Historias</a></li>
-    <li class="menu-categorias">
-      <a href="Categorias.html">Categorías</a>
-      <span class="desplegar-submenu" onclick="toggleSubmenu()">▼</span>
-      <ul class="submenu-categorias-movil">
-        <li><a href="turismo-carretera-austral.html">Turismo Carretera Austral</a></li>
-        <li><a href="tc-patagonico.html">TC Patagónico</a></li>
-        <li><a href="monomarca-r12.html">Monomarca R12</a></li>
-        <li><a href="tp-gol.html">Turismo Pista Gol 1.6</a></li>
-        <li><a href="tp-1100.html">Turismo Pista 1100</a></li>
-        <li><a href="karting.html">Karting</a></li>
-        <li><a href="safari.html">Safari</a></li>
-        <li><a href="sarmiento.html">Sarmiento</a></li>
-      </ul>
-    </li>
-  </ul>
-</div>
+  <!-- Menú escritorio -->
+  <nav class="menu-escritorio">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="noticias.html">Noticias</a></li>
+      <li><a href="pilotos.html">Pilotos</a></li>
+      <li><a href="historias.html">Historias</a></li>
+      <li><a href="labandadelsur.html">La Banda del Sur</a></li>
+    </ul>
+  </nav>
 
-<!-- Menú de escritorio -->
-    <nav class="menu-desktop">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="noticias.html">Noticias</a></li>
-        <li><a href="pilotos.html"class="activo">Pilotos</a></li>
-        <li><a href="historias.html">Historias</a></li>
-       <li class="dropdown">
-  <a href="Categorias.html">Categorías</a>
-  <span class="flecha-desktop" onclick="toggleDropdown()">▼</span>
-  <div class="dropdown-content" id="submenu-desktop">
-    <a href="turismo-carretera-austral.html">Turismo Carretera Austral</a>
-    <a href="tc-patagonico.html">TC Patagónico</a>
-    <a href="monomarca-r12.html">Monomarca R12</a>
-    <a href="tp-gol.html">Turismo Pista Gol 1.6</a>
-    <a href="tp-1100.html">Turismo Pista 1100</a>
-    <a href="karting.html">Karting</a>
-    <a href="safari.html">Safari</a>
-    <a href="sarmiento.html">Sarmiento</a>
+  <!-- Menú móvil -->
+  <div class="flecha-movil" onclick="toggleMenu()">☰ Menú</div>
+  <div id="menu-movil">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="noticias.html">Noticias</a></li>
+      <li><a href="pilotos.html">Pilotos</a></li>
+      <li><a href="historias.html">Historias</a></li>
+      <li><a href="labandadelsur.html">La Banda del Sur</a></li>
+    </ul>
   </div>
-</li>
-
-          </div>
-        </li>
-      </ul>
-    </nav>
-  </header>
+</header>
+<div class="botones-categorias">
+  <a href="turismo-carretera-austral.html#tabla" class="btn-tabla">Turismo Carretera Austral</a>
+  <a href="tc-patagonico.html#tabla" class="btn-tabla">TC Patagónico</a>
+  <a href="monomarca-r12.html#tabla" class="btn-tabla">Monomarca R12</a>
+  <a href="tp-gol.html#tabla" class="btn-tabla">Turismo Pista Gol 1.6</a>
+  <a href="tp-1100.html#tabla" class="btn-tabla">Turismo Pista 1100</a>
+  <a href="karting.html#tabla" class="btn-tabla">Karting</a>
+</div>
 
   <!-- Contenido principal -->
   <main class="contenido-pilotos"></main>
@@ -96,6 +74,30 @@
         <p><strong>Categoría actual:</strong> Turismo Carretera</p>
         <p><strong>Equipo / Preparador:</strong> Maquin Parts Racing</p>
         <p><strong>Auto que maneja:</strong> Toyota Camry</p>
+      </div>
+    </section>
+  </main>
+
+  <section class="ficha-piloto">
+      <img src="nacho-montenegro.png" alt="Ignacio Montenegro piloto de TCR" />
+      <div class="info-piloto">
+        <h2>Ignacio Montenegro</h2>
+        <p><strong>Ciudad de origen:</strong> Comodoro Rivadavia</p>
+        <p><strong>Categoría actual:</strong> TCR World Tour</p>
+        <p><strong>Equipo / Preparador:</strong> Goat Racing</p>
+        <p><strong>Auto que maneja:</strong> Honda Civic Type R</p>
+      </div>
+    </section>
+  </main>
+
+<section class="ficha-piloto">
+      <img src="thomy-micheloud.png" alt="Thomas Micheloud piloto TCPPK" />
+      <div class="info-piloto">
+        <h2>Thomas Micheloud</h2>
+        <p><strong>Ciudad de origen:</strong> Comodoro Rivadavia</p>
+        <p><strong>Categoría actual:</strong> TC Pista Pick Up</p>
+        <p><strong>Equipo / Preparador:</strong> Quilmes Plas Racing</p>
+        <p><strong>Auto que maneja:</strong> Ford Ranger</p>
       </div>
     </section>
   </main>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>La Banda del Sur - Cuenta Vueltas 77</title>
+
+  <!-- CSS global del sitio -->
+  <link rel="stylesheet" href="../estilos.css" />
+
+  <!-- Tipografías (arreglo del enlace con error) -->
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@400;700&family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ======= Ajuste de header fijo en móvil (respetando lo que ya usabas) ======= */
+    @media (max-width: 768px) {
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        height: 100px;
+      }
+      main {
+        padding-top: 100px; /* para que el contenido no quede tapado */
+      }
+    }
+
+    /* ======= Estética La Banda del Sur (solo estilos de esta página) ======= */
+    .page-wrap {
+      margin-top: 2px; /* separa del header en escritorio */
+    }
+
+    .portada-banda {
+      position: relative;
+      min-height: 200px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      background: #111 url("../notas/banda-del-sur") center/cover no-repeat; /* 🔁 Cambiar por tu imagen */
+      border-bottom: 3px solid #ff0000;
+    }
+    .portada-banda::after {
+      content: "";
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.65));
+    }
+    .portada-banda h1 {
+      position: relative;
+      font-family: "Orbitron", sans-serif;
+      font-size: clamp(28px, 5vw, 48px);
+      letter-spacing: 1px;
+      color: #fff;
+      margin: 0;
+      text-shadow: 0 2px 10px rgba(0,0,0,.6);
+    }
+    .portada-banda p {
+      position: relative;
+      color: #eee;
+      margin: 8px 20px 0;
+      max-width: 600px;
+      font-family: "Saira Condensed", system-ui, sans-serif;
+      font-size: clamp(16px, 2.6vw, 20px);
+    }
+
+    .contenido-banda {
+      width: min(1000px, 92%);
+      margin: 28px auto 60px;
+      display: grid;
+      gap: 22px;
+    }
+    @media (min-width: 769px) {
+      .contenido-banda { grid-template-columns: 1.1fr .9fr; }
+    }
+
+    .banda-card, .banda-foto {
+      background: #0f0f0f;
+      border: 1px solid #2a2a2a;
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.25);
+    }
+    .banda-foto {
+      padding: 10px;
+      border: 2px solid #ff0000; /* detalle rojo */
+    }
+    .banda-foto img {
+      width: 100%;
+      height: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+    }
+
+    .banda-card {
+      padding: 20px 18px;
+      color: #e9e9e9;
+    }
+    .banda-card h2 {
+      margin: 0 0 8px;
+      font-family: "Orbitron", sans-serif;
+      font-size: 22px;
+      color: #fff;
+      letter-spacing: .5px;
+    }
+    .banda-card p {
+      margin: 10px 0 18px;
+      font-family: "Saira Condensed", system-ui, sans-serif;
+      font-size: 18px;
+      line-height: 1.35;
+      color: #d8d8d8;
+    }
+
+    .ig-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 14px;
+      border: 1px dashed #454545;
+      border-radius: 12px;
+      background: #121212;
+      flex-wrap: wrap;
+    }
+    .ig-handle {
+      font-family: "Saira Condensed", system-ui, sans-serif;
+      font-size: 18px;
+      color: #fff;
+      margin: 0;
+      word-break: break-word;
+    }
+    .btn-instagram {
+      display: inline-block;
+      padding: 10px 16px;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 10px;
+      background: #ff0000;
+      color: #fff;
+      transition: transform .06s ease, filter .2s ease;
+      border: 1px solid #9a0000;
+      white-space: nowrap;
+    }
+    .btn-instagram:hover { filter: brightness(.95); transform: translateY(-1px); }
+    .btn-instagram:active { transform: translateY(0); }
+
+    .chip {
+      display: inline-block;
+      font-size: 12px;
+      letter-spacing: .3px;
+      padding: 4px 8px;
+      border: 1px solid #ff0000;
+      border-radius: 999px;
+      color: #ff5a5a;
+      background: #141414;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header (se respeta tu logo y estructura) -->
+  <header class="navbar">
+    <div class="logo-nombre">
+      <img src="logo-cuenta-vueltas-encabezado.PNG" alt="Logo Cuenta Vueltas 77" class="logo">
+    </div>
+
+    <!-- Menú ESCRITORIO -->
+    <nav class="menu-escritorio">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../noticias.html">Noticias</a></li>
+        <li><a href="../pilotos.html">Pilotos</a></li>
+        <li><a href="../historias.html">Historias</a></li>
+        <li><a href="labandadelsur.html" class="activo">La Banda del Sur</a></li>
+      </ul>
+    </nav>
+
+    <!-- Menú MÓVIL -->
+    <div class="flecha-movil" onclick="toggleMenu()">☰ Menú</div>
+    <div id="menu-movil">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../noticias.html">Noticias</a></li>
+        <li><a href="../pilotos.html">Pilotos</a></li>
+        <li><a href="../historias.html">Historias</a></li>
+        <li><a href="labandadelsur.html" class="activo">La Banda del Sur</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+    <!-- Portada -->
+    <section class="portada-banda" role="banner" aria-label="Portada La Banda del Sur">
+      <div>
+        <span class="chip">Zoom y a fondo</span>
+        <h1>La Banda del Sur</h1>
+        <p>Pasión por el automovilismo del sur: lo que no se ve de las carreras.</p>
+      </div>
+    </section>
+
+    <!-- Contenido principal -->
+    <section class="contenido-banda">
+      <!-- Foto representativa del grupo -->
+      <div class="banda-foto">
+        <!-- 🔁 Cambiar por tu archivo real (ideal 1600×900) -->
+        <img src="../notas/banda-del-sur.png" alt="Integrantes de La Banda del Sur" loading="lazy">
+      </div>
+
+      <!-- Descripción + Instagram -->
+      <article class="banda-card">
+        <h2>¿Quiénes somos?</h2>
+        <p>
+          La Banda del Sur es el grupo que banca el automovilismo patagónico fecha a fecha. Registramos momentos, alentamos en pista y amplificamos las historias que nacen en nuestros autódromos.
+        </p>
+
+        <div class="ig-box">
+          <p class="ig-handle">Instagram: <strong>@labandadelsur_</strong></p>
+          <!-- 🔗 Cambiar si el usuario es distinto -->
+          <a class="btn-instagram" href="https://instagram.com/labandadelsur_" target="_blank" rel="noopener">Seguir en Instagram</a>
+        </div>
+
+        <p style="margin-top:16px">• Cobertura zonal • Contenido propio • Comunidad fierrera del sur</p>
+      </article>
+    </section>
+  </main>
+
+  <!-- Footer (se mantiene) -->
+  <footer>
+    <p>&copy; 2025 Cuenta Vueltas 77</p>
+    <div class="redes-sociales">
+      <a href="https://instagram.com/cuentavueltas77" target="_blank" class="instagram">📸 Instagram</a>
+      <a href="https://facebook.com/cuentavueltas77" target="_blank" class="facebook">📘 Facebook</a>
+      <a href="https://tiktok.com/@cuentavueltas77" target="_blank" class="tiktok">🎥 TikTok</a>
+      <a href="https://x.com/cuentavueltas77" target="_blank" class="twitter">🐦 Twitter</a>
+      <a href="https://youtube.com/@cuentavueltas77" target="_blank" class="youtube">▶️ YouTube</a>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Abre o cierra el menú móvil
+    function toggleMenu() {
+      const menu = document.getElementById("menu-movil");
+      menu.style.display = (menu.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

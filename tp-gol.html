@@ -56,28 +56,14 @@
   <div class="logo-nombre">
     <img src="logo-cuenta-vueltas-encabezado.PNG" alt="Logo Cuenta Vueltas 77" class="logo">
   </div>
-
-  <!-- Menú escritorio -->
+<!-- Menú escritorio -->
   <nav class="menu-escritorio">
     <ul>
       <li><a href="index.html">Inicio</a></li>
       <li><a href="noticias.html">Noticias</a></li>
       <li><a href="pilotos.html">Pilotos</a></li>
       <li><a href="historias.html">Historias</a></li>
-      <li class="menu-categorias">
-        <a href="Categorias.html">Categorías</a>
-        <span class="desplegar-submenu" onclick="toggleSubmenu()">▼</span>
-        <ul class="submenu-categorias-movil">
-          <li><a href="turismo-carretera-austral.html">Turismo Carretera Austral</a></li>
-          <li><a href="tc-patagonico.html">TC Patagónico</a></li>
-          <li><a href="monomarca-r12.html">Monomarca R12</a></li>
-          <li><a href="tp-gol.html">Turismo Pista Gol 1.6</a></li>
-          <li><a href="tp-1100.html">Turismo Pista 1100</a></li>
-          <li><a href="karting.html">Karting</a></li>
-          <li><a href="safari.html">Safari</a></li>
-          <li><a href="sarmiento.html">Sarmiento</a></li>
-        </ul>
-      </li>
+      <li><a href="labandadelsur.html">La Banda del Sur</a></li>
     </ul>
   </nav>
 
@@ -89,23 +75,18 @@
       <li><a href="noticias.html">Noticias</a></li>
       <li><a href="pilotos.html">Pilotos</a></li>
       <li><a href="historias.html">Historias</a></li>
-      <li class="menu-categorias">
-        <a href="Categorias.html">Categorías</a>
-        <span class="desplegar-submenu" onclick="toggleSubmenu()">▼</span>
-        <ul class="submenu-categorias-movil">
-          <li><a href="turismo-carretera-austral.html">Turismo Carretera Austral</a></li>
-          <li><a href="tc-patagonico.html">TC Patagónico</a></li>
-          <li><a href="monomarca-r12.html">Monomarca R12</a></li>
-          <li><a href="tp-gol.html">Turismo Pista Gol 1.6</a></li>
-          <li><a href="tp-1100.html">Turismo Pista 1100</a></li>
-          <li><a href="karting.html">Karting</a></li>
-          <li><a href="safari.html">Safari</a></li>
-          <li><a href="sarmiento.html">Sarmiento</a></li>
-        </ul>
-      </li>
+      
     </ul>
   </div>
 </header>
+<div class="botones-categorias">
+  <a href="turismo-carretera-austral.html#tabla" class="btn-tabla">Turismo Carretera Austral</a>
+  <a href="tc-patagonico.html#tabla" class="btn-tabla">TC Patagónico</a>
+  <a href="monomarca-r12.html#tabla" class="btn-tabla">Monomarca R12</a>
+  <a href="tp-gol.html#tabla" class="btn-tabla">Turismo Pista Gol 1.6</a>
+  <a href="tp-1100.html#tabla" class="btn-tabla">Turismo Pista 1100</a>
+  <a href="karting.html#tabla" class="btn-tabla">Karting</a>
+</div>
 
 
   <!-- Contenido principal -->
@@ -113,10 +94,35 @@
     <h2>Turismo Pista Gol 1.6</h2>
     <p>Aquí podés encontrar noticias, información y resultados de la categoría TP Gol 1.6.</p>
 
-    <a href="https://fcha.org.ar/wp-content/uploads/ranking/FChA-Pista-2025-5-Puntos-Gol-1.6.pdf" target="_blank" class="btn-tabla">
-      Ver Tabla de Posiciones Oficial
-    </a>
+    
   </section>
+<!-- NOTAS DE LA CATEGORÍA -->
+<section class="notas-categoria">
+  <h2>Notas de la categoría</h2>
+
+  <!-- Tarjeta/teaser de la nota -->
+  <article class="nota-teaser">
+    <a class="teaser-link" href="notas/tp-gol-fecha6.html">
+
+      <h3>Miranda se queda con la Fecha 6</h3>
+      <p>Final intensa en el San Martín: triunfo de Daniel Miranda, con D’Elia y Gómez completando el podio.</p>
+      <span class="leer-mas">Leer nota ➜</span>
+    </a>
+  </article>
+
+  <!-- Duplicá más tarjetas si querés -->
+</section>
+<section class="posiciones-categoria">
+  <h2>Tabla de posiciones</h2>
+
+  <!-- Botón a PDF oficial -->
+  <a href="https://fcha.org.ar/wp-content/uploads/ranking/FChA-Pista-2025-5-Puntos-Gol-1.6.pdf"
+     target="_blank" class="btn-tabla">
+    Ver tabla de posiciones oficial
+  </a>
+
+  
+</section>
 
  <!-- Footer -->
   <footer>
@@ -127,36 +133,76 @@
       <a href="https://tiktok.com/@cuentavueltas77" target="_blank" class="tiktok">🎥 TikTok</a>
       <a href="https://x.com/cuentavueltas77" target="_blank" class="twitter">🐦 Twitter</a>
       <a href="https://youtube.com/@cuentavueltas77" target="_blank" class="youtube">▶️ YouTube</a>
+    
+    
     </div>
   </footer>
 
   <script>
-  
-  function toggleMenu() {
-    const menu = document.getElementById("menu-movil");
-    menu.style.display = menu.style.display === "block" ? "none" : "block";
-  }
+document.addEventListener("DOMContentLoaded", function () {
+  const menuMovil = document.getElementById("menu-movil");
+  const btnFlechaMovil = document.querySelector(".flecha-movil");
+  const categoriasLink = document.querySelector(".menu-categorias > a");
+  const flechita = document.querySelector(".desplegar-submenu");
+  const submenuCategorias = document.querySelector(".submenu-categorias-movil");
 
-  function toggleSubmenu() {
-    document.querySelectorAll(".submenu-categorias-movil").forEach((submenu) => {
-      const visible = submenu.style.display === "block";
-      submenu.style.display = visible ? "none" : "block";
+  // Abrir/cerrar menú móvil
+  if (btnFlechaMovil && menuMovil) {
+    btnFlechaMovil.addEventListener("click", function (e) {
+      e.stopPropagation();
+      menuMovil.style.display = menuMovil.style.display === "block" ? "none" : "block";
     });
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const submenus = document.querySelectorAll(".submenu-categorias-movil");
-    const flechitas = document.querySelectorAll(".desplegar-submenu");
-    const categorias = document.querySelectorAll(".menu-categorias > a");
+  // Abrir/cerrar submenú
+  if (flechita && submenuCategorias) {
+    flechita.addEventListener("click", function (e) {
+      e.stopPropagation();
+      submenuCategorias.style.display = submenuCategorias.style.display === "block" ? "none" : "block";
+    });
+  }
 
-    document.addEventListener("click", function (e) {
-      const clickedInside = [...submenus, ...flechitas, ...categorias].some(el => el.contains(e.target));
-      if (!clickedInside) {
-        submenus.forEach(submenu => submenu.style.display = "none");
-      }
+  // Cerrar todo si se hace clic fuera
+  document.addEventListener("click", function (e) {
+    if (menuMovil && !menuMovil.contains(e.target) && !btnFlechaMovil.contains(e.target)) {
+      menuMovil.style.display = "none";
+    }
+    if (submenuCategorias && !submenuCategorias.contains(e.target) && !flechita.contains(e.target)) {
+      submenuCategorias.style.display = "none";
+    }
+  });
+
+  // Cerrar menú al hacer clic en un enlace
+  const enlacesMenu = document.querySelectorAll("#menu-movil a");
+  enlacesMenu.forEach(link => {
+    link.addEventListener("click", () => {
+      menuMovil.style.display = "none";
+      submenuCategorias.style.display = "none";
     });
   });
+});
+
 </script>
+<!-- Loader tolerante a rutas -->
+<script>
+(function () {
+  if (window.__cv77MenuLoaded) return;
+  window.__cv77MenuLoaded = true;
+
+  const tryPaths = ["menu.js", "../menu.js", "../../menu.js"];
+  let loaded = false;
+
+  (function load(i){
+    if (i >= tryPaths.length || loaded) return;
+    const s = document.createElement("script");
+    s.src = tryPaths[i]; s.defer = true;
+    s.onload = function(){ loaded = true; console.log("menu.js cargado desde:", s.src); };
+    s.onerror = function(){ load(i+1); };
+    document.head.appendChild(s);
+  })(0);
+})();
+</script>
+
 
 
 
