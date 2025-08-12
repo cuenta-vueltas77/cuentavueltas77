@@ -22,7 +22,7 @@
     <nav class="menu-escritorio">
       <ul>
         <li><a href="../index.html">Inicio</a></li>
-        <li><a href="../noticias.html">Noticias</a></li>
+        
         <li><a href="../pilotos.html">Pilotos</a></li>
         <li><a href="../historias.html">Historias</a></li>
         <li><a href="../labandadelsur.html">La Banda del Sur</a></li>
@@ -37,7 +37,7 @@
     <div id="menu-movil">
       <ul>
         <li><a href="../index.html">Inicio</a></li>
-        <li><a href="../noticias.html">Noticias</a></li>
+        
         <li><a href="../pilotos.html">Pilotos</a></li>
         <li><a href="../historias.html">Historias</a></li>
         <li><a href="../labandadelsur.html">La Banda del Sur</a></li>
@@ -47,14 +47,7 @@
       </ul>
     </div>
   </header>
-<div class="botones-categorias">
-  <a href="../turismo-carretera-austral.html" class="btn-tabla">Turismo Carretera Austral</a>
-  <a href="../tc-patagonico.html" class="btn-tabla">TC Patagónico</a>
-  <a href="../monomarca-r12.html" class="btn-tabla">Monomarca R12</a>
-  <a href="../tp-gol.html" class="btn-tabla">Turismo Pista Gol 1.6</a>
-  <a href="../tp-1100.html" class="btn-tabla">Turismo Pista 1100</a>
-  <a href="../karting.html" class="btn-tabla">Karting</a>
-</div>
+
 
   <!-- Contenido -->
   <main class="contenedor">
@@ -97,9 +90,21 @@ El momento más impactante se vivió con el accidente de Rubén Pires, quien en 
 
   <footer>
     <p>&copy; 2025 Cuenta Vueltas 77</p>
+    <div class="redes-sociales">
+      <a href="https://instagram.com/cuentavueltas77" target="_blank" class="instagram">📸 Instagram</a>
+      <a href="https://facebook.com/cuentavueltas77" target="_blank" class="facebook">📘 Facebook</a>
+      <a href="https://tiktok.com/@cuentavueltas77" target="_blank" class="tiktok">🎥 TikTok</a>
+      <a href="https://x.com/cuentavueltas77" target="_blank" class="twitter">🐦 Twitter</a>
+      <a href="https://youtube.com/@cuentavueltas77" target="_blank" class="youtube">▶️ YouTube</a>
+    </div>
   </footer>
+  
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("menu-movil");
+  menu.classList.toggle("activo");
+}
+</script>
 
-  <!-- Carga del JS común (ruta correcta desde /notas/) -->
-  <script src="../menu.js"></script>
 </body>
 </html>

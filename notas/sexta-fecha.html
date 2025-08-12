@@ -26,7 +26,7 @@
     <nav class="menu-escritorio">
       <ul>
         <li><a href="../index.html">Inicio</a></li>
-        <li><a href="../noticias.html">Noticias</a></li>
+        
         <li><a href="../pilotos.html">Pilotos</a></li>
         <li><a href="../historias.html">Historias</a></li>
         <li><a href="../labandadelsur.html">La Banda del Sur</a></li>
@@ -41,7 +41,7 @@
     <div id="menu-movil">
       <ul>
         <li><a href="../index.html">Inicio</a></li>
-        <li><a href="../noticias.html">Noticias</a></li>
+        
         <li><a href="../pilotos.html">Pilotos</a></li>
         <li><a href="../historias.html">Historias</a></li>
         <li><a href="../labandadelsur.html">La Banda del Sur</a></li>
@@ -99,8 +99,13 @@
       <a href="https://youtube.com/@cuentavueltas77" target="_blank" class="youtube">▶️ YouTube</a>
     </div>
   </footer>
+  
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("menu-movil");
+  menu.classList.toggle("activo");
+}
+</script>
 
-  <!-- Cargá el JS común del menú (ruta relativa desde /notas/) -->
-  <script src="../menu.js"></script>
 </body>
 </html>

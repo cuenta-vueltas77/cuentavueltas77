@@ -3,11 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gran Premio Transportes Arias – Fecha 6 | Cuenta Vueltas 77</title>
-
-  <!-- Esta página está en /notas/, por eso usamos ../ -->
-  <link rel="stylesheet" href="../estilos.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed&display=swap">
+  <title>Renzo Blotta invita a Felipe Martini – TN Clase 2 | Cuenta Vueltas 77</title>
+  <link rel="stylesheet" href="/estilos.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed+2&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
@@ -19,65 +17,37 @@
   <!-- Header principal -->
   <header class="navbar">
     <div class="logo-nombre">
-      <img src="../logo-cuenta-vueltas-encabezado.PNG" alt="Logo Cuenta Vueltas 77" class="logo">
+      <img src="/logo-cuenta-vueltas-encabezado.PNG" alt="Logo Cuenta Vueltas 77" class="logo">
     </div>
 
-    <!-- Menú ESCRITORIO -->
+    <!-- Menú escritorio -->
     <nav class="menu-escritorio">
       <ul>
-        <li><a href="../index.html">Inicio</a></li>
-        <li><a href="../noticias.html">Noticias</a></li>
-        <li><a href="../pilotos.html">Pilotos</a></li>
-        <li><a href="../historias.html">Historias</a></li>
-        <li><a href="../labandadelsur.html">La Banda del Sur</a></li>
-
+        <li><a href="/index.html">Inicio</a></li>
         
-        </li>
+        <li><a href="/pilotos.html">Pilotos</a></li>
+        <li><a href="/historias.html">Historias</a></li>
+        <li><a href="/labandadelsur.html">La Banda del Sur</a></li>
       </ul>
     </nav>
 
-    <!-- Menú MÓVIL -->
+    <!-- Menú móvil -->
     <div class="flecha-movil" onclick="toggleMenu()">☰ Menú</div>
     <div id="menu-movil">
       <ul>
-        <li><a href="../index.html">Inicio</a></li>
-        <li><a href="../noticias.html">Noticias</a></li>
-        <li><a href="../pilotos.html">Pilotos</a></li>
-        <li><a href="../historias.html">Historias</a></li>
-        <li><a href="../labandadelsur.html">La Banda del Sur</a></li>
-       
-          </ul>
-        </li>
+        <li><a href="/index.html">Inicio</a></li>
+        
+        <li><a href="/pilotos.html">Pilotos</a></li>
+        <li><a href="/historias.html">Historias</a></li>
+        <li><a href="/labandadelsur.html">La Banda del Sur</a></li>
       </ul>
     </div>
   </header>
 
-  <!-- Menú móvil -->
-  <div id="menu-movil">
-    <ul>
-      <li><a href="index.html" class="activo">Inicio</a></li>
-      <li><a href="noticias.html">Noticias</a></li>
-      <li><a href="pilotos.html">Pilotos</a></li>
-      <li><a href="historias.html">Historias</a></li>
-      <li class="menu-categorias">
-        <a href="categorias.html">Categorías</a>
-        <span class="desplegar-submenu" onclick="toggleSubmenuMovil()">▼</span>
-        <ul class="submenu-categorias-movil">
-          <li><a href="#">Turismo Carretera Austral</a></li>
-          <li><a href="#">TC Patagónico</a></li>
-          <li><a href="#">Monomarca R12</a></li>
-          <li><a href="#">Turismo Pista Gol 1.6</a></li>
-          <li><a href="#">Turismo Pista 1100</a></li>
-          <li><a href="#">Karting</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-
   <!-- CONTENIDO -->
   <main class="nota-layout">
     <nav class="breadcrumbs">
-      <a href="../index.html">Inicio</a> / Renzo Blotta invita a Felipe Martini – TN Clase 2
+      <a href="/index.html">Inicio</a> / Renzo Blotta invita a Felipe Martini – TN Clase 2
     </nav>
 
     <article class="nota-card">
@@ -88,7 +58,6 @@
       </header>
 
       <figure class="nota-media">
-        <!-- reemplazá la imagen por la tuya si querés -->
         <img src="/notas/renzo-martini.png" alt="Renzo Blotta y Felipe Martini competirán juntos en el TN C2">
         <figcaption class="nota-cita-img"></figcaption>
       </figure>
@@ -118,6 +87,13 @@
       <a href="https://youtube.com/@cuentavueltas77" target="_blank" class="youtube">▶️ YouTube</a>
     </div>
   </footer>
-  <script src="menu.js"></script>
+
+  <!-- Script del menú directamente en el HTML -->
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("menu-movil");
+  menu.classList.toggle("activo");
+}
+</script>
 </body>
 </html>
