@@ -1093,7 +1093,7 @@ h1,h2,h3 { font-family:"Orbitron", sans-serif; letter-spacing:.3px; }
 /* Botonera: aire justo debajo en móvil */
 @media (max-width:768px){
   .botones-categorias{
-    margin-top:120px;     /* despega del header fijo */
+    margin-top:0px;     /* despega del header fijo */
     padding-bottom:6px;   /* recorta aire propio */
     margin-bottom:0;
   }
@@ -1230,3 +1230,38 @@ h1,h2,h3 { font-family:"Orbitron", sans-serif; letter-spacing:.3px; }
   text-align: center;
   margin-top: 4px;
 }
+
+
+/* === Dejar espacio bajo el header fijo === */
+:root{
+  --header-h-desktop: 90px;   /* ajustá si tu header es más alto/bajo */
+  --header-h-mobile: 130px;   /* subí o bajá hasta que se vea cómodo */
+}
+
+/* Aplicá el padding en el contenedor principal (o en body si no usás <main>) */
+body, main, .contenido, .pagina, .wrapper{
+  padding-top: var(--header-h-desktop);
+}
+
+@media (max-width: 768px){
+  body, main, .contenido, .pagina, .wrapper{
+    padding-top: var(--header-h-mobile);
+  }
+}
+
+/* Si usás anclas (#seccion), que no las tape el header */
+[id]{ scroll-margin-top: var(--header-h-desktop); }
+@media (max-width: 768px){
+  [id]{ scroll-margin-top: var(--header-h-mobile); }
+}
+
+
+#menu-movil {
+  display: none;
+}
+
+#menu-movil.activo {
+  display: block;
+}
+
+
