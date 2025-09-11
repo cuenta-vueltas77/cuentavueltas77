@@ -1,0 +1,260 @@
+<!doctype html><html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pilotos - Cuenta Vueltas 77</title><meta name="description" content="Pilotos del automovilismo chubutense.">
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@400;600;700&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/main.css"><link rel="icon" href="/cv77-starter-v3/assets/img/logo/icono-cv77.png"></head>
+<body><!-- Header -->
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="../index.html">
+          <img class="brand__logo" src="../assets/img/logo/logo-cv77.png" alt="Cuenta Vueltas 77" />
+          <span class="brand__name"></span>
+        </a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false">☰</button>
+        <nav id="primary-nav" class="nav__menu" data-state="closed" aria-label="Navegación principal">
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../pilotos/index.html">Pilotos</a></li>
+            <li><a href="../historias/index.html">Historias</a></li>
+            <li class="has-submenu">
+              <a href="../categorias/index.html">Categorías</a>
+              <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-categorias" title="Desplegar categorías">▼</button>
+              <ul id="submenu-categorias" class="submenu">
+                <li><a href="../categorias/tc-austral.html">TC Austral</a></li>
+                <li><a href="../categorias/tc-patagonico.html">TC Patagónico</a></li>
+                <li><a href="../categorias/monomarca-r12.html">Monomarca R-12</a></li>
+                <li><a href="../categorias/tp-gol.html">TP Gol 1.6</a></li>
+                <li><a href="../categorias/tp-1100.html">TP 1100</a></li>
+                <li><a href="../categorias/karting.html">Karting</a></li>
+              </ul>
+              <li><a href="../banda/index.html" class="nav__cta">La Banda del Sur</a></li>
+            </li>
+            <li class="has-submenu">
+              <a href="../reglas/index.html">Más</a>
+              <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-mas" title="Más secciones">▼</button>
+              <ul id="submenu-mas" class="submenu">
+                <li><a href="../reglas/index.html">Reglas & banderas</a></li>
+                <li><a href="../tecnica/index.html">Sección técnica</a></li>
+                <li><a href="../piloto-de-la-fecha/index.html">Piloto de la fecha</a></li>
+                <li><a href="../trivias/index.html">Trivias & juegos</a></li>
+                <li><a href="../convocatoria/index-publico.html">Enviá tu historia</a></li>
+              </ul>
+            </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+<main class="container" style="padding:24px 0 48px">
+  <h1>Pilotos de Comodoro (nivel nacional)</h1>
+  <p class="lead">Directorio de pilotos comodorenses que compiten a nivel nacional. Filtrá por categoría o buscá por nombre/equipo.</p>
+
+  <!-- Filtros -->
+  <div class="filters">
+    <div class="group">
+      <span class="label">Ciudad:</span>
+      <!-- Dejamos Comodoro pre-seleccionado -->
+      <span class="chip-check">
+        <input type="checkbox" id="f-ciudad-comodoro rivadavia" checked>
+        <label for="f-ciudad-comodoro rivadavia">Comodoro Rivadavia</label>
+      </span>
+    </div>
+
+    <div class="group">
+      <span class="label">Nivel:</span>
+      <span class="chip-check">
+        <input type="checkbox" id="f-nivel-nacional" checked>
+        <label for="f-nivel-nacional">Nacional/Internacional</label>
+      </span>
+    </div>
+
+    <div class="group">
+      <span class="label">Categoría:</span>
+      <span class="chip-check">
+        <input type="checkbox" id="cat-tc" data-cat="TC">
+        <label for="cat-tc">TC</label>
+      </span>
+      <span class="chip-check">
+        <input type="checkbox" id="cat-tc-pista" data-cat="TC Pista">
+        <label for="cat-tc-pista">TCPPK</label>
+      </span>
+      <span class="chip-check">
+        <input type="checkbox" id="cat-tn" data-cat="Turismo Nacional">
+        <label for="cat-tn">Turismo Nacional</label>
+      </span>
+      <span class="chip-check">
+        <input type="checkbox" id="cat-tr" data-cat="Top Race">
+        <label for="cat-tr">Top Race</label>
+      </span>
+      <span class="chip-check">
+        <input type="checkbox" id="cat-otros" data-cat="Otros">
+        <label for="cat-otros">Otros</label>
+      </span>
+    </div>
+
+    <div class="searchbar">
+      <input type="search" id="q" placeholder="Buscar por nombre o equipo…">
+    </div>
+  </div>
+
+  <!-- Grid de pilotos (ejemplos, reemplazá por datos reales) -->
+  <div id="drivers" class="grid grid-3" style="margin-top:16px">
+    <!-- CARD 1 -->
+    <article class="card driver-card"
+      data-nombre="Renzo Blotta"
+      data-equipo="Ale Bucci Racing"
+      data-ciudad="Comodoro"
+      data-nivel="nacional"
+      data-categoria="Turismo Nacional">
+      <div class="card__media"><img src="../assets/img/renzo-blotta.jpg" alt="Nombre Apellido"></div>
+      <div class="card__body">
+        <h3 class="card__title">Renzo Blotta</h3>
+        <div class="driver-meta">
+          <span class="badge">Comodoro</span>
+          <span class="badge">Turismo Nacional</span>
+        </div>
+        <div class="stat-grid">
+          <div class="stat"><b>23</b><span>Auto</span></div>
+          <div class="stat"><b>2025</b><span>Temporada</span></div>
+          <div class="stat"><b>TN C2</b><span>Categoría</span></div>
+        </div>
+        <p class="card__cta" style="margin-top:10px">
+          <a class="btn" href="ficha-renzo.html">Ver ficha</a>
+        </p>
+      </div>
+    </article>
+
+    <!-- CARD 2 -->
+    <article class="card driver-card"
+      data-nombre="Marcelo Agrelo"
+      data-equipo="Maquin Parts Racing"
+      data-ciudad="comodoro"
+      data-nivel="nacional"
+      data-categoria="TC">
+      <div class="card__media"><img src="../assets/img/marcelo-agrelo.png" alt="Marcelo Agrelo"></div>
+      <div class="card__body">
+        <h3 class="card__title">Marcelo Agrelo</h3>
+        <div class="driver-meta">
+          <span class="badge">Comodoro</span>
+          <span class="badge">TC</span>
+        </div>
+        <div class="stat-grid">
+          <div class="stat"><b>127</b><span>Auto</span></div>
+          <div class="stat"><b>2025</b><span>Temporada</span></div>
+          <div class="stat"><b>TC</b><span>Categoría</span></div>
+        </div>
+        <p class="card__cta" style="margin-top:10px">
+          <a class="btn" href="ficha-agrelo.html">Ver ficha</a>
+        </p>
+      </div>
+    </article>
+
+    <!-- CARD 3 -->
+    <article class="card driver-card"
+      data-nombre="Ignacio Montenegro"
+      data-equipo="Goat Racing Team"
+      data-ciudad="comodoro"
+      data-nivel="internacional"
+      data-categoria="TCR World Tour">
+      <div class="card__media"><img src="../assets/img/nacho.png" alt="Ignacio Montenegro"></div>
+      <div class="card__body">
+        <h3 class="card__title">Ignacio Montenegro</h3>
+        <div class="driver-meta">
+          <span class="badge">Comodoro</span>
+          <span class="badge">TCR</span>
+        </div>
+        <div class="stat-grid">
+          <div class="stat"><b>123</b><span>Auto</span></div>
+          <div class="stat"><b>2025</b><span>Temporada</span></div>
+          <div class="stat"><b>TCR</b><span>Categoría</span></div>
+        </div>
+        <p class="card__cta" style="margin-top:10px">
+          <a class="btn" href="ficha-nacho.html">Ver ficha</a>
+        </p>
+      </div>
+    </article>
+
+    <!-- CARD 4 -->
+    <article class="card driver-card"
+      data-nombre="Thomas Micheloud"
+      data-equipo="Quilmes Plas Racing"
+      data-ciudad="comodoro"
+      data-nivel="nacional"
+      data-categoria="TCPPK">
+      <div class="card__media"><img src="../assets/img/thomas-micheloud.png" alt="Thomas Micheloud"></div>
+      <div class="card__body">
+        <h3 class="card__title">Thomas Micheloud</h3>
+        <div class="driver-meta">
+          <span class="badge">Comodoro</span>
+          <span class="badge">TCPPK</span>
+        </div>
+        <div class="stat-grid">
+          <div class="stat"><b>116</b><span>Auto</span></div>
+          <div class="stat"><b>2025</b><span>Temporada</span></div>
+          <div class="stat"><b>TCPPK</b><span>Categoría</span></div>
+        </div>
+        <p class="card__cta" style="margin-top:10px">
+          <a class="btn" href="ficha-thomas.html">Ver ficha</a>
+        </p>
+      </div>
+    </article>
+  </div>
+</main>
+
+<!-- Script de filtros (cargalo al final del body) -->
+<script>
+(function(){
+  const q = document.getElementById('q');
+  const list = document.getElementById('drivers');
+  const cards = () => Array.from(list.querySelectorAll('.driver-card'));
+
+  const ckComodoro = document.getElementById('f-ciudad-comodoro');
+  const ckNacional = document.getElementById('f-nivel-nacional');
+  const catChecks = Array.from(document.querySelectorAll('[id^="cat-"][data-cat]'));
+
+  function activeCategories(){
+    const act = catChecks.filter(c=>c.checked).map(c=>c.dataset.cat);
+    return act.length ? act : null; // null = todas
+  }
+
+  function matches(el){
+    const text = (q.value || '').trim().toLowerCase();
+    const catAct = activeCategories();
+
+    const cityOk = !ckComodoro.checked || el.dataset.ciudad === 'comodoro';
+    const lvlOk  = !ckNacional.checked || el.dataset.nivel === 'nacional';
+
+    const catOk  = !catAct || catAct.includes(el.dataset.categoria);
+    const textOk = !text || (el.dataset.nombre + ' ' + el.dataset.equipo + ' ' + el.dataset.categoria).toLowerCase().includes(text);
+
+    return cityOk && lvlOk && catOk && textOk;
+  }
+
+  function render(){
+    cards().forEach(el=>{
+      el.style.display = matches(el) ? '' : 'none';
+    });
+  }
+
+  [q, ckComodoro, ckNacional, ...catChecks].forEach(el=>{
+    el.addEventListener('input', render);
+    el.addEventListener('change', render);
+  });
+
+  render(); // estado inicial
+})();
+</script>
+
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <p><strong>Cuenta Vueltas 77</strong> — Noticias, historias y pasión por el automovilismo chubutense.</p>
+    <p>Seguinos en 
+      <a href="https://instagram.com/cuentavueltas77" target="_blank" rel="noopener">Instagram</a>, 
+      <a href="https://tiktok.com/@cuentavueltas77" target="_blank" rel="noopener">TikTok</a> y 
+      <a href="https://facebook.com/cuentavueltas77" target="_blank" rel="noopener">Facebook</a>.
+    </p>
+  </div>
+</footer><script src="../assets/js/menu.js"></script></body></html>

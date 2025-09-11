@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Categorías - Cuenta Vueltas 77</title>
+  <meta name="description" content="Todas las categorías del automovilismo chubutense.">
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@400;600;700&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="icon" href="/cv77-starter-v3/assets/img/logo/icono-cv77.png">
+
+  <!-- Estilos del contador (solo esta página) -->
+  <style>
+    /* Card del contador */
+    .countdown-card{
+      display:flex; justify-content:space-between; align-items:center; gap:16px;
+      background:#121212; border:1px solid #222; border-radius:16px;
+      padding:14px 18px; box-shadow: 0 6px 24px rgba(0,0,0,.25);
+    }
+    .countdown-left{ display:flex; flex-direction:column; gap:4px; }
+    .countdown-label{ font-weight:800; letter-spacing:.02em; opacity:.9 }
+    .countdown-date{ font-size:1.1rem; opacity:.95 }
+    .countdown-right{ display:flex; align-items:center; gap:10px; }
+    .pill{ display:inline-block; background:#ff1a1a; color:#fff; border-radius:999px; padding:8px 14px; font-weight:800; }
+    .countdown-sub{ font-size:.95rem; opacity:.85 }
+
+    /* Centrado del contador */
+    #proxima-fecha{ margin: 12px 0 28px; }
+    #proxima-fecha .countdown-card{ width:100%; max-width:560px; margin:0 auto; }
+
+    @media (max-width:640px){
+      .countdown-card{ flex-direction:column; align-items:flex-start }
+      .countdown-right{ gap:12px }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../index.html">
+        <img class="brand__logo" src="../assets/img/logo/logo-cv77.png" alt="Cuenta Vueltas 77" />
+        <span class="brand__name"></span>
+      </a>
+      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false">☰</button>
+      <nav id="primary-nav" class="nav__menu" data-state="closed" aria-label="Navegación principal">
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="../pilotos/index.html">Pilotos</a></li>
+          <li><a href="../historias/index.html">Historias</a></li>
+
+          <!-- Categorías (submenu) -->
+          <li class="has-submenu">
+            <a href="../categorias/index.html">Categorías</a>
+            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-categorias" title="Desplegar categorías">▼</button>
+            <ul id="submenu-categorias" class="submenu">
+              <li><a href="../categorias/tc-austral.html">TC Austral</a></li>
+              <li><a href="../categorias/tc-patagonico.html">TC Patagónico</a></li>
+              <li><a href="../categorias/monomarca-r12.html">Monomarca R-12</a></li>
+              <li><a href="../categorias/tp-gol.html">TP Gol 1.6</a></li>
+              <li><a href="../categorias/tp-1100.html">TP 1100</a></li>
+              <li><a href="../categorias/karting.html">Karting</a></li>
+            </ul>
+          </li>
+
+          <!-- Botón destacado -->
+          <li><a href="../banda/index.html" class="nav__cta">La Banda del Sur</a></li>
+
+          <!-- Más (submenu) -->
+          <li class="has-submenu">
+            <a href="../reglas/index.html">Más</a>
+            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-mas" title="Más secciones">▼</button>
+            <ul id="submenu-mas" class="submenu">
+              <li><a href="../reglas/index.html">Reglas & banderas</a></li>
+              <li><a href="../tecnica/index.html">Sección técnica</a></li>
+              <li><a href="../piloto-de-la-fecha/index.html">Piloto de la fecha</a></li>
+              <li><a href="../trivias/index.html">Trivias & juegos</a></li>
+              <li><a href="../convocatoria/index.html">Enviá tu historia</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding:24px 0 48px">
+    <h1>Categorías</h1>
+    <p class="lead">Elegí una categoría para ver noticias, historias y tablas.</p>
+
+    <!-- ===== Contador próxima fecha (centrado) ===== -->
+    <section id="proxima-fecha">
+      <div class="countdown-card">
+        <div class="countdown-left">
+          <div class="countdown-label">Próxima fecha</div>
+          <time id="raceDate" class="countdown-date"></time>
+        </div>
+        <div class="countdown-right">
+          <span class="pill" id="daysLeft"><b>--</b> días</span>
+          <div class="countdown-sub" id="countdownDetail">-- h -- min</div>
+        </div>
+      </div>
+    </section>
+    <!-- ============================================ -->
+
+    <div class="grid grid-3" style="margin-top:24px">
+      <article class="card"><div class="card__body"><h3 class="card__title">TC Austral</h3><p class="card__text">Turismo Carretera Austral.</p><p class="card__cta"><a class="btn" href="tc-austral.html">Ver página</a></p></div></article>
+      <article class="card"><div class="card__body"><h3 class="card__title">TC Patagónico</h3><p class="card__text">Velocidad y tradición patagónica.</p><p class="card__cta"><a class="btn" href="tc-patagonico.html">Ver página</a></p></div></article>
+      <article class="card"><div class="card__body"><h3 class="card__title">Monomarca R-12</h3><p class="card__text">La clásica monomarca regional.</p><p class="card__cta"><a class="btn" href="monomarca-r12.html">Ver página</a></p></div></article>
+      <article class="card"><div class="card__body"><h3 class="card__title">TP Gol 1.6</h3><p class="card__text">Parque numeroso y espectáculo.</p><p class="card__cta"><a class="btn" href="tp-gol.html">Ver página</a></p></div></article>
+      <article class="card"><div class="card__body"><h3 class="card__title">TP 1100</h3><p class="card__text">Histórica y peleada fecha a fecha.</p><p class="card__cta"><a class="btn" href="tp-1100.html">Ver página</a></p></div></article>
+      <article class="card"><div class="card__body"><h3 class="card__title">Karting</h3><p class="card__text">La base de los futuros pilotos.</p><p class="card__cta"><a class="btn" href="karting.html">Ver página</a></p></div></article>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>Cuenta Vueltas 77</strong> — Noticias, historias y pasión por el automovilismo chubutense.</p>
+      <p>Seguinos en 
+        <a href="https://instagram.com/cuentavueltas77" target="_blank" rel="noopener">Instagram</a>, 
+        <a href="https://tiktok.com/@cuentavueltas77" target="_blank" rel="noopener">TikTok</a> y 
+        <a href="https://facebook.com/cuentavueltas77" target="_blank" rel="noopener">Facebook</a>.
+      </p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/menu.js"></script>
+
+  <!-- Script del contador -->
+  <script>
+  (function(){
+    // === FECHA/HORA DE LA PRÓXIMA CARRERA ===
+    // Formatos: "AAAA-MM-DD" o "AAAA-MM-DDTHH:MM:SS-03:00"
+    const RACE_DATE = "2025-09-12T12:10:00-03:00"; // <-- CAMBIAR
+
+    const raceDateEl = document.getElementById("raceDate");
+    const daysEl     = document.getElementById("daysLeft");
+    const detEl      = document.getElementById("countdownDetail");
+    if (!raceDateEl || !daysEl || !detEl) return;
+
+    const d = new Date(RACE_DATE);
+    try{ raceDateEl.dateTime = d.toISOString(); }catch(e){}
+    raceDateEl.textContent = d.toLocaleDateString("es-AR", {
+      weekday:"long", year:"numeric", month:"long", day:"numeric"
+    });
+
+    function tick(){
+      const diff = d - new Date();
+      if (diff <= 0){
+        daysEl.innerHTML = "<b>¡Es hoy!</b>";
+        detEl.textContent = "";
+        return;
+      }
+      const totalMin = Math.floor(diff/60000);
+      const days  = Math.floor(totalMin/1440);
+      const hours = Math.floor((totalMin%1440)/60);
+      const mins  = totalMin % 60;
+      daysEl.innerHTML = `<b>${days}</b> día${days!==1?"s":""}`;
+      detEl.textContent = `${hours} h ${mins} min`;
+    }
+    tick();
+    setInterval(tick, 60000);
+  })();
+  </script>
+</body>
+</html>

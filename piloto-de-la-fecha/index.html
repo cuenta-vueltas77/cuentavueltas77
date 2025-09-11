@@ -1,0 +1,261 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Piloto de la fecha - Cuenta Vueltas 77</title><meta name="description" content="Elegí al piloto destacado del fin de semana.">
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@400;600;700&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/main.css"><link rel="icon" href="/cv77-starter-v3/assets/img/logo/icono-cv77.png"></head>
+<body><!-- Header -->
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="../index.html">
+          <img class="brand__logo" src="../assets/img/logo/logo-cv77.png" alt="Cuenta Vueltas 77" />
+          <span class="brand__name"></span>
+        </a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false">☰</button>
+        <nav id="primary-nav" class="nav__menu" data-state="closed" aria-label="Navegación principal">
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../pilotos/index.html">Pilotos</a></li>
+            <li><a href="../historias/index.html">Historias</a></li>
+            <li class="has-submenu">
+              <a href="../categorias/index.html">Categorías</a>
+              <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-categorias" title="Desplegar categorías">▼</button>
+              <ul id="submenu-categorias" class="submenu">
+                <li><a href="../categorias/tc-austral.html">TC Austral</a></li>
+                <li><a href="../categorias/tc-patagonico.html">TC Patagónico</a></li>
+                <li><a href="../categorias/monomarca-r12.html">Monomarca R-12</a></li>
+                <li><a href="../categorias/tp-gol.html">TP Gol 1.6</a></li>
+                <li><a href="../categorias/tp-1100.html">TP 1100</a></li>
+                <li><a href="../categorias/karting.html">Karting</a></li>
+              </ul>
+              <li><a href="../banda/index.html" class="nav__cta">La Banda del Sur</a></li>
+            </li>
+            <li class="has-submenu">
+              <a href="../reglas/index.html">Más</a>
+              <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-mas" title="Más secciones">▼</button>
+              <ul id="submenu-mas" class="submenu">
+                <li><a href="../reglas/index.html">Reglas & banderas</a></li>
+                <li><a href="../tecnica/index.html">Sección técnica</a></li>
+                <li><a href="../piloto-de-la-fecha/index.html">Piloto de la fecha</a></li>
+                <li><a href="../trivias/index.html">Trivias & juegos</a></li>
+                <li><a href="../convocatoria/index-publico.html">Enviá tu historia</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- En el <head> -->
+<script src="../assets/js/polls-mini.js" defer></script>
+    </header><main>
+<section class="hero"><div class="container"><h1>Piloto de la fecha</h1><p class="lead">Votá a tu destacado del finde.</p><p style="margin-top:16px"><a class="btn" href="#votar">Votar</a></p></div></section>
+<section id="votar" class="container" style="padding:24px 0 48px">
+  <h2>Candidatos</h2>
+
+  <div class="candidates" style="margin-top:16px">
+<!-- TCA -->
+<article class="candidate-card">
+  <div class="card__media"><img src="../assets/img/casco-tca.png" alt=""></div>
+  <div class="card__body">
+    <h3 class="card__title">Piloto TCA</h3>
+    <p class="card__text">Turismo Carretera Austral</p>
+
+    <div class="cv77-pmini" data-poll-id="tca">
+      <form class="pmini-form" aria-label="Votación TCA">
+        <label class="pmini-opt"><input type="radio" name="tca" value="Candidato 1"> <span>Candidato 1</span></label>
+        <label class="pmini-opt"><input type="radio" name="tca" value="Candidato 2"> <span>Candidato 2</span></label>
+        <label class="pmini-opt"><input type="radio" name="tca" value="Candidato 3"> <span>Candidato 3</span></label>
+
+        <!-- NUEVO: Otros -->
+        <label class="pmini-opt">
+          <input type="radio" name="tca" value="__OTROS__" data-other>
+          <span>Otros:</span>
+          <input type="text" class="pmini-other" placeholder="Escribí el nombre" disabled>
+        </label>
+
+        <div class="pmini-actions">
+          <button type="button" class="btn" data-action="vote">Votar</button>
+          <button type="button" class="btn btn-outline" data-action="see">Ver resultados</button>
+        </div>
+        <p class="pmini-msg" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="pmini-results" hidden>
+        <ul class="pmini-list" role="list"></ul>
+        <div class="pmini-actions">
+          <button type="button" class="btn btn-outline" data-action="back">Volver</button>
+        </div>
+        <small class="pmini-note">*Resultados ilustrativos.</small>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- TP GOL -->
+<article class="candidate-card">
+  <div class="card__media"><img src="../assets/img/casco-tpgol.png" alt=""></div>
+  <div class="card__body">
+    <h3 class="card__title">Piloto TP GOL</h3>
+    <p class="card__text">Turismo Pista Gol 1.6</p>
+
+    <div class="cv77-pmini" data-poll-id="tp-gol">
+      <form class="pmini-form" aria-label="Votación TP GOL">
+        <label class="pmini-opt"><input type="radio" name="tp-gol" value="Candidato 1"> <span>Candidato 1</span></label>
+        <label class="pmini-opt"><input type="radio" name="tp-gol" value="Candidato 2"> <span>Candidato 2</span></label>
+        <label class="pmini-opt"><input type="radio" name="tp-gol" value="Candidato 3"> <span>Candidato 3</span></label>
+
+        <!-- NUEVO: Otros -->
+        <label class="pmini-opt">
+          <input type="radio" name="tp-gol" value="__OTROS__" data-other>
+          <span>Otros:</span>
+          <input type="text" class="pmini-other" placeholder="Escribí el nombre" disabled>
+        </label>
+
+        <div class="pmini-actions">
+          <button type="button" class="btn" data-action="vote">Votar</button>
+          <button type="button" class="btn btn-outline" data-action="see">Ver resultados</button>
+        </div>
+        <p class="pmini-msg" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="pmini-results" hidden>
+        <ul class="pmini-list" role="list"></ul>
+        <div class="pmini-actions">
+          <button type="button" class="btn btn-outline" data-action="back">Volver</button>
+        </div>
+        <small class="pmini-note">*Resultados ilustrativos.</small>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- TCP -->
+<article class="candidate-card">
+  <div class="card__media"><img src="../assets/img/casco-tcp.png" alt=""></div>
+  <div class="card__body">
+    <h3 class="card__title">Piloto TCP</h3>
+    <p class="card__text">Turismo Carretera Patagonico</p>
+
+    <div class="cv77-pmini" data-poll-id="tcp">
+      <form class="pmini-form" aria-label="Votación TCP">
+        <label class="pmini-opt"><input type="radio" name="tcp" value="Candidato 1"> <span>Candidato 1</span></label>
+        <label class="pmini-opt"><input type="radio" name="tcp" value="Candidato 2"> <span>Candidato 2</span></label>
+        <label class="pmini-opt"><input type="radio" name="tcp" value="Candidato 3"> <span>Candidato 3</span></label>
+
+        <!-- NUEVO: Otros -->
+        <label class="pmini-opt">
+          <input type="radio" name="tcp" value="__OTROS__" data-other>
+          <span>Otros:</span>
+          <input type="text" class="pmini-other" placeholder="Escribí el nombre" disabled>
+        </label>
+
+        <div class="pmini-actions">
+          <button type="button" class="btn" data-action="vote">Votar</button>
+          <button type="button" class="btn btn-outline" data-action="see">Ver resultados</button>
+        </div>
+        <p class="pmini-msg" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="pmini-results" hidden>
+        <ul class="pmini-list" role="list"></ul>
+        <div class="pmini-actions">
+          <button type="button" class="btn btn-outline" data-action="back">Volver</button>
+        </div>
+        <small class="pmini-note">*Resultados ilustrativos.</small>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- TP 1100 -->
+<article class="candidate-card">
+  <div class="card__media"><img src="../assets/img/casco-1100.png" alt=""></div>
+  <div class="card__body">
+    <h3 class="card__title">Piloto TP 1100</h3>
+    <p class="card__text">Turismo Pista 1100</p>
+
+    <div class="cv77-pmini" data-poll-id="tp-1100">
+      <form class="pmini-form" aria-label="Votación TP 1100">
+        <label class="pmini-opt"><input type="radio" name="tp-1100" value="Candidato 1"> <span>Candidato 1</span></label>
+        <label class="pmini-opt"><input type="radio" name="tp-1100" value="Candidato 2"> <span>Candidato 2</span></label>
+        <label class="pmini-opt"><input type="radio" name="tp-1100" value="Candidato 3"> <span>Candidato 3</span></label>
+
+        <!-- NUEVO: Otros -->
+        <label class="pmini-opt">
+          <input type="radio" name="tp-1100" value="__OTROS__" data-other>
+          <span>Otros:</span>
+          <input type="text" class="pmini-other" placeholder="Escribí el nombre" disabled>
+        </label>
+
+        <div class="pmini-actions">
+          <button type="button" class="btn" data-action="vote">Votar</button>
+          <button type="button" class="btn btn-outline" data-action="see">Ver resultados</button>
+        </div>
+        <p class="pmini-msg" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="pmini-results" hidden>
+        <ul class="pmini-list" role="list"></ul>
+        <div class="pmini-actions">
+          <button type="button" class="btn btn-outline" data-action="back">Volver</button>
+        </div>
+        <small class="pmini-note">*Resultados ilustrativos.</small>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- R12 -->
+<article class="candidate-card">
+  <div class="card__media"><img src="../assets/img/casco-r12.png" alt=""></div>
+  <div class="card__body">
+    <h3 class="card__title">Piloto R12</h3>
+    <p class="card__text">Monomarca R12</p>
+
+    <div class="cv77-pmini" data-poll-id="r12">
+      <form class="pmini-form" aria-label="Votación R12">
+        <label class="pmini-opt"><input type="radio" name="r12" value="Candidato 1"> <span>Candidato 1</span></label>
+        <label class="pmini-opt"><input type="radio" name="r12" value="Candidato 2"> <span>Candidato 2</span></label>
+        <label class="pmini-opt"><input type="radio" name="r12" value="Candidato 3"> <span>Candidato 3</span></label>
+
+        <!-- NUEVO: Otros -->
+        <label class="pmini-opt">
+          <input type="radio" name="r12" value="__OTROS__" data-other>
+          <span>Otros:</span>
+          <input type="text" class="pmini-other" placeholder="Escribí el nombre" disabled>
+        </label>
+
+        <div class="pmini-actions">
+          <button type="button" class="btn" data-action="vote">Votar</button>
+          <button type="button" class="btn btn-outline" data-action="see">Ver resultados</button>
+        </div>
+        <p class="pmini-msg" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="pmini-results" hidden>
+        <ul class="pmini-list" role="list"></ul>
+        <div class="pmini-actions">
+          <button type="button" class="btn btn-outline" data-action="back">Volver</button>
+        </div>
+        <small class="pmini-note">*Resultados ilustrativos.</small>
+      </div>
+    </div>
+  </div>
+</article>
+
+</section>
+<div class="container">
+  <p class="vote-note" style="opacity:.8;margin-top:1px">
+    Tu voto = +1 décima para el piloto 😉🏁
+  </p>
+</div>
+
+
+</main><!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <p><strong>Cuenta Vueltas 77</strong> — Noticias, historias y pasión por el automovilismo chubutense.</p>
+    <p>Seguinos en 
+      <a href="https://instagram.com/cuentavueltas77" target="_blank" rel="noopener">Instagram</a>, 
+      <a href="https://tiktok.com/@cuentavueltas77" target="_blank" rel="noopener">TikTok</a> y 
+      <a href="https://facebook.com/cuentavueltas77" target="_blank" rel="noopener">Facebook</a>.
+    </p>
+  </div>
+</footer><script src="../assets/js/menu.js"></script></body></html>

@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enviá tu historia - Cuenta Vueltas 77</title>
+  <meta name="description" content="Mandanos tus historias, anécdotas y fotos para publicarlas en CV77.">
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@400;600;700&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+  <!-- header con rutas ../ como el resto -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../index.html">
+        <img class="brand__logo" src="../assets/img/logo/logo-cv77.png" alt="CV77">
+        <span class="brand__name"></span>
+      </a>
+      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false">☰</button>
+      <nav id="primary-nav" class="nav__menu" data-state="closed" aria-label="Navegación principal">
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="../pilotos/index.html">Pilotos</a></li>
+          <li><a href="../historias/index.html">Historias</a></li>
+          <li class="has-submenu">
+            <a href="../categorias/index.html">Categorías</a>
+            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-categorias">▼</button>
+            <ul id="submenu-categorias" class="submenu">
+              <li><a href="../categorias/tc-austral.html">TC Austral</a></li>
+              <li><a href="../categorias/tc-patagonico.html">TC Patagónico</a></li>
+              <li><a href="../categorias/monomarca-r12.html">Monomarca R-12</a></li>
+              <li><a href="../categorias/tp-gol.html">TP Gol 1.6</a></li>
+              <li><a href="../categorias/tp-1100.html">TP 1100</a></li>
+              <li><a href="../categorias/karting.html">Karting</a></li>
+            </ul>
+            <li><a href="../banda/index.html" class="nav__cta">La Banda del Sur</a></li>
+          </li>
+          <li class="has-submenu">
+            <a href="../reglas/index.html">Más</a>
+            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-mas">▼</button>
+            <ul id="submenu-mas" class="submenu">
+              <li><a href="../reglas/index.html">Reglas & banderas</a></li>
+              <li><a href="../tecnica/index.html">Sección técnica</a></li>
+              <li><a href="../piloto-de-la-fecha/index.html">Piloto de la fecha</a></li>
+              <li><a href="../trivias/index.html">Trivias & juegos</a></li>
+              <li><a href="../convocatoria/index-publico.html">Enviá tu historia</a></li>
+
+            </ul>
+          </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Enviá tu historia</h1>
+        <p class="lead">¿Tenés una historia, anécdota o fotos fierreras? Mandanos tu material y lo publicamos con crédito.</p>
+        <p style="margin-top:12px">
+          <a id="mailBtn" class="btn" href="#">Escribir por email</a>
+          <button id="copyEmail" class="btn btn-outline" type="button" style="margin-left:8px">Copiar correo</button>
+        </p>
+        <p style="opacity:.85;margin-top:6px">
+          
+        </p>
+      </div>
+    </section>
+
+    <section class="container" style="padding:24px 0 48px">
+      <div class="card">
+        <div class="card__body">
+          <h2 class="card__title">Qué podés enviar</h2>
+          <div class="prose">
+            <ul>
+              <li><b>Historias y anécdotas</b> (texto en el cuerpo del mail o adjunto .doc/.pdf).</li>
+              <li><b>Fotos</b> (hasta 10 por mail). Ideal: 2000 px o más, sin marcas de agua.</li>
+              <li><b>Datos</b> para contexto: fecha, circuito, categoría, nombres y @ para crédito.</li>
+            </ul>
+            <p class="callout"><b>Importante:</b> al enviar, confirmás que tenés derecho a compartir el material y nos permitís publicarlo en CV77 con tu crédito.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:16px">
+        <div class="card__body">
+          <h3 class="card__title">Sugerencia de asunto y cuerpo</h3>
+          <div class="prose">
+            <p>Usamos un email con asunto y plantilla sugerida para que sea más fácil. Después podés adjuntar fotos antes de enviar.</p>
+            <pre style="white-space:pre-wrap;background:#0f0f0f;border:1px solid #222;border-radius:8px;padding:12px;margin:0">
+Asunto: Historia/Anécdota para publicar – [Tu nombre]
+
+Hola CV77, les comparto:
+• Título/Resumen:
+• Categoría/Fecha/Circuito:
+• Texto:
+• Créditos (nombres y @):
+• Fotos adjuntas (autor y créditos):
+Gracias 🙌
+</pre>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>Cuenta Vueltas 77</strong> — Noticias, historias y pasión por el automovilismo chubutense.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/menu.js"></script>
+ <script>
+(function(){
+  // === CONFIGURÁ TU CORREO ACÁ ===
+  const EMAIL = "cuentavueltas77@gmail.com"; // <-- reemplazar por el real
+
+  // Pinta el correo visible (si existe el nodo)
+  const emailEl = document.getElementById("emailText");
+  if (emailEl) emailEl.textContent = EMAIL;
+
+  // Mailto con asunto + cuerpo pre-cargado (siempre queda un href válido)
+  const subject = encodeURIComponent("Historia/Anécdota para publicar – [Tu nombre]");
+  const body = encodeURIComponent(
+`Hola CV77, les comparto:
+• Título/Resumen:
+• Categoría/Fecha/Circuito:
+• Texto:
+• Créditos (nombres y @):
+• Fotos adjuntas (autor y créditos):
+Gracias 🙌`
+  );
+  const mailto = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
+  const mailBtn = document.getElementById("mailBtn");
+  if (mailBtn) mailBtn.setAttribute("href", mailto);
+
+  // Botón copiar correo (con fallback si no hay clipboard API)
+  const copyBtn = document.getElementById("copyEmail");
+  if (copyBtn) {
+    copyBtn.addEventListener("click", async ()=>{
+      const done = ()=>{
+        const prev = copyBtn.textContent;
+        copyBtn.textContent = "Copiado ✔";
+        setTimeout(()=> copyBtn.textContent = prev, 1500);
+      };
+      try {
+        await navigator.clipboard.writeText(EMAIL);
+        done();
+      } catch {
+        const i = document.createElement("input");
+        i.value = EMAIL; document.body.appendChild(i); i.select();
+        document.execCommand("copy"); document.body.removeChild(i);
+        done();
+      }
+    });
+  }
+})();
+</script>
