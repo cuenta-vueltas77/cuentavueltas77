@@ -1,0 +1,464 @@
+/* =============================
+   Cuenta Vueltas 77 - main.css (v3)
+   ============================= */
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+img{max-width:100%;display:block}
+ul{margin:0;padding:0;list-style:none}
+a{text-decoration:none;color:inherit}
+
+:root{
+  --cv77-black:#000;
+  --cv77-white:#fff;
+  --cv77-red:#ff1a1a;
+  --cv77-gray-900:#111;
+  --cv77-gray-800:#1a1a1a;
+  --cv77-gray-700:#2a2a2a;
+  --cv77-metal:#2f2f2f;
+
+  --font-title:'Orbitron', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --font-body:'Saira Condensed', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+
+  --container:1100px;
+  --r:16px;
+  --shadow:0 8px 24px rgba(0,0,0,.35);
+
+  --s-1:4px; --s-2:8px; --s-3:12px; --s-4:16px; --s-5:24px; --s-6:32px; --s-8:48px; --s-10:64px;
+}
+
+body{
+  font-family:var(--font-body);
+  background:linear-gradient(180deg,var(--cv77-gray-900),var(--cv77-black));
+  color:var(--cv77-white);
+  min-height:100vh; line-height:1.35;
+}
+.container{max-width:var(--container);margin:0 auto;padding:0 var(--s-4)}
+
+h1,h2,h3,h4{font-family:var(--font-title);letter-spacing:.5px;margin:var(--s-5) 0 var(--s-3)}
+p{margin:var(--s-3) 0;font-size:1.05rem}
+.lead{font-size:1.25rem;opacity:.9}
+
+/* Buttons */
+.btn{display:inline-block;padding:10px 16px;border-radius:999px;background:var(--cv77-red);color:#fff;font-weight:700;transition:transform .15s, opacity .15s}
+.btn:hover{transform:translateY(-1px);opacity:.95}
+.btn-outline{background:transparent;border:2px solid var(--cv77-red);color:#fff}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.75);backdrop-filter:blur(6px);border-bottom:1px solid #222}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:var(--s-4);min-height:64px}
+.brand{display:flex;align-items:center;gap:var(--s-3)}
+.brand__logo{height:38px;width:auto}
+.brand__name{font-family:var(--font-title);font-weight:800;letter-spacing:.6px}
+.nav-toggle{display:none;background:var(--cv77-gray-800);color:#fff;border:1px solid #333;border-radius:8px;padding:8px 10px;cursor:pointer;font-weight:700}
+.nav__menu{display:flex;align-items:center;gap:var(--s-4)}
+.nav__menu>ul{display:flex;gap:var(--s-3);align-items:center}
+.nav__menu a{padding:10px 12px;border-radius:10px;color:#fff;font-weight:700}
+.nav__menu a:hover{background:#151515}
+.has-submenu{position:relative;display:flex;align-items:center;gap:4px}
+.submenu-toggle{background:transparent;color:#fff;border:1px solid #333;border-radius:6px;padding:4px 6px;cursor:pointer}
+.submenu{position:absolute;top:calc(100% + 6px);left:0;min-width:240px;background:#151515;border:2px solid var(--cv77-red);border-radius:12px;box-shadow:var(--shadow);padding:6px;display:none}
+.submenu li a{display:block;padding:10px 12px;border-radius:8px}
+.submenu li a:hover{background:#1f1f1f}
+@media(min-width:1024px){.has-submenu:hover>.submenu{display:block}.submenu-toggle{display:none}}
+@media(max-width:1023px){
+  .nav-toggle{display:block}
+  .nav__menu{position:fixed;inset:64px 0 auto 0;background:rgba(0,0,0,.92);border-top:1px solid #222;padding:var(--s-4);flex-direction:column;gap:var(--s-4);transform:translateY(-8px);opacity:0;pointer-events:none;transition:all .18s ease}
+  .nav__menu[data-state="open"]{transform:translateY(0);opacity:1;pointer-events:auto}
+  .nav__menu>ul{flex-direction:column;align-items:stretch;gap:6px}
+  .nav__menu a{display:block;background:#111;border:1px solid #222}
+  .submenu{position:static;display:none;margin-top:6px}
+  .submenu.show{display:block}
+}
+
+/* Hero */
+.hero{padding:var(--s-8) 0 var(--s-6);background:radial-gradient(1000px 300px at 50% -100px, rgba(255,26,26,.25), transparent 60%);text-align:center}
+.hero h1{font-size:clamp(28px,4.2vw,48px)}
+.hero p{max-width:720px;margin:0 auto;opacity:.9}
+
+/* Grid + Cards */
+.grid{display:grid;gap:var(--s-5)}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-2{grid-template-columns:1.15fr 1fr}
+@media(max-width:1023px){.grid-3{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}}
+.card{background:#121212;border:1px solid #222;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.card__media{aspect-ratio:16/9;background:#0e0e0e}
+.card__body{padding:var(--s-4)}
+.card__title{font-size:1.25rem;margin-bottom:6px}
+.card__meta{font-size:.9rem;opacity:.75;margin-bottom:8px}
+.card__text{opacity:.9}
+.card__cta{margin-top:var(--s-3)}
+
+/* Footer */
+.site-footer{margin-top:var(--s-8);border-top:1px solid #222;background:#0d0d0d;padding:var(--s-6) 0;color:#dcdcdc;font-size:.95rem}
+.site-footer a{color:#f1f1f1;text-decoration:underline;text-underline-offset:2px}
+
+/* CTA pill */
+.nav__cta{background:var(--cv77-red);color:#fff !important;border-radius:999px;padding:10px 14px !important;font-weight:800;display:inline-block}
+.nav__cta:hover{opacity:.95;transform:translateY(-1px)}
+
+/* Chips */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0}
+.chip{font-size:.9rem;padding:6px 10px;border:1px solid #2a2a2a;border-radius:999px;background:#0e0e0e}
+
+/* About Banda */
+.about-media{background:#0e0e0e;border:2px solid var(--cv77-red);border-radius:var(--r);box-shadow:var(--shadow);padding:var(--s-4)}
+.about-media img{border-radius:calc(var(--r) - 4px);background:#000}
+.about-card{background:#0d0d0d;border:1px solid #222;border-radius:var(--r);box-shadow:var(--shadow);padding:var(--s-5)}
+.social-box{display:flex;gap:var(--s-4);align-items:center;flex-wrap:wrap;margin:var(--s-4) 0;padding:var(--s-4);background:#111;border:1px dashed #383838;border-radius:12px}
+.social-box p{margin:0;opacity:.95}
+
+/* Reglas (banderas) */
+.flags-grid{display:grid;gap:var(--s-4);grid-template-columns:repeat(3,1fr)}
+@media(max-width:1023px){.flags-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.flags-grid{grid-template-columns:1fr}}
+.flag-card{background:#121212;border:1px solid #222;border-radius:var(--r);box-shadow:var(--shadow);padding:var(--s-4);display:flex;gap:16px;align-items:center}
+.flag-icon{width:72px;height:48px;border-radius:8px;border:2px solid #333;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-weight:800}
+.flag-green{background:#0ba84f}.flag-yellow{background:#f7c607}.flag-red{background:#d11a2a}
+.flag-blue{background:#1a5fd1}.flag-white{background:#e8e8e8;color:#000}.flag-check{background:conic-gradient(#fff 25%, #000 0 50%, #fff 0 75%, 0)}
+
+/* ===== Reglas & Banderas — extras según tu lista ===== */
+
+/* Nuevos “pintados” de bandera */
+.flag--verde{ background:#0ba84f; }
+.flag--amarilla{ background:#f7c607; color:#000; }      /* texto oscuro para contraste */
+.flag--roja{ background:#d11a2a; }
+.flag--azul{ background:#1a5fd1; }
+.flag--negra{ background:#000; }
+.flag--cuadros{
+  /* patrón a cuadros sin imagen */
+  background:
+    conic-gradient(#fff 90deg, #000 0 180deg, #fff 0 270deg, #000 0) 0 / 16px 16px;
+  border-color:#444;
+}
+.flag--pacecar{
+  /* azul, blanco y naranja (tres franjas verticales) */
+  background: linear-gradient(90deg,
+    #1a5fd1 0 33.333%,
+    #ffffff 33.333% 66.666%,
+    #ff7a00 66.666% 100%);
+  color:#000;
+}
+
+/* Cartel de número (para acompañar a bandera negra) */
+.number-board{
+  width:72px; height:48px; border-radius:8px;
+  background:#fff; color:#000; border:2px solid #333;
+  display:flex; align-items:center; justify-content:center;
+  font-family: var(--font-title); font-weight:800; font-size:22px;
+}
+
+/* Carteles de grilla */
+.boards-grid{ display:grid; gap:var(--s-4); grid-template-columns:repeat(3,1fr); }
+@media(max-width:1023px){ .boards-grid{ grid-template-columns:1fr 1fr; } }
+@media(max-width:640px){ .boards-grid{ grid-template-columns:1fr; } }
+
+.board-card{ background:#121212; border:1px solid #222; border-radius:var(--r); box-shadow:var(--shadow); padding:var(--s-4); display:flex; gap:16px; align-items:center; }
+.board-icon{
+  width:72px; height:72px; border-radius:12px; border:2px solid #333;
+  display:flex; align-items:center; justify-content:center;
+  font-family: var(--font-title); font-weight:800; font-size:32px;
+  background:#0e0e0e;
+}
+/* Secciones consistentes */
+.section{ padding:24px 0 48px; }
+.section + .section{ padding-top:0; }
+
+/* Grid uniforme */
+.flags-grid{ display:grid; gap:var(--s-4); grid-template-columns:repeat(3,1fr); }
+.boards-grid{ display:grid; gap:var(--s-4); grid-template-columns:repeat(3,1fr); }
+@media (max-width:1023px){
+  .flags-grid,.boards-grid{ grid-template-columns:1fr 1fr; }
+}
+@media (max-width:640px){
+  .flags-grid,.boards-grid{ grid-template-columns:1fr; }
+}
+
+/* Cards compactas y alineadas */
+.flag-card,.board-card{
+  background:#121212; border:1px solid #222; border-radius:var(--r);
+  box-shadow:var(--shadow); padding:var(--s-4);
+  display:flex; gap:16px; align-items:center; min-height:110px;
+}
+.flag-icon{
+  width:72px; height:48px; border-radius:10px; border:2px solid #333; flex-shrink:0;
+}
+.number-board{ width:72px; height:48px; border-radius:8px; background:#fff; color:#000;
+  border:2px solid #333; display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-title); font-weight:800; font-size:22px; }
+
+.board-icon{
+  width:72px; height:72px; border-radius:12px; border:2px solid #333;
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-title); font-weight:800; font-size:32px; background:#0e0e0e;
+}
+
+/* Títulos/textos dentro de las cards más contenidas */
+.flag-card .card__title,
+.board-card .card__title{ margin:0 0 6px; font-size:1.15rem; }
+.flag-card .card__text,
+.board-card .card__text{ margin:0; opacity:.92; }
+
+/* Pintados de banderas */
+.flag--verde{ background:#0ba84f; }
+.flag--amarilla{ background:#f7c607; color:#000; }
+.flag--roja{ background:#d11a2a; }
+.flag--azul{ background:#1a5fd1; }
+.flag--negra{ background:#000; }
+.flag--cuadros{
+  background: conic-gradient(#fff 90deg,#000 0 180deg,#fff 0 270deg,#000 0) 0/16px 16px;
+  border-color:#444;
+}
+.flag--pacecar{
+  background:linear-gradient(90deg,#1a5fd1 0 33.333%,#fff 33.333% 66.666%,#ff7a00 66.666% 100%);
+  color:#000;
+}
+
+
+
+
+
+
+/* Técnica */
+.specs{display:grid;gap:12px;grid-template-columns:repeat(2,1fr);margin-top:var(--s-3)}
+.spec{background:#0f0f0f;border:1px solid #222;border-radius:10px;padding:10px}
+.spec b{display:block;font-family:var(--font-title);font-size:.95rem;margin-bottom:4px}
+.callout{margin-top:var(--s-4);border-left:4px solid var(--cv77-red);background:#101010;padding:12px;border-radius:8px}
+
+/* Piloto de la fecha */
+.candidates{display:grid;gap:var(--s-4);grid-template-columns:repeat(3,1fr)}
+@media(max-width:1023px){.candidates{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.candidates{grid-template-columns:1fr}}
+.candidate-card{background:#121212;border:1px solid #222;border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
+.candidate-card .card__body{padding:var(--s-4)}
+.iframe-responsive{position:relative;width:100%;padding-top:56.25%}
+.iframe-responsive iframe{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:12px}
+
+/* Trivia */
+.quiz{max-width:760px;margin:0 auto;background:#121212;border:1px solid #222;border-radius:var(--r);box-shadow:var(--shadow);padding:var(--s-5)}
+.quiz h3{margin-top:0}
+.answers{display:grid;gap:10px;margin-top:10px}
+.answer-btn{padding:12px 14px;border:1px solid #333;border-radius:10px;background:#0e0e0e;color:#fff;font-weight:700;cursor:pointer;text-align:left}
+.answer-btn:hover{background:#151515}
+.progress{margin-top:12px;opacity:.8}
+.result{margin-top:16px;font-weight:800}
+
+/* === Artículos (Notas) === */
+.article{ max-width: 860px; margin: 0 auto; }
+.article-header{ margin: var(--s-5) 0 var(--s-4); padding-bottom: var(--s-3); border-bottom: 1px solid #222; }
+.breadcrumbs{ font-size:.95rem; opacity:.8; margin-top: var(--s-3); }
+.article-title{ font-size: clamp(28px, 3.6vw, 40px); margin: 0 0 6px; }
+.article-meta{ opacity:.8; font-size:.95rem; }
+
+.article-hero{ margin: var(--s-4) 0; border-radius: var(--r); overflow:hidden; box-shadow: var(--shadow); border:1px solid #222; background:#0e0e0e; }
+.article-hero img{ width:100%; height:auto; display:block; }
+.caption{ opacity:.75; font-size:.95rem; padding: 10px 14px; background:#0d0d0d; border-top:1px solid #1e1e1e; }
+
+.prose{ font-size: 1.06rem; }
+.prose h2{ font-family: var(--font-title); font-size:1.5rem; margin: 24px 0 8px; }
+.prose h3{ font-family: var(--font-title); font-size:1.2rem; margin: 18px 0 6px; opacity:.95; }
+.prose p{ margin: 10px 0; opacity:.95; }
+.prose ul{ list-style: disc; margin-left: 20px; }
+.prose ol{ list-style: decimal; margin-left: 20px; }
+.prose li{ margin: 6px 0; }
+.prose blockquote{ margin: 14px 0; padding: 10px 14px; background:#101010; border-left: 4px solid var(--cv77-red); border-radius: 8px; }
+
+.tags{ display:flex; flex-wrap:wrap; gap:8px; margin-top: var(--s-4); }
+.tag{ font-size:.9rem; padding:6px 10px; border:1px solid #2a2a2a; border-radius:999px; background:#0e0e0e; }
+
+.article-nav{ display:flex; justify-content:space-between; gap:12px; margin: var(--s-5) 0; }
+.article-nav a{ display:block; flex:1; padding:12px 16px; border:1px solid #222; background:#0f0f0f; border-radius:12px; }
+.article-nav a:hover{ background:#151515; }
+
+/* === Pilotos (listado + ficha) === */
+.filters{ display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin:16px 0 6px; }
+.filters .group{ display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+.filters .label{ opacity:.8; font-weight:700; margin-right:4px; }
+
+.chip-check{ position:relative; display:inline-block; }
+.chip-check input{ position:absolute; inset:0; opacity:0; pointer-events:none; }
+.chip-check label{ display:inline-block; padding:6px 10px; border:1px solid #2a2a2a; border-radius:999px; background:#0e0e0e; cursor:pointer; font-weight:700; }
+.chip-check input:checked + label{ background:#151515; border-color:var(--cv77-red); }
+
+.searchbar{ margin-top:8px; }
+.searchbar input[type="search"]{
+  width:100%; max-width:420px; padding:10px 12px; border-radius:10px;
+  border:1px solid #2a2a2a; background:#0e0e0e; color:#fff;
+}
+
+.driver-card{ overflow:hidden; }
+.driver-card .card__media{ aspect-ratio: 4/3; background:#0e0e0e; }
+.driver-meta{ display:flex; flex-wrap:wrap; gap:8px; margin:6px 0 10px; }
+.badge{ font-size:.85rem; padding:4px 8px; border:1px solid #2a2a2a; border-radius:999px; background:#0f0f0f; opacity:.95; }
+
+.stat-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-top:8px; }
+.stat{ background:#0f0f0f; border:1px solid #222; border-radius:10px; padding:8px; text-align:center; }
+.stat b{ display:block; font-family:var(--font-title); }
+
+.ficha-hero{ display:grid; gap:16px; grid-template-columns: 1fr 1.1fr; }
+@media (max-width: 900px){ .ficha-hero{ grid-template-columns: 1fr; } }
+.ficha-photo{ border:1px solid #222; border-radius:12px; overflow:hidden; background:#0e0e0e; }
+.ficha-panel{ background:#0f0f0f; border:1px solid #222; border-radius:12px; padding:16px; }
+.ficha-list{ display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+.ficha-list div{ background:#0d0d0d; border:1px solid #222; border-radius:10px; padding:10px; }
+.ficha-list b{ display:block; font-family:var(--font-title); font-size:.95rem; margin-bottom:4px; }
+
+/* === Pilotos: media consistente === */
+.driver-card .card__media{
+  position: relative;
+  aspect-ratio: 4 / 3;       /* mismo alto en todas (cambiá a 3/4 si querés más vertical) */
+  overflow: hidden;          /* recorta excedentes */
+  background: #0e0e0e;
+}
+
+/* La imagen siempre ocupa todo el contenedor */
+.driver-card .card__media img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* llena y recorta */
+  object-position: 50% 20%;  /* foco un poco alto (cara al centro-superior) */
+}
+
+/* Fallback si el navegador no soporta aspect-ratio */
+@supports not (aspect-ratio: 1){
+  .driver-card .card__media{ height: 240px; } /* ajustá a tu gusto */
+}
+
+/* Historias: hero más chico y centrado */
+.article-hero--sm{
+  max-width: 680px;          /* ajustá 600–800px a gusto */
+  margin: var(--s-4) auto;   /* centra el bloque */
+}
+
+/* ====== MOBILE: submenu como ACORDEÓN que EMPUJA hacia abajo ====== */
+@media (max-width: 1024px), (hover: none) {
+  /* el contenedor del item */
+  .nav__menu li { width: 100%; }
+
+  /* el dropdown deja de ser flotante y vuelve al flujo */
+  .submenu{
+    position: static !important;        /* <- clave */
+    left: auto !important; top: auto !important;
+    width: 100% !important;
+    box-sizing: border-box;
+
+    margin: 8px 0 0;
+    background: #0f0f0f;
+    border-radius: 12px;
+
+    /* colapsado por defecto */
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    border: 0 solid #222;
+
+    /* anula animaciones de desktop */
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+
+    transition:
+      max-height .28s ease,
+      padding .2s ease,
+      border-width .2s ease,
+      box-shadow .2s ease;
+  }
+
+  /* abierto (tu JS pone .show) */
+  .submenu.show{
+    max-height: 700px;                  /* subilo si hay más items */
+    padding: 8px;
+    border-width: 1px;
+
+    /* acento rojo tipo “marco” */
+    --cv77-red: #ff1a1a;                /* por si no está definida */
+    box-shadow:
+      inset 0 0 0 1px #222,
+      0 0 0 2px var(--cv77-red);        /* borde rojo exterior */
+    border-radius: 14px;
+  }
+
+  /* sin “puente” en mobile */
+  .has-submenu .submenu::before{ display: none; }
+
+  /* que la fila entera actúe como trigger si querés */
+  .has-submenu > a{
+    display:flex; justify-content:space-between; align-items:center;
+  }
+}
+
+/* ===== Contador próxima fecha ===== */
+.countdown-card{
+  display:flex; justify-content:space-between; align-items:center; gap:16px;
+  background:#121212; border:1px solid #222; border-radius:16px;
+  padding:14px 18px; box-shadow: 0 6px 24px rgba(0,0,0,.25);
+}
+.countdown-left{ display:flex; flex-direction:column; gap:4px; }
+.countdown-label{ font-weight:800; letter-spacing:.02em; opacity:.9 }
+.countdown-date{ font-size:1.1rem; opacity:.95 }
+.countdown-right{ display:flex; align-items:center; gap:10px; }
+.pill{
+  display:inline-block; background:#ff1a1a; color:#fff; border-radius:999px;
+  padding:8px 14px; font-weight:800;
+}
+.countdown-sub{ font-size:.95rem; opacity:.85 }
+@media (max-width: 640px){
+  .countdown-card{ flex-direction:column; align-items:flex-start }
+  .countdown-right{ gap:12px }
+}
+/* Centrar el contador en Categorías */
+#proxima-fecha{
+  display: flex;
+  justify-content: center;   /* lo pone al medio */
+  margin: 12px 0 28px;       /* separación con el h1 y el grid */
+}
+#proxima-fecha .countdown-card{
+  width: 100%;
+  max-width: 560px;          /* ajustá (480–640px según prefieras) */
+}
+
+/* Utilidad para apilar con espacio vertical */
+.stack-md > * + * { margin-top: 16px; }
+@media (min-width: 768px){ .stack-md > * + * { margin-top: 20px; } }
+@media (min-width: 1024px){ .stack-md > * + * { margin-top: 24px; } }
+
+
+/* Mini-encuesta dentro de la card */
+.cv77-pmini{margin-top:12px}
+.pmini-opt{display:flex;align-items:center;gap:8px;margin:6px 0;font-size:16px}
+.pmini-opt input{accent-color:#e10600}
+.pmini-actions{display:flex;gap:8px;margin-top:10px}
+.pmini-msg{margin:.3rem 0 0;min-height:1.1em;color:#ddd}
+
+/* Resultados */
+.pmini-results{margin-top:10px}
+.pmini-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.pmini-row{position:relative;display:flex;align-items:center;gap:8px;padding:8px 10px;
+           background:#171717;border-radius:12px;overflow:hidden}
+.pmini-row::before{content:"";position:absolute;inset:0;right:auto;width:var(--pct,0%);
+                   background:rgba(225,6,0,.18)}
+.pmini-badge{z-index:1;background:#e10600;color:#fff;border-radius:8px;padding:4px 8px;
+             font-weight:800;min-width:54px;text-align:center}
+.pmini-label{z-index:1}
+.pmini-note{display:block;margin-top:6px;color:#bdbdbd;font-size:12px}
+
+
+.pmini-opt { gap: 10px; flex-wrap: wrap; }
+.pmini-opt .pmini-other{
+  flex: 1 1 220px; max-width: 100%;
+  padding: 8px 10px; border-radius: 10px;
+  border: 1px solid #333; background:#111; color:#fff;
+}
+.pmini-opt .pmini-other:disabled{ opacity:.6 }
+
+/* BOTON VOLVER */
+.album-actions{
+  display:flex;
+  justify-content:center;
+  margin:38px 0 8px;
+}
+.album-actions .btn{
+  min-width:160px;
+  text-align:center;
+}
