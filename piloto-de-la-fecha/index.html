@@ -48,10 +48,14 @@
 
     </header><main>
 <section class="hero"><div class="container"><h1>Piloto de la fecha</h1><p class="lead">Votá a tu destacado del finde.</p><p style="margin-top:16px"><a class="btn" href="#votar">Votar</a></p></div></section>
+
 <section id="votar" class="container" style="padding:24px 0 48px">
+<button id="share-page" class="btn-share">Compartir</button>
+
   <h2>Candidatos</h2>
 
   <div class="candidates" style="margin-top:16px">
+    
 
     <!-- TCA -->
 <article class="candidate-card">
@@ -77,7 +81,7 @@
     <div class="pmini-actions">
       <a class="btn btn-votar" href="https://forms.gle/qnfMouujWqo4pycJ9" target="_blank" rel="noopener">Votar</a>
     </div>
-    <p class="vote-thanks" hidden role="status" aria-live="polite">¡Gracias por votar! Se abrió en otra pestaña 🏁</p>
+    <p class="vote-thanks" hidden role="status" aria-live="polite">¡Gracias por votar!🏁</p>
   </div>
 </article>
 
@@ -91,7 +95,7 @@
     <div class="pmini-actions">
       <a class="btn btn-votar" href="https://forms.gle/MUL5DB9sCUao3JJE6" target="_blank" rel="noopener">Votar</a>
     </div>
-    <p class="vote-thanks" hidden role="status" aria-live="polite">¡Gracias por votar! Se abrió en otra pestaña 🏁</p>
+    <p class="vote-thanks" hidden role="status" aria-live="polite">¡Gracias por votar!🏁</p>
   </div>
 </article>
 
@@ -105,7 +109,7 @@
     <div class="pmini-actions">
       <a class="btn btn-votar" href="https://forms.gle/ZqCzjdAe6C644oWZ9" target="_blank" rel="noopener">Votar</a>
     </div>
-    <p class="vote-thanks" hidden role="status" aria-live="polite">¡Gracias por votar! Se abrió en otra pestaña 🏁</p>
+    <p class="vote-thanks" hidden role="status" aria-live="polite">¡Gracias por votar!🏁</p>
   </div>
 </article>
 
@@ -119,7 +123,7 @@
     <div class="pmini-actions">
       <a class="btn btn-votar" href="https://forms.gle/jg9k235vv1smbpQMA" target="_blank" rel="noopener">Votar</a>
     </div>
-    <p class="vote-thanks" hidden role="status" aria-live="polite">¡Gracias por votar! Se abrió en otra pestaña 🏁</p>
+    <p class="vote-thanks" hidden role="status" aria-live="polite">¡Gracias por votar!🏁</p>
   </div>
 </article>
 
@@ -154,6 +158,30 @@
       msg._t = setTimeout(()=>{ msg.hidden = true; },X);
     });
   });
+  
 </script>
+<script>
+  const btn = document.getElementById('share-page');
+  if (btn) {
+    const data = {
+      title: document.title,
+      text: 'Votá el Piloto de la Fecha en Cuenta Vueltas 77 🏁',
+      url: location.href
+    };
+    btn.addEventListener('click', async () => {
+      if (navigator.share) {
+        try { await navigator.share(data); } catch(e){}
+      } else {
+        try {
+          await navigator.clipboard.writeText(data.url);
+          alert('📋 Link copiado. Abrí tu red y pegalo.');
+        } catch {
+          window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(data.url),'_blank');
+        }
+      }
+    });
+  }
+</script>
+
 </body>
 </html>
