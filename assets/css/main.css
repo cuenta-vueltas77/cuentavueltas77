@@ -462,3 +462,108 @@ p{margin:var(--s-3) 0;font-size:1.05rem}
   min-width:160px;
   text-align:center;
 }
+
+.btn-share{
+  display:inline-flex;align-items:center;gap:.5rem;
+  padding:.6rem 1rem;border:2px solid #e10600;border-radius:999px;
+  background:#111;color:#fff;font-weight:700;cursor:pointer;
+}
+.btn-share:hover{background:#e10600}
+
+/* Contenedor de acciones: centra y pone lado a lado */
+.pf-cta{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:16px;          /* separación entre botones */
+  margin-top:18px;
+  flex-wrap:wrap;    /* si no entran, bajan a la línea siguiente en móvil */
+}
+
+/* Si tu .btn-votar ya tiene estilos, no toques; esto es por si necesitás homogeneizar alturas */
+.pf-cta .btn-votar,
+.pf-cta .btn-share{
+  height:48px;
+  display:inline-flex;
+  align-items:center;
+  padding:0 20px;
+}
+
+/* Tu botón Compartir (el estilo que ya venías usando) */
+.btn-share{
+  border:2px solid #e10600;
+  border-radius:999px;
+  background:#111;
+  color:#fff;
+  font-weight:700;
+  cursor:pointer;
+}
+.btn-share:hover{ background:#e10600; }
+
+/* Por si sin querer le quedó position fijo o absoluto en algún lado */
+.btn-share{ position:static; }
+
+.pf-cta{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:16px;
+  margin-top:16px;
+  flex-wrap:wrap;
+}
+
+.btn-share{
+  border:2px solid #e10600;
+  border-radius:999px;
+  background:#111;
+  color:#fff;
+  font-weight:700;
+  padding:.6rem 1rem;
+  height:48px; display:inline-flex; align-items:center;
+  cursor:pointer;
+}
+.btn-share:hover{ background:#e10600; }
+
+/* Afecta únicamente al héroe */
+.hero .hero-cta{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;     /* en móvil se apilan sin romper nada */
+}
+
+/* Variante “outline” SOLO en el héroe (no toca otras .btn del sitio) */
+.hero .hero-cta .btn.outline{
+  background:transparent;
+  border:2px solid #e10600;
+  color:#fff;
+}
+/* Solo el bloque de botones del héroe */
+.hero .hero-cta{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+  margin-top:16px;
+  flex-wrap:wrap;
+}
+/* Botonera del héroe: en columna y centrada */
+.hero .hero-cta{
+  display:flex;
+  flex-direction:column;   /* 👈 pone “Compartir” debajo */
+  align-items:center;
+  justify-content:center;
+  gap:12px;                /* espacio entre Votar y Compartir */
+  margin-top:16px;
+}
+
+/* Variante outline SOLO aquí */
+.hero .hero-cta .btn.outline{
+  background:transparent;
+  border:2px solid #e10600;
+  color:#fff;
+}
+
+/* por si quedó algo raro */
+#share-page{ position:static; }   /* evita que se vaya abajo a la izquierda */
