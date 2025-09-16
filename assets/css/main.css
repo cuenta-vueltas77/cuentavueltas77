@@ -548,22 +548,29 @@ p{margin:var(--s-3) 0;font-size:1.05rem}
   margin-top:16px;
   flex-wrap:wrap;
 }
-/* Botonera del héroe: en columna y centrada */
-.hero .hero-cta{
-  display:flex;
-  flex-direction:column;   /* 👈 pone “Compartir” debajo */
-  align-items:center;
-  justify-content:center;
-  gap:12px;                /* espacio entre Votar y Compartir */
-  margin-top:16px;
-}
+.category-news { margin: 20px 0 28px; }
+.category-news__title { font-family: 'Orbitron', sans-serif; font-weight: 800; margin: 0 0 12px; }
 
-/* Variante outline SOLO aquí */
-.hero .hero-cta .btn.outline{
-  background:transparent;
-  border:2px solid #e10600;
-  color:#fff;
-}
+.card-grid { display: grid; gap: 16px; }
+@media (min-width: 768px){ .card-grid { grid-template-columns: 1fr 1fr; } } /* si querés mostrar 2+ cartas */
 
-/* por si quedó algo raro */
-#share-page{ position:static; }   /* evita que se vaya abajo a la izquierda */
+.card-note{
+  display: grid; grid-template-columns: 160px 1fr; gap: 14px;
+  background: #111; border: 1px solid #2a2a2a; border-radius: 16px;
+  padding: 12px; text-decoration: none; color: inherit;
+  transition: transform .15s ease, border-color .15s ease;
+}
+.card-note:hover{ transform: translateY(-2px); border-color: #3a3a3a; }
+
+.card-note__img{
+  width: 160px; height: 112px; object-fit: cover; border-radius: 12px;
+}
+.card-note__body{ display:flex; flex-direction:column; gap:6px; }
+.card-note__title{ font-family:'Orbitron',sans-serif; margin:0; line-height:1.15; }
+.card-note__meta{ opacity:.7; margin:0; font-size:.95rem; }
+.card-note__excerpt{ opacity:.9; margin:0; }
+.card-note__cta{ margin-top:auto; display:inline-block; opacity:.9; }
+@media (max-width: 460px){
+  .card-note{ grid-template-columns: 1fr; }
+  .card-note__img{ width:100%; height:180px; }
+}
