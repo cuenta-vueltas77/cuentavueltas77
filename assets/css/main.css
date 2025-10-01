@@ -574,3 +574,29 @@ p{margin:var(--s-3) 0;font-size:1.05rem}
   .card-note{ grid-template-columns: 1fr; }
   .card-note__img{ width:100%; height:180px; }
 }
+
+/* Chevron en acordeones */
+.schedule summary{
+  position: relative;
+  padding-right: 44px;          /* espacio para la flecha */
+}
+.schedule summary::after{
+  content: "▸";                 /* flecha apuntando a la derecha */
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);  /* centrada vertical */
+  transition: transform .2s ease;
+  opacity: .9;
+  font-size: 1.1rem;
+}
+.schedule details[open] summary::after{
+  transform: translateY(-50%) rotate(90deg); /* apunta hacia abajo al abrir */
+}
+
+/* Accesibilidad: foco visible al tabear */
+.schedule summary:focus-visible{
+  outline: 2px solid #e11;      /* podés ajustar el color */
+  outline-offset: 3px;
+  border-radius: 10px;
+}
