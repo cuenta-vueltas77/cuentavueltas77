@@ -9,82 +9,66 @@
   <link rel="stylesheet" href="../assets/css/main.css">
   <link rel="icon" href="../assets/img/logo/icono-cv77.png">
 
-  <!-- Open Graph / Twitter Cards (opcional) -->
+  <!-- === Open Graph / Twitter Cards (para imagen grande en FB/WA/TG) === -->
+  <link rel="canonical" href="https://cuentavueltas77.com.ar/notas/tn-c2-rosario-renzo-blotta.html">
   <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Cuenta Vueltas 77">
   <meta property="og:title" content="El Cacique, a la caza en Rosario — TN Clase 2 | Cuenta Vueltas 77">
   <meta property="og:description" content="Renzo Blotta vuelve al Fangio de Rosario (TN C2). Agenda, antecedentes y lo que viene.">
-  <meta property="og:image" content="https://tusitio.com/assets/img/notas/fecha-rosario-renzo.png">
-  <meta property="og:url" content="https://tusitio.com/notas/tn-c2-rosario-renzo-blotta.html">
+  <meta property="og:url" content="https://cuentavueltas77.com.ar/notas/tn-c2-rosario-renzo-blotta.html">
+  <!-- IMPORTANTE: imagen 1200x630 en URL absoluta del dominio -->
+  <meta property="og:image" content="https://cuentavueltas77.com.ar/assets/img/notas/fecha-rosario-renzo-cover.jpg">
+  <meta property="og:image:secure_url" content="https://cuentavueltas77.com.ar/assets/img/notas/fecha-rosario-renzo-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Renzo Blotta en el Turismo Nacional Clase 2 en Rosario">
+
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="El Cacique, a la caza en Rosario — TN Clase 2 | Cuenta Vueltas 77">
+  <meta name="twitter:description" content="Renzo Blotta vuelve al Fangio de Rosario (TN C2). Agenda, antecedentes y lo que viene.">
+  <meta name="twitter:image" content="https://cuentavueltas77.com.ar/assets/img/notas/fecha-rosario-renzo-cover.jpg">
 
   <!-- Estilos del bloque Compartir (compacto y sutil) -->
   <style>
     .cv77-share--compact{
-      margin: 16px 0 0;
-      padding: 8px;
-      background: #0f0f0f;
-      border: 1px solid #2a2a2a;
-      border-radius: 12px;
+      margin:16px 0 0;
+      padding:8px;
+      background:#0f0f0f;
+      border:1px solid #2a2a2a;
+      border-radius:12px;
     }
     .cv77-share__title{
-      font-family: 'Orbitron', sans-serif;
-      color: #e10600;
-      text-transform: uppercase;
-      margin: 0 0 6px;
-      font-size: 14px;
-      letter-spacing: .5px;
+      font-family:'Orbitron',sans-serif;color:#e10600;text-transform:uppercase;
+      margin:0 0 6px;font-size:14px;letter-spacing:.5px;
     }
     .cv77-share__native{
-      display: inline-flex;
-      gap: 8px;
-      align-items: center;
-      padding: 7px 10px;
-      font-size: 12px;
-      border: 1px solid #c10a08;
-      background: #c10a08;
-      color: #fff;
-      font-weight: 700;
-      border-radius: 999px;
-      cursor: pointer;
-      text-transform: uppercase;
-      letter-spacing: .5px;
+      display:inline-flex;gap:8px;align-items:center;padding:7px 10px;font-size:12px;
+      border:1px solid #c10a08;background:#c10a08;color:#fff;font-weight:700;
+      border-radius:999px;cursor:pointer;text-transform:uppercase;letter-spacing:.5px;
     }
-    .cv77-share__native:hover{ filter: brightness(1.05); }
-    .cv77-share__fallback{
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-top: 8px;
-    }
+    .cv77-share__native:hover{filter:brightness(1.05)}
+    .cv77-share__fallback{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
     .cv77-btn{
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 10px;
-      font-size: 13px;
-      border: 1px solid #333;
-      background: #171717;
-      color: #fff;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 600;
+      display:inline-flex;align-items:center;gap:6px;padding:6px 10px;font-size:13px;
+      border:1px solid #333;background:#171717;color:#fff;border-radius:10px;
+      text-decoration:none;font-weight:600;
     }
-    .cv77-btn:hover{ border-color:#e10600; }
-    .cv77-btn svg{ width:16px; height:16px; fill:#fff; }
-    .cv77-btn.copy{ cursor: pointer; }
-    .cv77-btn.wa{ background:#145d1f; }
-    .cv77-btn.x{ background:#000; }
-    .cv77-btn.fb{ background:#0e3b82; }
-    .cv77-btn.tg{ background:#146b8c; }
+    .cv77-btn:hover{border-color:#e10600}
+    .cv77-btn svg{width:16px;height:16px;fill:#fff}
+    .cv77-btn.copy{cursor:pointer}
+    .cv77-btn.wa{background:#145d1f}
+    .cv77-btn.x{background:#000}
+    .cv77-btn.fb{background:#0e3b82}
+    .cv77-btn.tg{background:#146b8c}
     @media (prefers-reduced-motion:no-preference){
-      .cv77-share__fallback .cv77-btn{ transition: transform .12s ease; }
-      .cv77-share__fallback .cv77-btn:hover{ transform: translateY(-1px); }
+      .cv77-share__fallback .cv77-btn{transition:transform .12s ease}
+      .cv77-share__fallback .cv77-btn:hover{transform:translateY(-1px)}
     }
-    /* En móvil: aún más minimal */
-    @media (max-width: 480px){
-      .cv77-share__native{ display:none; }   /* solo redes en mobile */
-      .cv77-btn span{ display:none; }        /* icon-only */
-      .cv77-btn{ padding:6px; }
+    /* En móvil: más minimal (solo iconos) */
+    @media (max-width:480px){
+      .cv77-share__native{display:none}
+      .cv77-btn span{display:none}
+      .cv77-btn{padding:6px}
     }
   </style>
 </head>
@@ -227,12 +211,10 @@
       const fallback  = block.querySelector('.cv77-share__fallback');
       const copyBtn   = block.querySelector('.cv77-btn.copy');
 
-      // Data de la nota
       const title = block.dataset.title || document.title;
       const text  = block.dataset.text  || '';
       const url   = block.dataset.url   || window.location.href;
 
-      // Enlaces
       const encodedMsg = encodeURIComponent(`${text} ${url}`.trim());
       const links = {
         wa:  `https://wa.me/?text=${encodedMsg}`,
@@ -252,21 +234,15 @@
       if (fb) fb.href = links.fb;
       if (tg) tg.href = links.tg;
 
-      // Web Share API
       btnNative?.addEventListener('click', async () => {
         if (navigator.share) {
-          try {
-            await navigator.share({ title, text, url });
-          } catch(e) {
-            // Cancelado o error -> mostramos fallback
-            fallback.hidden = false;
-          }
+          try { await navigator.share({ title, text, url }); }
+          catch(e){ fallback.hidden = false; }
         } else {
           fallback.hidden = false;
         }
       });
 
-      // Copiar enlace
       copyBtn?.addEventListener('click', async () => {
         try {
           await navigator.clipboard.writeText(url);
@@ -285,5 +261,3 @@
   </script>
 </body>
 </html>
-
-
