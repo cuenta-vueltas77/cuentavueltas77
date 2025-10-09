@@ -600,3 +600,35 @@ p{margin:var(--s-3) 0;font-size:1.05rem}
   outline-offset: 3px;
   border-radius: 10px;
 }
+.cards-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.cards-row .card {
+  flex: 1 1 420px;  /* dos por fila si hay espacio */
+  min-width: 300px; /* evita que se achiquen demasiado */
+}
+.cv77-share{
+  margin: 24px 0 0;
+  padding: 12px 14px;
+  border-top: 1px solid #2a2a2a;
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+}
+.cv77-share__label{
+  font-size: 13px; letter-spacing:.04em; text-transform: uppercase;
+  color:#bbb; margin-right: 6px;
+}
+.cv77-share__btn{
+  display:inline-flex; align-items:center; gap:8px;
+  background:#1a1a1a; color:#fff; border:1px solid #2a2a2a;
+  border-radius:999px; padding:6px 10px; font-size:13px; cursor:pointer;
+}
+.cv77-share__btn:hover{ border-color:#e10600; }
+.cv77-share__icon{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:32px; height:32px; border-radius:999px; border:1px solid #2a2a2a;
+  background:#111; color:#fff; cursor:pointer; text-decoration:none;
+}
+.cv77-share__icon:hover{ border-color:#e10600; }
+.cv77-share svg{ display:block; }
