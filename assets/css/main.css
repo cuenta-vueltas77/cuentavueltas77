@@ -632,3 +632,21 @@ p{margin:var(--s-3) 0;font-size:1.05rem}
 }
 .cv77-share__icon:hover{ border-color:#e10600; }
 .cv77-share svg{ display:block; }
+
+
+.btn-cv77 {
+  padding: 6px 12px;
+  background-color: #c40000; /* rojo CV77 */
+  color: #fff;
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-cv77:hover {
+  background-color: #a00000;
+}
