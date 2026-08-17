@@ -1,14 +1,11 @@
 import { defineConfig } from 'astro/config';
-import db from '@astrojs/db'; // <-- 1. Tiene que estar este import
-
-import node from '@astrojs/node';
-
+import db from '@astrojs/db';
 import vercel from '@astrojs/vercel';
 
 export default defineConfig({
+  output: 'server',
   integrations: [
-    db() // <-- 2. Tiene que estar agregado acá adentro
+    db()
   ],
-
   adapter: vercel(),
 });
